@@ -11,6 +11,17 @@
 		C20CF2C52C6A974A009CE98E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20CF2C42C6A974A009CE98E /* ContentView.swift */; };
 		C20CF2C72C6A974C009CE98E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C20CF2C62C6A974C009CE98E /* Assets.xcassets */; };
 		C20CF2CA2C6A974C009CE98E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C20CF2C92C6A974C009CE98E /* Preview Assets.xcassets */; };
+		C20CF2D12C6A9A53009CE98E /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20CF2D02C6A9A53009CE98E /* QuestionModel.swift */; };
+		C20CF2D32C6A9ABD009CE98E /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20CF2D22C6A9ABD009CE98E /* QuizViewModel.swift */; };
+		C20CF2D52C6BD866009CE98E /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20CF2D42C6BD866009CE98E /* AnswerButton.swift */; };
+		C20CF2D72C6BE018009CE98E /* QuizSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20CF2D62C6BE018009CE98E /* QuizSelectionView.swift */; };
+		C20CF2DC2C6BE430009CE98E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C20CF2DB2C6BE430009CE98E /* FirebaseAnalytics */; };
+		C20CF2DE2C6BE430009CE98E /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = C20CF2DD2C6BE430009CE98E /* FirebaseAnalyticsOnDeviceConversion */; };
+		C20CF2E02C6BE430009CE98E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = C20CF2DF2C6BE430009CE98E /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		C20CF2E22C6BE430009CE98E /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = C20CF2E12C6BE430009CE98E /* FirebaseAppCheck */; };
+		C20CF2E42C6BE430009CE98E /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = C20CF2E32C6BE430009CE98E /* FirebaseAppDistribution-Beta */; };
+		C20CF2E72C6BE5FA009CE98E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C20CF2E62C6BE5FA009CE98E /* FirebaseFirestore */; };
+		C20CF2E92C6BED8C009CE98E /* interviewQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = C20CF2E82C6BED8C009CE98E /* interviewQuestions.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +30,11 @@
 		C20CF2C42C6A974A009CE98E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C20CF2C62C6A974C009CE98E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C20CF2C92C6A974C009CE98E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C20CF2D02C6A9A53009CE98E /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		C20CF2D22C6A9ABD009CE98E /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		C20CF2D42C6BD866009CE98E /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
+		C20CF2D62C6BE018009CE98E /* QuizSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSelectionView.swift; sourceTree = "<group>"; };
+		C20CF2E82C6BED8C009CE98E /* interviewQuestions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = interviewQuestions.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +42,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C20CF2E22C6BE430009CE98E /* FirebaseAppCheck in Frameworks */,
+				C20CF2DC2C6BE430009CE98E /* FirebaseAnalytics in Frameworks */,
+				C20CF2E42C6BE430009CE98E /* FirebaseAppDistribution-Beta in Frameworks */,
+				C20CF2E02C6BE430009CE98E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				C20CF2DE2C6BE430009CE98E /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				C20CF2E72C6BE5FA009CE98E /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +75,11 @@
 			children = (
 				C20CF2C22C6A974A009CE98E /* RevisionAppApp.swift */,
 				C20CF2C42C6A974A009CE98E /* ContentView.swift */,
+				C20CF2D62C6BE018009CE98E /* QuizSelectionView.swift */,
+				C20CF2D42C6BD866009CE98E /* AnswerButton.swift */,
+				C20CF2D22C6A9ABD009CE98E /* QuizViewModel.swift */,
+				C20CF2D02C6A9A53009CE98E /* QuestionModel.swift */,
+				C20CF2E82C6BED8C009CE98E /* interviewQuestions.json */,
 				C20CF2C62C6A974C009CE98E /* Assets.xcassets */,
 				C20CF2C82C6A974C009CE98E /* Preview Content */,
 			);
@@ -83,6 +110,14 @@
 			dependencies = (
 			);
 			name = RevisionApp;
+			packageProductDependencies = (
+				C20CF2DB2C6BE430009CE98E /* FirebaseAnalytics */,
+				C20CF2DD2C6BE430009CE98E /* FirebaseAnalyticsOnDeviceConversion */,
+				C20CF2DF2C6BE430009CE98E /* FirebaseAnalyticsWithoutAdIdSupport */,
+				C20CF2E12C6BE430009CE98E /* FirebaseAppCheck */,
+				C20CF2E32C6BE430009CE98E /* FirebaseAppDistribution-Beta */,
+				C20CF2E62C6BE5FA009CE98E /* FirebaseFirestore */,
+			);
 			productName = RevisionApp;
 			productReference = C20CF2BF2C6A974A009CE98E /* RevisionApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +146,9 @@
 				Base,
 			);
 			mainGroup = C20CF2B62C6A974A009CE98E;
+			packageReferences = (
+				C20CF2DA2C6BE430009CE98E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = C20CF2C02C6A974A009CE98E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C20CF2CA2C6A974C009CE98E /* Preview Assets.xcassets in Resources */,
+				C20CF2E92C6BED8C009CE98E /* interviewQuestions.json in Resources */,
 				C20CF2C72C6A974C009CE98E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +176,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C20CF2D72C6BE018009CE98E /* QuizSelectionView.swift in Sources */,
+				C20CF2D52C6BD866009CE98E /* AnswerButton.swift in Sources */,
+				C20CF2D12C6A9A53009CE98E /* QuestionModel.swift in Sources */,
 				C20CF2C52C6A974A009CE98E /* ContentView.swift in Sources */,
 				C20CF2C32C6A974A009CE98E /* RevisionAppApp.swift in Sources */,
+				C20CF2D32C6A9ABD009CE98E /* QuizViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +387,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C20CF2DA2C6BE430009CE98E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C20CF2DB2C6BE430009CE98E /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C20CF2DA2C6BE430009CE98E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		C20CF2DD2C6BE430009CE98E /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C20CF2DA2C6BE430009CE98E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		C20CF2DF2C6BE430009CE98E /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C20CF2DA2C6BE430009CE98E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		C20CF2E12C6BE430009CE98E /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C20CF2DA2C6BE430009CE98E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		C20CF2E32C6BE430009CE98E /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C20CF2DA2C6BE430009CE98E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
+		C20CF2E62C6BE5FA009CE98E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C20CF2DA2C6BE430009CE98E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C20CF2B72C6A974A009CE98E /* Project object */;
 }
