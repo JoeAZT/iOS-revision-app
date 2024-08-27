@@ -11,14 +11,13 @@ class QuizViewModel: ObservableObject {
     @Published var questionModel: [QuestionModel] = []
     @Published var score: Int
     @Published var currentQuestion: Int
+    @Published var backgroundColor: Color = .white
     
     init(score: Int, currentQuestion: Int) {
         self.score = score
         self.currentQuestion = currentQuestion
         
-        // Load questions from the local JSON file
         loadQuestionsFromJSON()
-        print(questionModel.count)
     }
     
     func loadQuestionsFromJSON() {
@@ -36,13 +35,22 @@ class QuizViewModel: ObservableObject {
             print("Could not find questions.json")  // Debug print statement
         }
     }
-
     
     func answerIsCorrect() {
+        backgroundColor = .green
         score += 1
     }
     
+    func answerIsIncorrect() {
+        backgroundColor = .red
+    }
+    
     func increaseQuestionNumber() {
-        currentQuestion += 1
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            withAnimation(.easeInOut(duration: 0.5)) {
+                self.backgroundColor = .white
+                self.currentQuestion += 1
+            }
+        }
     }
 }

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AnswerButton: ViewModifier {
+    
+    var color: Color
+    
     func body(content: Content) -> some View {
             content
                 .foregroundColor(.white)

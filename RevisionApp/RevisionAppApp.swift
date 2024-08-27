@@ -14,10 +14,7 @@ struct RevisionAppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(
-                viewModel: QuizViewModel(
-                    score: 0,
-                    currentQuestion: 0
-                )
+                viewModel: QuizViewModel(score: 0, currentQuestion: 0)
             )
         }
     }
