@@ -100,12 +100,12 @@
         ]
     },
     {
-        "questionText": "What is a protocol in Swift?",
+        "questionText": "What is the difference between weak and unowned references in Swift?",
         "possibleAnswers": [
-            { "optionText": "A blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality", "isAnswer": true },
-            { "optionText": "A type of loop", "isAnswer": false },
-            { "optionText": "A data structure for managing collections", "isAnswer": false },
-            { "optionText": "A method for error handling", "isAnswer": false }
+            { "optionText": "Weak references can be nil, unowned references cannot", "isAnswer": true },
+            { "optionText": "Unowned references increase the retain count", "isAnswer": false },
+            { "optionText": "Weak references are used for structs, unowned for classes", "isAnswer": false },
+            { "optionText": "There is no difference between them", "isAnswer": false }
         ]
     },
     {
@@ -224,5 +224,114 @@
             { "optionText": "A group of multiple values that can be of different types, grouped into a single compound value", "isAnswer": true },
             { "optionText": "A subclass of UIView", "isAnswer": false }
         ]
+    },
+    {
+        "questionText": "What is the purpose of the @IBOutlet keyword in Swift?",
+        "possibleAnswers": [
+            { "optionText": "To connect UI elements in Interface Builder to your code", "isAnswer": true },
+            { "optionText": "To declare a variable as optional", "isAnswer": false },
+            { "optionText": "To define an input method for a function", "isAnswer": false },
+            { "optionText": "To create a singleton instance", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What is ARC (Automatic Reference Counting) in iOS?",
+        "possibleAnswers": [
+            { "optionText": "A manual memory management technique", "isAnswer": false },
+            { "optionText": "A system that automatically manages the memory of class instances", "isAnswer": true },
+            { "optionText": "A way to handle multi-threading in iOS", "isAnswer": false },
+            { "optionText": "A debugging tool for finding memory leaks", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What is the purpose of a storyboard in iOS development?",
+        "possibleAnswers": [
+            { "optionText": "To design the layout and flow of your application's UI", "isAnswer": true },
+            { "optionText": "To manage network requests", "isAnswer": false },
+            { "optionText": "To handle background processing", "isAnswer": false },
+            { "optionText": "To write unit tests for your app", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What is the difference between @objc and @objcMembers in Swift?",
+        "possibleAnswers": [
+            { "optionText": "@objc exposes a single method or property to Objective-C runtime, @objcMembers exposes all methods and properties in a class", "isAnswer": true },
+            { "optionText": "@objc is used for classes, @objcMembers is used for structs", "isAnswer": false },
+            { "optionText": "@objcMembers is used to optimize performance", "isAnswer": false },
+            { "optionText": "There is no difference", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What is the purpose of a DispatchQueue in iOS?",
+        "possibleAnswers": [
+            { "optionText": "To manage the execution of tasks asynchronously or synchronously", "isAnswer": true },
+            { "optionText": "To handle user interface updates", "isAnswer": false },
+            { "optionText": "To manage memory allocation", "isAnswer": false },
+            { "optionText": "To create data models", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What does the @Published property wrapper do in Swift?",
+        "possibleAnswers": [
+            { "optionText": "It automatically notifies observers when the property's value changes", "isAnswer": true },
+            { "optionText": "It makes a property immutable", "isAnswer": false },
+            { "optionText": "It caches the property's value for performance", "isAnswer": false },
+            { "optionText": "It creates a singleton instance of the property", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What is the purpose of the @main attribute in Swift?",
+        "possibleAnswers": [
+            { "optionText": "It indicates the entry point of the app", "isAnswer": true },
+            { "optionText": "It creates a new thread", "isAnswer": false },
+            { "optionText": "It makes the function public", "isAnswer": false },
+            { "optionText": "It initializes the main view controller", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What is Combine used for in iOS development?",
+        "possibleAnswers": [
+            { "optionText": "To handle asynchronous events using a declarative Swift API", "isAnswer": true },
+            { "optionText": "To manage Core Data entities", "isAnswer": false },
+            { "optionText": "To debug networking code", "isAnswer": false },
+            { "optionText": "To create animations", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What is the role of AppDelegate in an iOS application?",
+        "possibleAnswers": [
+            { "optionText": "To handle application lifecycle events like launching, entering background, etc.", "isAnswer": true },
+            { "optionText": "To manage network requests", "isAnswer": false },
+            { "optionText": "To define the UI layout", "isAnswer": false },
+            { "optionText": "To manage Core Data stack", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What is the purpose of the @EnvironmentObject property wrapper in SwiftUI?",
+        "possibleAnswers": [
+            { "optionText": "To create a new environment object", "isAnswer": false },
+            { "optionText": "To pass an observable object down the view hierarchy", "isAnswer": true },
+            { "optionText": "To handle network requests", "isAnswer": false },
+            { "optionText": "To define the layout of a view", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What is the purpose of the @autoclosure keyword in Swift?",
+        "possibleAnswers": [
+            { "optionText": "To automatically wrap an expression in a closure", "isAnswer": true },
+            { "optionText": "To create a closure that can be called later", "isAnswer": false },
+            { "optionText": "To define a lazy property", "isAnswer": false },
+            { "optionText": "To optimize closure execution", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What is the purpose of the @ViewBuilder attribute in SwiftUI?",
+        "possibleAnswers": [
+            { "optionText": "To allow multiple views to be returned from a closure in a declarative way", "isAnswer": true },
+            { "optionText": "To optimize view rendering", "isAnswer": false },
+            { "optionText": "To define a reusable view component", "isAnswer": false },
+            { "optionText": "To handle asynchronous UI updates", "isAnswer": false }
+        ]
     }
 ]
+

@@ -10,13 +10,18 @@ import SwiftUI
 class QuizViewModel: ObservableObject {
     @Published var questionModel: [QuestionModel] = []
     @Published var score: Int
-    @Published var currentQuestion: Int
+    @Published var currentQuestion: Int 
     @Published var backgroundColor: Color = .white
+    @Published var router: RouterProtocol
     
-    init(score: Int, currentQuestion: Int) {
+    init(
+        score: Int,
+        currentQuestion: Int,
+        router: RouterProtocol
+    ) {
         self.score = score
         self.currentQuestion = currentQuestion
-        
+        self.router = router
         loadQuestionsFromJSON()
     }
     
