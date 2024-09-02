@@ -19,6 +19,7 @@
 		C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */; };
 		C2F361832C7FCB4E000546A1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361822C7FCB4E000546A1 /* Router.swift */; };
 		C2F361852C7FCBFB000546A1 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361842C7FCBFB000546A1 /* RouterProtocol.swift */; };
+		C2F361BD2C84FA9F000546A1 /* MainButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361BC2C84FA9F000546A1 /* MainButtonModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C2F361822C7FCB4E000546A1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		C2F361842C7FCBFB000546A1 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		C2F361BC2C84FA9F000546A1 /* MainButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			children = (
 				C2F3617C2C7FC993000546A1 /* MainView.swift */,
 				C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */,
+				C2F361BC2C84FA9F000546A1 /* MainButtonModifier.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				C20CF2D52C6BD866009CE98E /* AnswerButton.swift in Sources */,
 				C2F3617D2C7FC993000546A1 /* MainView.swift in Sources */,
 				C20CF2D12C6A9A53009CE98E /* QuestionModel.swift in Sources */,
+				C2F361BD2C84FA9F000546A1 /* MainButtonModifier.swift in Sources */,
 				C2F361832C7FCB4E000546A1 /* Router.swift in Sources */,
 				C20CF2C52C6A974A009CE98E /* ContentView.swift in Sources */,
 				C20CF2C32C6A974A009CE98E /* RevisionAppApp.swift in Sources */,
