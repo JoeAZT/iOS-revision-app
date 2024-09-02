@@ -11,7 +11,6 @@ struct ContentView: View {
     @ObservedObject var viewModel: QuizViewModel
 
     var body: some View {
-        NavigationStack {
             VStack {
                 if viewModel.questionModel.isEmpty {
                     Text("Loading questions...")
@@ -51,13 +50,11 @@ struct ContentView: View {
                 }
             }
             .background(viewModel.backgroundColor)
-            .navigationTitle("Quiz")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Text("Score: \($viewModel.score)")
                         .bold()
                 }
             }
-        }
     }
 }
