@@ -1,237 +1,236 @@
-
 [
     {
         "questionText": "What is the purpose of the @IBOutlet keyword in Swift?",
         "possibleAnswers": [
-            { "optionText": "To connect UI elements in Interface Builder to your code and make them accessible as variables", "isAnswer": true },
-            { "optionText": "To connect UI elements in Interface Builder to your code but only for read-only properties", "isAnswer": false },
-            { "optionText": "To define variables that automatically update UI elements when their values change", "isAnswer": false },
-            { "optionText": "To link actions to UI elements directly in Interface Builder", "isAnswer": false }
+            { "optionText": "To connect UI elements in Interface Builder to your code as variables", "isAnswer": true },
+            { "optionText": "To connect UI elements to read-only properties", "isAnswer": false },
+            { "optionText": "To define variables that automatically update UI elements", "isAnswer": false },
+            { "optionText": "To link actions to UI elements in Interface Builder", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is ARC (Automatic Reference Counting) in iOS?",
         "possibleAnswers": [
-            { "optionText": "A system that automatically manages the memory of objects in Swift by counting strong references", "isAnswer": true },
-            { "optionText": "A technique that requires manual memory management by developers to count references", "isAnswer": false },
-            { "optionText": "A mechanism that prevents memory leaks by automatically deallocating objects that are no longer referenced", "isAnswer": false },
-            { "optionText": "A way to manage memory of objects in Swift by tracking both strong and weak references", "isAnswer": false }
+            { "optionText": "A system that automatically manages memory by counting strong references", "isAnswer": true },
+            { "optionText": "A technique requiring manual memory management by developers", "isAnswer": false },
+            { "optionText": "A mechanism preventing memory leaks by deallocating unreferenced objects", "isAnswer": false },
+            { "optionText": "A way to manage memory by tracking strong and weak references", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is the purpose of a storyboard in iOS development?",
         "possibleAnswers": [
-            { "optionText": "To design the layout and flow of your app's user interface and manage transitions between views", "isAnswer": true },
-            { "optionText": "To define the data flow between view controllers in a single screen", "isAnswer": false },
-            { "optionText": "To manage the interaction between your app’s logic and UI components", "isAnswer": false },
-            { "optionText": "To create and manage UI elements programmatically rather than using Interface Builder", "isAnswer": false }
+            { "optionText": "To design the app's UI layout and manage view transitions", "isAnswer": true },
+            { "optionText": "To define data flow between view controllers", "isAnswer": false },
+            { "optionText": "To manage the interaction between app logic and UI components", "isAnswer": false },
+            { "optionText": "To create and manage UI elements programmatically", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is the difference between @objc and @objcMembers in Swift?",
         "possibleAnswers": [
-            { "optionText": "@objc exposes a single method or property to Objective-C runtime, while @objcMembers automatically exposes all methods and properties of a class to Objective-C", "isAnswer": true },
-            { "optionText": "@objc is used for classes and structs, while @objcMembers is only used for classes", "isAnswer": false },
-            { "optionText": "@objc is for making a class fully compatible with Objective-C, while @objcMembers is for making individual methods and properties compatible", "isAnswer": false },
-            { "optionText": "@objc exposes instance methods to Objective-C runtime, while @objcMembers is for exposing class methods", "isAnswer": false }
+            { "optionText": "@objc exposes a single method; @objcMembers exposes all class methods", "isAnswer": true },
+            { "optionText": "@objc is for classes and structs; @objcMembers is for classes only", "isAnswer": false },
+            { "optionText": "@objc makes a class Objective-C compatible; @objcMembers is for individual methods", "isAnswer": false },
+            { "optionText": "@objc exposes instance methods; @objcMembers exposes class methods", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is the purpose of a DispatchQueue in iOS?",
         "possibleAnswers": [
-            { "optionText": "To manage the execution of tasks asynchronously or synchronously on different threads", "isAnswer": true },
-            { "optionText": "To ensure all tasks in an app run on the main thread for better performance", "isAnswer": false },
-            { "optionText": "To allow tasks to be executed in sequence, ensuring thread safety by locking resources", "isAnswer": false },
-            { "optionText": "To manage memory allocation and deallocation for background tasks", "isAnswer": false }
+            { "optionText": "To manage task execution asynchronously or synchronously on different threads", "isAnswer": true },
+            { "optionText": "To ensure all tasks run on the main thread", "isAnswer": false },
+            { "optionText": "To execute tasks in sequence, ensuring thread safety", "isAnswer": false },
+            { "optionText": "To manage memory allocation for background tasks", "isAnswer": false }
         ]
     },
     {
         "questionText": "What does the @Published property wrapper do in Swift?",
         "possibleAnswers": [
-            { "optionText": "It notifies observers of any changes to the property, triggering UI updates if the property is used in a SwiftUI view", "isAnswer": true },
-            { "optionText": "It caches the property's value and prevents it from being changed, ensuring thread safety", "isAnswer": false },
-            { "optionText": "It marks a property as optional, allowing it to hold either a value or nil", "isAnswer": false },
-            { "optionText": "It automatically synchronizes the property's value across different instances of the same class", "isAnswer": false }
+            { "optionText": "Notifies observers of changes, triggering UI updates in SwiftUI", "isAnswer": true },
+            { "optionText": "Caches the property's value, preventing changes", "isAnswer": false },
+            { "optionText": "Marks a property as optional, allowing nil values", "isAnswer": false },
+            { "optionText": "Synchronizes the property across instances of the class", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is the purpose of the @main attribute in Swift?",
         "possibleAnswers": [
-            { "optionText": "It indicates the entry point of a Swift application, marking the starting point of execution", "isAnswer": true },
-            { "optionText": "It is used to mark the main thread for thread-safe operations in SwiftUI", "isAnswer": false },
-            { "optionText": "It ensures that a Swift class or struct is only initialized once during the app's lifecycle", "isAnswer": false },
-            { "optionText": "It defines the main view controller that handles all UI interactions", "isAnswer": false }
+            { "optionText": "Indicates the entry point of a Swift application", "isAnswer": true },
+            { "optionText": "Marks the main thread for thread-safe operations in SwiftUI", "isAnswer": false },
+            { "optionText": "Ensures a class or struct is initialized once", "isAnswer": false },
+            { "optionText": "Defines the main view controller for UI interactions", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is Combine used for in iOS development?",
         "possibleAnswers": [
             { "optionText": "To handle asynchronous events and data streams using a declarative Swift API", "isAnswer": true },
-            { "optionText": "To merge multiple data sources into a single data stream for UI updates", "isAnswer": false },
-            { "optionText": "To combine multiple view controllers into a single, unified interface", "isAnswer": false },
-            { "optionText": "To manage Core Data relationships and handle automatic updates to the database", "isAnswer": false }
+            { "optionText": "To merge multiple data sources for UI updates", "isAnswer": false },
+            { "optionText": "To combine multiple view controllers into a single interface", "isAnswer": false },
+            { "optionText": "To manage Core Data relationships and updates", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is the difference between weak and unowned references in Swift?",
         "possibleAnswers": [
-            { "optionText": "Weak references can become nil when the object they refer to is deallocated, while unowned references cannot", "isAnswer": true },
-            { "optionText": "Unowned references are automatically converted to weak references if they can potentially be nil", "isAnswer": false },
-            { "optionText": "Weak references are used for value types, while unowned references are used for reference types", "isAnswer": false },
-            { "optionText": "Weak references increase the reference count, while unowned references do not", "isAnswer": false }
+            { "optionText": "Weak references can become nil; unowned references cannot", "isAnswer": true },
+            { "optionText": "Unowned references convert to weak if they can be nil", "isAnswer": false },
+            { "optionText": "Weak references are used for value types; unowned for reference types", "isAnswer": false },
+            { "optionText": "Weak references increase reference count; unowned do not", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is the role of AppDelegate in an iOS application?",
         "possibleAnswers": [
-            { "optionText": "To handle application lifecycle events like launching, entering background, and managing push notifications", "isAnswer": true },
-            { "optionText": "To manage the memory and resources used by the app", "isAnswer": false },
-            { "optionText": "To serve as the main entry point for creating views and handling user interactions", "isAnswer": false },
-            { "optionText": "To manage the navigation stack and transitions between view controllers", "isAnswer": false }
+            { "optionText": "To handle application lifecycle events and push notifications", "isAnswer": true },
+            { "optionText": "To manage the app's memory and resources", "isAnswer": false },
+            { "optionText": "To serve as the main entry point for creating views", "isAnswer": false },
+            { "optionText": "To manage the navigation stack and view controller transitions", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is the difference between a struct and a class in Swift?",
         "possibleAnswers": [
-            { "optionText": "Structs are value types and Classes are reference types, meaning structs are copied when passed around, while classes are passed by reference", "isAnswer": true },
-            { "optionText": "Structs are used for small data types, while classes are used for larger, more complex data structures", "isAnswer": false },
-            { "optionText": "Structs are immutable by default, while classes are always mutable", "isAnswer": false },
-            { "optionText": "There is no significant difference; both can be used interchangeably in Swift", "isAnswer": false }
+            { "optionText": "Structs are value types; classes are reference types", "isAnswer": true },
+            { "optionText": "Structs are for small data; classes for complex data", "isAnswer": false },
+            { "optionText": "Structs are immutable by default; classes are mutable", "isAnswer": false },
+            { "optionText": "There is no significant difference; both are interchangeable", "isAnswer": false }
         ]
     },
     {
         "questionText": "When would you use a struct over a class in Swift?",
         "possibleAnswers": [
-            { "optionText": "Use structs when you need a simple data model that is immutable or doesn't require inheritance, and use classes when you need inheritance or shared mutable state", "isAnswer": true },
-            { "optionText": "Always use structs because they are more efficient in memory usage than classes", "isAnswer": false },
-            { "optionText": "Always use classes because they provide more flexibility in inheritance and polymorphism", "isAnswer": false },
-            { "optionText": "Use structs for any type of data model, as they are always faster and more performant than classes", "isAnswer": false }
+            { "optionText": "Use structs for simple, immutable data models; use classes for inheritance", "isAnswer": true },
+            { "optionText": "Always use structs for better memory efficiency", "isAnswer": false },
+            { "optionText": "Always use classes for more flexible inheritance", "isAnswer": false },
+            { "optionText": "Use structs for any data model; they are faster", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is the difference between synchronous and asynchronous tasks?",
         "possibleAnswers": [
-            { "optionText": "Synchronous tasks block the current thread until the task is complete, while asynchronous tasks allow the current thread to continue and handle the task's completion later", "isAnswer": true },
-            { "optionText": "Asynchronous tasks always execute faster than synchronous tasks because they run on separate threads", "isAnswer": false },
-            { "optionText": "Synchronous tasks must run on the main thread, while asynchronous tasks must run on background threads", "isAnswer": false },
-            { "optionText": "There is no difference; synchronous and asynchronous tasks are handled the same way in Swift", "isAnswer": false }
+            { "optionText": "Synchronous tasks block the current thread; asynchronous tasks allow it to continue", "isAnswer": true },
+            { "optionText": "Asynchronous tasks are always faster than synchronous tasks", "isAnswer": false },
+            { "optionText": "Synchronous tasks must run on the main thread", "isAnswer": false },
+            { "optionText": "There is no difference; both are handled the same", "isAnswer": false }
         ]
     },
     {
         "questionText": "What are optionals in Swift?",
         "possibleAnswers": [
-            { "optionText": "A type that can hold either a value or nil, allowing variables to represent the absence of a value", "isAnswer": true },
-            { "optionText": "A type that must always have a value, ensuring non-nil data is always available", "isAnswer": false },
-            { "optionText": "A type used only for error handling in Swift, providing safe error propagation", "isAnswer": false },
-            { "optionText": "A function that returns a value or nil based on the provided input parameters", "isAnswer": false }
+            { "optionText": "A type that can hold either a value or nil", "isAnswer": true },
+            { "optionText": "A type that must always have a value", "isAnswer": false },
+            { "optionText": "A type used only for error handling in Swift", "isAnswer": false },
+            { "optionText": "A function that returns a value or nil", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is the purpose of a guard statement in Swift?",
         "possibleAnswers": [
-            { "optionText": "To check for conditions that must be met, and exit the current scope early if they aren't, providing a safer way to handle potential errors", "isAnswer": true },
-            { "optionText": "To break out of a loop or control flow structure when a certain condition is met", "isAnswer": false },
-            { "optionText": "To declare variables that must be initialized before the current scope is exited", "isAnswer": false },
-            { "optionText": "To create loops that execute as long as the guard condition is true", "isAnswer": false }
+            { "optionText": "To check conditions and exit early if they aren't met", "isAnswer": true },
+            { "optionText": "To break out of a loop when a condition is met", "isAnswer": false },
+            { "optionText": "To declare variables that must be initialized before exiting", "isAnswer": false },
+            { "optionText": "To create loops that run while a condition is true", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is GCD (Grand Central Dispatch) used for in iOS?",
         "possibleAnswers": [
-            { "optionText": "For managing the execution of tasks in a multi-threaded environment, enabling efficient background processing and task scheduling", "isAnswer": true },
-            { "optionText": "For handling database queries and ensuring data integrity across different threads", "isAnswer": false },
-            { "optionText": "For creating and managing user interfaces across different threads", "isAnswer": false },
-            { "optionText": "For handling image processing and other compute-intensive tasks", "isAnswer": false }
+            { "optionText": "For managing tasks in a multi-threaded environment", "isAnswer": true },
+            { "optionText": "For handling database queries across threads", "isAnswer": false },
+            { "optionText": "For creating and managing user interfaces across threads", "isAnswer": false },
+            { "optionText": "For handling image processing and compute-intensive tasks", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is a completion handler?",
         "possibleAnswers": [
-            { "optionText": "A closure that is called when an asynchronous task has completed, often used to handle the result of the task", "isAnswer": true },
-            { "optionText": "A function that is called when a loop completes its execution, used to handle post-loop processing", "isAnswer": false },
-            { "optionText": "A special type of closure that handles errors within a function", "isAnswer": false },
-            { "optionText": "A tool used to manage and synchronize multiple threads within an application", "isAnswer": false }
+            { "optionText": "A closure called when an asynchronous task completes", "isAnswer": true },
+            { "optionText": "A function called when a loop completes its execution", "isAnswer": false },
+            { "optionText": "A closure that handles errors within a function", "isAnswer": false },
+            { "optionText": "A tool to manage and synchronize multiple threads", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is a closure in Swift?",
         "possibleAnswers": [
-            { "optionText": "A self-contained block of functionality that can be passed around and used in your code, capturing and storing references to variables and constants within its scope", "isAnswer": true },
-            { "optionText": "A function without a name that is executed immediately after its definition", "isAnswer": false },
-            { "optionText": "A method used exclusively for error handling and reporting in Swift applications", "isAnswer": false },
-            { "optionText": "A special data structure used for managing memory within a Swift application", "isAnswer": false }
+            { "optionText": "A self-contained block of code that can be passed around and used", "isAnswer": true },
+            { "optionText": "A function without a name that is executed immediately", "isAnswer": false },
+            { "optionText": "A method used for error handling in Swift applications", "isAnswer": false },
+            { "optionText": "A special data structure for managing memory in Swift", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is a delegate in iOS development?",
         "possibleAnswers": [
-            { "optionText": "A design pattern that allows one object to communicate with another by sending messages through a protocol, enabling flexible and reusable code", "isAnswer": true },
-            { "optionText": "A class that defines the blueprint of methods that another class must implement, enforcing strict type-checking at compile time", "isAnswer": false },
-            { "optionText": "A tool for managing multithreading and background processing within an application", "isAnswer": false },
-            { "optionText": "A subclass of UIView that handles user input and gestures within an iOS application", "isAnswer": false }
+            { "optionText": "A design pattern allowing communication between objects via a protocol", "isAnswer": true },
+            { "optionText": "A class defining a blueprint of methods for another class", "isAnswer": false },
+            { "optionText": "A tool for managing multithreading within an application", "isAnswer": false },
+            { "optionText": "A UIView subclass handling user input and gestures", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is the difference between weak and strong references?",
         "possibleAnswers": [
-            { "optionText": "Strong references keep an object in memory by increasing its reference count, while weak references do not increase the reference count and allow the object to be deallocated", "isAnswer": true },
-            { "optionText": "Weak references are faster and more memory-efficient than strong references, which are slower but provide more safety", "isAnswer": false },
-            { "optionText": "Strong references are used only within closures, while weak references are used for delegate properties", "isAnswer": false },
-            { "optionText": "There is no significant difference; both weak and strong references serve the same purpose in memory management", "isAnswer": false }
+            { "optionText": "Strong references increase reference count; weak references do not", "isAnswer": true },
+            { "optionText": "Weak references are faster and more memory-efficient", "isAnswer": false },
+            { "optionText": "Strong references are used within closures only", "isAnswer": false },
+            { "optionText": "No significant difference; both serve the same purpose", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is the purpose of the @escaping keyword in Swift?",
         "possibleAnswers": [
-            { "optionText": "@escaping is used to indicate that a closure passed to a function may outlive the function's execution, allowing the closure to be stored and called later", "isAnswer": true },
-            { "optionText": "@escaping is used to mark closures that prevent memory leaks by automatically deallocating after use", "isAnswer": false },
-            { "optionText": "@escaping is a keyword that enhances the performance of closures by optimizing their execution on background threads", "isAnswer": false },
-            { "optionText": "@escaping is required when a closure needs to be used in multiple threads simultaneously", "isAnswer": false }
+            { "optionText": "To indicate that a closure may outlive the function’s execution", "isAnswer": true },
+            { "optionText": "To mark closures that prevent memory leaks by deallocating after use", "isAnswer": false },
+            { "optionText": "To enhance closure performance by optimizing execution", "isAnswer": false },
+            { "optionText": "To use a closure in multiple threads simultaneously", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is a protocol in Swift?",
         "possibleAnswers": [
-            { "optionText": "A blueprint of methods, properties, and other requirements that a class, struct, or enum can adopt to provide a specific set of functionalities", "isAnswer": true },
-            { "optionText": "A type of loop used in Swift to iterate over collections and perform operations on each element", "isAnswer": false },
-            { "optionText": "A data structure used for managing and organizing collections of objects within a Swift application", "isAnswer": false },
-            { "optionText": "A method for handling errors and ensuring safe execution of code within a Swift application", "isAnswer": false }
+            { "optionText": "A blueprint of methods and properties that a class, struct, or enum can adopt", "isAnswer": true },
+            { "optionText": "A loop used to iterate over collections and perform operations", "isAnswer": false },
+            { "optionText": "A data structure for managing collections of objects", "isAnswer": false },
+            { "optionText": "A method for handling errors and ensuring safe code execution", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is Core Data used for?",
         "possibleAnswers": [
-            { "optionText": "For managing object graphs and persistent storage, allowing complex data models to be saved and retrieved efficiently", "isAnswer": true },
-            { "optionText": "For creating animations and handling real-time rendering of UI elements", "isAnswer": false },
-            { "optionText": "For managing network requests and ensuring data is fetched and stored securely", "isAnswer": false },
-            { "optionText": "For organizing and presenting views and layout hierarchies within an iOS application", "isAnswer": false }
+            { "optionText": "For managing object graphs and persistent storage", "isAnswer": true },
+            { "optionText": "For creating animations and handling UI rendering", "isAnswer": false },
+            { "optionText": "For managing network requests and secure data storage", "isAnswer": false },
+            { "optionText": "For organizing views and layout hierarchies in iOS", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is the difference between frame and bounds in iOS?",
         "possibleAnswers": [
-            { "optionText": "Frame refers to the view's position and size in its superview's coordinate system, while bounds refers to the view's position and size in its own coordinate system", "isAnswer": true },
-            { "optionText": "Bounds are used for defining animations, while frame is used for static layout positioning", "isAnswer": false },
-            { "optionText": "Frame is used for drawing within the view, while bounds is used for positioning the view on the screen", "isAnswer": false },
-            { "optionText": "There is no difference; frame and bounds are interchangeable terms in iOS development", "isAnswer": false }
+            { "optionText": "Frame is a view's size and position in its superview; bounds is in its own coordinate system", "isAnswer": true },
+            { "optionText": "Bounds define animations; frame is for layout positioning", "isAnswer": false },
+            { "optionText": "Frame is used for drawing; bounds is for positioning on screen", "isAnswer": false },
+            { "optionText": "No difference; frame and bounds are interchangeable", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is the purpose of the 'lazy' keyword in Swift?",
         "possibleAnswers": [
-            { "optionText": "To delay the initialization of a property until it is first accessed, optimizing performance by avoiding unnecessary computation", "isAnswer": true },
-            { "optionText": "To improve performance by preloading data into memory before it is needed", "isAnswer": false },
-            { "optionText": "To reduce memory usage by automatically deallocating unused properties after a certain period of time", "isAnswer": false },
-            { "optionText": "To create static variables that are shared across all instances of a class or struct", "isAnswer": false }
+            { "optionText": "To delay property initialization until it is first accessed", "isAnswer": true },
+            { "optionText": "To preload data into memory before it is needed", "isAnswer": false },
+            { "optionText": "To automatically deallocate unused properties after time", "isAnswer": false },
+            { "optionText": "To create static variables shared across class instances", "isAnswer": false }
         ]
     },
     {
         "questionText": "How does memory management work in iOS?",
         "possibleAnswers": [
-            { "optionText": "iOS uses Automatic Reference Counting (ARC) to manage memory by automatically tracking and releasing objects that are no longer in use", "isAnswer": true },
-            { "optionText": "Developers must manually allocate and free memory for all objects, ensuring efficient memory usage", "isAnswer": false },
-            { "optionText": "Memory is managed entirely by the operating system, with no developer intervention required", "isAnswer": false },
-            { "optionText": "Memory management is not a concern in iOS, as modern devices have enough memory to handle most applications without issues", "isAnswer": false }
+            { "optionText": "iOS uses ARC to manage memory by tracking and releasing unused objects", "isAnswer": true },
+            { "optionText": "Developers must manually allocate and free memory for objects", "isAnswer": false },
+            { "optionText": "Memory is managed by the operating system without developer intervention", "isAnswer": false },
+            { "optionText": "Memory management isn't a concern in iOS; modern devices handle it", "isAnswer": false }
         ]
     },
     {
@@ -246,74 +245,75 @@
     {
         "questionText": "What is a property wrapper in Swift?",
         "possibleAnswers": [
-            { "optionText": "A custom attribute that can add behavior to properties, such as data validation or automatic updates, while keeping the property declaration clean and concise", "isAnswer": true },
+            { "optionText": "A custom attribute that can add behavior to properties while keeping the declaration clean", "isAnswer": true },
             { "optionText": "A tool for creating loops and iterating over collections in Swift", "isAnswer": false },
-            { "optionText": "A method for error handling that wraps properties to ensure safe execution", "isAnswer": false },
+            { "optionText": "A method for error handling that wraps properties for safe execution", "isAnswer": false },
             { "optionText": "A design pattern used for delegation and communication between objects", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is the purpose of the @State keyword in SwiftUI?",
         "possibleAnswers": [
-            { "optionText": "To create a mutable state that is tied to the lifecycle of the view, ensuring the view updates when the state changes", "isAnswer": true },
-            { "optionText": "To create a constant value that can be shared across different views within a SwiftUI application", "isAnswer": false },
-            { "optionText": "To handle network requests and manage data fetching within a SwiftUI view", "isAnswer": false },
-            { "optionText": "To define view hierarchies and manage the layout of UI elements within a SwiftUI application", "isAnswer": false }
+            { "optionText": "To create mutable state tied to the view lifecycle, ensuring UI updates", "isAnswer": true },
+            { "optionText": "To create a constant value shared across views within a SwiftUI application", "isAnswer": false },
+            { "optionText": "To handle network requests and manage data fetching within a view", "isAnswer": false },
+            { "optionText": "To define view hierarchies and manage UI layout", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is the difference between @State and @Binding in SwiftUI?",
         "possibleAnswers": [
-            { "optionText": "@State is used to manage state within a view, while @Binding is used to pass a reference to that state to another view, allowing for two-way data binding", "isAnswer": true },
-            { "optionText": "@State is used for local variables within a view, while @Binding is used for global constants shared across the application", "isAnswer": false },
-            { "optionText": "@Binding is used for managing classes, while @State is used for managing structs", "isAnswer": false },
-            { "optionText": "There is no significant difference; @State and @Binding can be used interchangeably in SwiftUI", "isAnswer": false }
+            { "optionText": "@State manages local state; @Binding passes a reference for two-way binding", "isAnswer": true },
+            { "optionText": "@State is for local variables; @Binding is for global constants", "isAnswer": false },
+            { "optionText": "@Binding is for managing classes; @State is for structs", "isAnswer": false },
+            { "optionText": "No significant difference; both can be used interchangeably", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is MVVM?",
         "possibleAnswers": [
-            { "optionText": "A design pattern that separates objects into three types: Model, View, and ViewModel, allowing for a clean separation of concerns and easier testability", "isAnswer": true },
+            { "optionText": "A design pattern separating objects into Model, View, and ViewModel for testability and separation of concerns", "isAnswer": true },
             { "optionText": "A method for managing memory and resources within an iOS application", "isAnswer": false },
-            { "optionText": "A framework for creating animations and handling real-time rendering in iOS applications", "isAnswer": false },
-            { "optionText": "A data structure used for organizing and managing lists and collections within an iOS application", "isAnswer": false }
+            { "optionText": "A framework for creating animations and handling real-time rendering", "isAnswer": false },
+            { "optionText": "A data structure for organizing and managing lists and collections", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is the Combine framework in iOS?",
         "possibleAnswers": [
-            { "optionText": "A framework for handling asynchronous events and data streams using a declarative Swift API, allowing for reactive programming", "isAnswer": true },
+            { "optionText": "A framework for handling asynchronous events and data streams using a declarative Swift API", "isAnswer": true },
             { "optionText": "A framework for managing images and media content within an iOS application", "isAnswer": false },
             { "optionText": "A tool for debugging and optimizing network requests in iOS applications", "isAnswer": false },
-            { "optionText": "A UI framework for creating and managing animations and transitions between views", "isAnswer": false }
+            { "optionText": "A UI framework for creating and managing animations", "isAnswer": false }
         ]
     },
     {
         "questionText": "How do you handle errors in Swift?",
         "possibleAnswers": [
-            { "optionText": "Using do-catch blocks to catch and handle errors that are thrown, ensuring safe execution of code and proper error handling", "isAnswer": true },
-            { "optionText": "Using try-catch blocks like in other programming languages, allowing for structured error handling", "isAnswer": false },
-            { "optionText": "Using guard statements to catch and handle errors, ensuring that conditions are met before proceeding", "isAnswer": false },
-            { "optionText": "Using if-else statements to check for errors and handle them accordingly", "isAnswer": false }
+            { "optionText": "Using do-catch blocks to catch and handle errors thrown by functions", "isAnswer": true },
+            { "optionText": "Using try-catch blocks like in other programming languages", "isAnswer": false },
+            { "optionText": "Using guard statements to catch and handle errors", "isAnswer": false },
+            { "optionText": "Using if-else statements to check for errors", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is the difference between map, flatMap, and compactMap?",
         "possibleAnswers": [
-            { "optionText": "map transforms each element of a collection, flatMap flattens nested collections, and compactMap removes nil values and unwraps optionals", "isAnswer": true },
-            { "optionText": "flatMap and compactMap are used exclusively for optional collections, while map is used for non-optional collections", "isAnswer": false },
-            { "optionText": "map removes duplicates from a collection, while flatMap and compactMap handle nested collections and optionals", "isAnswer": false },
-            { "optionText": "There is no significant difference between them; they can be used interchangeably for transforming collections", "isAnswer": false }
+            { "optionText": "map transforms elements; flatMap flattens collections; compactMap removes nils and unwraps optionals", "isAnswer": true },
+            { "optionText": "flatMap and compactMap are for optionals; map is for non-optionals", "isAnswer": false },
+            { "optionText": "map removes duplicates; flatMap and compactMap handle nested collections", "isAnswer": false },
+            { "optionText": "No significant difference; all can be used interchangeably", "isAnswer": false }
         ]
     },
     {
         "questionText": "What is a tuple in Swift?",
         "possibleAnswers": [
-            { "optionText": "A group of multiple values that can be of different types, grouped into a single compound value that can be accessed by index or name", "isAnswer": true },
-            { "optionText": "A loop that iterates over a collection and performs operations on each element", "isAnswer": false },
-            { "optionText": "A data structure for storing key-value pairs, similar to a dictionary but with fixed-size elements", "isAnswer": false },
-            { "optionText": "A subclass of UIView that is used for grouping and organizing UI elements within a Swift application", "isAnswer": false }
+            { "optionText": "A group of values of different types, grouped into a single compound value", "isAnswer": true },
+            { "optionText": "A loop that iterates over a collection and performs operations", "isAnswer": false },
+            { "optionText": "A data structure for storing key-value pairs, like a dictionary", "isAnswer": false },
+            { "optionText": "A UIView subclass used for grouping and organizing UI elements", "isAnswer": false }
         ]
     }
 ]
+
 

@@ -25,7 +25,7 @@ class MainViewModel: ObservableObject {
     }
     
     var quizViewModel: QuizViewModel {
-        .init(score: 0, currentQuestion: 0, router: router)
+        .init(score: 0, currentQuestion: 0, router: router, showingCorrectAnswerSheet: false)
     }
 }
 

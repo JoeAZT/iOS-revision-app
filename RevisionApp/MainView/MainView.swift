@@ -20,9 +20,11 @@ struct MainView: View {
                         viewModel.didTapNavigateToQuiz()
                     } label: {
                         HStack {
-                            Text("Start quiz")
+                            Text("Easy quiz")
                             Spacer()
-                            Text("10/12")
+                            //amend this sbased on the users score - bronze, silver, gold
+                            Image(systemName: "trophy.fill")
+                                .foregroundColor(.gray.opacity(0.75))
                         }
                         .modifier(MainButtonStyle())
                     }
@@ -37,7 +39,6 @@ struct MainView: View {
                 }
             }
             .navigationTitle("Main menu")
-            
         }
     }
 }

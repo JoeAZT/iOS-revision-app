@@ -11,9 +11,9 @@ struct MainButtonStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
             .bold()
-            .foregroundColor(.black)
+            .foregroundColor(.white)
             .padding()
-            .background(Color.white)
+            .background(Color.black)
             .cornerRadius(10)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)

@@ -10,18 +10,21 @@ import SwiftUI
 class QuizViewModel: ObservableObject {
     @Published var questionModel: [QuestionModel] = []
     @Published var score: Int
-    @Published var currentQuestion: Int 
+    @Published var currentQuestion: Int
     @Published var backgroundColor: Color = .white
     @Published var router: RouterProtocol
+    @Published var showingCorrectAnswerSheet: Bool = false
     
     init(
         score: Int,
         currentQuestion: Int,
-        router: RouterProtocol
+        router: RouterProtocol,
+        showingCorrectAnswerSheet: Bool
     ) {
         self.score = score
         self.currentQuestion = currentQuestion
         self.router = router
+        self.showingCorrectAnswerSheet = showingCorrectAnswerSheet
         loadQuestionsFromJSON()
     }
     
@@ -42,20 +45,23 @@ class QuizViewModel: ObservableObject {
     }
     
     func answerIsCorrect() {
-        backgroundColor = .green
+        backgroundColor = Color("correct")
         score += 1
     }
     
     func answerIsIncorrect() {
-        backgroundColor = .red
+        backgroundColor = Color("incorrect")
     }
     
-    func increaseQuestionNumber() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            withAnimation(.easeInOut(duration: 0.5)) {
-                self.backgroundColor = .white
-                self.currentQuestion += 1
-            }
+    func answerPressed() {
+        showingCorrectAnswerSheet = true
+    }
+    
+    func nextQuestion() {
+        showingCorrectAnswerSheet = false
+        withAnimation(.easeInOut(duration: 0.5)) {
+            self.backgroundColor = .white
+            self.currentQuestion += 1
         }
     }
 }
