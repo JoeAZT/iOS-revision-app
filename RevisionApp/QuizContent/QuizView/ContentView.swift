@@ -32,9 +32,9 @@ struct ContentView: View {
                         
                         Spacer()
                         
-                        ForEach(0..<viewModel.questionModel[viewModel.currentQuestion].possibleAnswers.count) { answerIndex in
+                        ForEach(0..<viewModel.shuffledAnswers.count) { answerIndex in
                             Button {
-                                let selectedAnswer = viewModel.questionModel[viewModel.currentQuestion].possibleAnswers[answerIndex]
+                                let selectedAnswer = viewModel.shuffledAnswers[answerIndex]
                                 if selectedAnswer.isAnswer {
                                     viewModel.answerIsCorrect()
                                 } else {
@@ -43,7 +43,7 @@ struct ContentView: View {
                                 viewModel.answerPressed(answerIndex: answerIndex)
                             } label: {
                                 HStack {
-                                    Text(viewModel.questionModel[viewModel.currentQuestion].possibleAnswers[answerIndex].optionText)
+                                    Text(viewModel.shuffledAnswers[answerIndex].optionText)
                                     Spacer()
                                 }
                                 .modifier(AnswerButton())
