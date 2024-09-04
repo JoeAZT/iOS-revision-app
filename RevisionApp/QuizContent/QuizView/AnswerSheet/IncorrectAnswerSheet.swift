@@ -17,13 +17,17 @@ struct IncorrectAnswerSheet: View {
                 .font(.title2)
                 .bold()
             
-            VStack(alignment: .leading) {
-                Text("Correct answer:")
-                    .font(.title3)
-                    .bold()
-                Text(viewModel.questionModel[viewModel.currentQuestion].possibleAnswers.first(where: { $0.isAnswer })!.optionText)
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("Correct answer:")
+                        .font(.title3)
+                        .bold()
+                    Text(viewModel.questionModel[viewModel.currentQuestion].possibleAnswers.first(where: { $0.isAnswer })!.optionText)
+                }
+                Spacer()
             }
             .padding()
+            .frame(maxWidth: .infinity)
             .background(Color("incorrectSecondary"))
             .cornerRadius(10)
         }
