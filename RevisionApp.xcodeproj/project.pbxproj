@@ -21,6 +21,8 @@
 		C2F361852C7FCBFB000546A1 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361842C7FCBFB000546A1 /* RouterProtocol.swift */; };
 		C2F361BD2C84FA9F000546A1 /* MainButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361BC2C84FA9F000546A1 /* MainButtonModifier.swift */; };
 		C2F361BF2C87A150000546A1 /* AnswerSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361BE2C87A150000546A1 /* AnswerSheetView.swift */; };
+		C2F361C22C89093C000546A1 /* IncorrectAnswerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361C12C89093C000546A1 /* IncorrectAnswerSheet.swift */; };
+		C2F361C52C890A4D000546A1 /* CorrectAnswerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361C42C890A4D000546A1 /* CorrectAnswerSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		C2F361842C7FCBFB000546A1 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		C2F361BC2C84FA9F000546A1 /* MainButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonModifier.swift; sourceTree = "<group>"; };
 		C2F361BE2C87A150000546A1 /* AnswerSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerSheetView.swift; sourceTree = "<group>"; };
+		C2F361C12C89093C000546A1 /* IncorrectAnswerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncorrectAnswerSheet.swift; sourceTree = "<group>"; };
+		C2F361C42C890A4D000546A1 /* CorrectAnswerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectAnswerSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +119,20 @@
 			isa = PBXGroup;
 			children = (
 				C20CF2C42C6A974A009CE98E /* ContentView.swift */,
-				C2F361BE2C87A150000546A1 /* AnswerSheetView.swift */,
+				C2F361C32C890941000546A1 /* AnswerSheet */,
 				C20CF2D42C6BD866009CE98E /* AnswerButton.swift */,
 			);
 			path = QuizView;
+			sourceTree = "<group>";
+		};
+		C2F361C32C890941000546A1 /* AnswerSheet */ = {
+			isa = PBXGroup;
+			children = (
+				C2F361BE2C87A150000546A1 /* AnswerSheetView.swift */,
+				C2F361C42C890A4D000546A1 /* CorrectAnswerSheet.swift */,
+				C2F361C12C89093C000546A1 /* IncorrectAnswerSheet.swift */,
+			);
+			path = AnswerSheet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +215,7 @@
 				C2F361BF2C87A150000546A1 /* AnswerSheetView.swift in Sources */,
 				C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */,
 				C20CF2D52C6BD866009CE98E /* AnswerButton.swift in Sources */,
+				C2F361C52C890A4D000546A1 /* CorrectAnswerSheet.swift in Sources */,
 				C2F3617D2C7FC993000546A1 /* MainView.swift in Sources */,
 				C20CF2D12C6A9A53009CE98E /* QuestionModel.swift in Sources */,
 				C2F361BD2C84FA9F000546A1 /* MainButtonModifier.swift in Sources */,
@@ -208,6 +223,7 @@
 				C20CF2C52C6A974A009CE98E /* ContentView.swift in Sources */,
 				C20CF2C32C6A974A009CE98E /* RevisionAppApp.swift in Sources */,
 				C20CF2D32C6A9ABD009CE98E /* QuizViewModel.swift in Sources */,
+				C2F361C22C89093C000546A1 /* IncorrectAnswerSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

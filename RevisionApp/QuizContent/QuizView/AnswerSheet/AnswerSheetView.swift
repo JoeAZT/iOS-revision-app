@@ -12,11 +12,13 @@ struct AnswerSheetView: View {
     @ObservedObject var viewModel: QuizViewModel
     
     var body: some View {
+        
         VStack(alignment: .leading) {
-                Text("Correct answer:")
-                    .font(.title3)
-                    .bold()
-            Text(viewModel.questionModel[viewModel.currentQuestion].possibleAnswers.first(where: { $0.isAnswer })!.optionText)
+        if viewModel.selectedAnswer == viewModel.questionModel[viewModel.currentQuestion].possibleAnswers.first(where: { $0.isAnswer })!.optionText {
+            CorrectAnswerSheet()
+        } else {
+            IncorrectAnswerSheet(viewModel: viewModel)
+        }
             Spacer()
             Button {
                 viewModel.nextQuestion()

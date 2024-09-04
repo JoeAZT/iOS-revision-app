@@ -14,6 +14,7 @@ class QuizViewModel: ObservableObject {
     @Published var backgroundColor: Color = .white
     @Published var router: RouterProtocol
     @Published var showingCorrectAnswerSheet: Bool = false
+    @Published var selectedAnswer: String = ""
     
     init(
         score: Int,
@@ -53,7 +54,8 @@ class QuizViewModel: ObservableObject {
         backgroundColor = Color("incorrect")
     }
     
-    func answerPressed() {
+    func answerPressed(answerIndex: Int) {
+        selectedAnswer = questionModel[currentQuestion].possibleAnswers[answerIndex].optionText
         showingCorrectAnswerSheet = true
     }
     

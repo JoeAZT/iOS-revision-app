@@ -40,7 +40,7 @@ struct ContentView: View {
                                 } else {
                                     viewModel.answerIsIncorrect()
                                 }
-                                viewModel.answerPressed()
+                                viewModel.answerPressed(answerIndex: answerIndex)
                             } label: {
                                 HStack {
                                     Text(viewModel.questionModel[viewModel.currentQuestion].possibleAnswers[answerIndex].optionText)
@@ -53,7 +53,12 @@ struct ContentView: View {
                     .padding()
                     .sheet(isPresented: $viewModel.showingCorrectAnswerSheet) {
                         AnswerSheetView(viewModel: viewModel)
-                            .presentationDetents([.fraction(0.3)])
+                        
+                        //add for ios18
+                        //.presentationSizing(
+                        // .form.sticky(horizontal: false, vertical: true))
+                        // .interactiveDismissDisabled()
+                            .presentationDetents([.fraction(0.35)])
                             .interactiveDismissDisabled()
                     }
                 }
