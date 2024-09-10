@@ -76,9 +76,11 @@ struct QuizView: View {
                     viewModel.didTapNavigateToMainView()
                 } label: {
                     Image(systemName: "chevron.left")
+                        .bold()
                 }
             }
         }
         .navigationBarBackButtonHidden(true)
+        .tint(.black)
     }
 }

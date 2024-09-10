@@ -99,7 +99,7 @@ class QuizViewModel: ObservableObject {
     
     //To be used to navigate back to quiz from here
     func didTapNavigateToQuiz() {
-        router.push(to: .quizView(viewModel: self))
+        router.pop()
     }
     
     func didTapNavigateToMainView() {
