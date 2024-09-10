@@ -31,12 +31,7 @@ struct MainView: View {
                     Spacer()
                 }
                 .padding(.horizontal)
-                .navigationDestination(for: Route.self) { route in
-                    switch route {
-                    case .quizView(let viewModel):
-                        ContentView(viewModel: viewModel)
-                    }
-                }
+                .navigationDestination(for: Route.self) { $0 }
             }
             .navigationTitle("Main menu")
         }

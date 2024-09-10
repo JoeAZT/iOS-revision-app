@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct QuizFinishedView: View {
+struct FinishedQuizView: View {
     
     @ObservedObject var viewModel: QuizViewModel
     
@@ -16,23 +16,23 @@ struct QuizFinishedView: View {
             Text("🙌 Quiz Complete! 🙌")
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .padding()
-            Text("Score: \(viewModel.score) / \(viewModel.questionModel.count)")
+            Text("Score: \(viewModel.score)/\(viewModel.questionModel.count)")
                 .font(.title)
-                .padding()
             HStack {
                 Button {
+                    viewModel.resetQuiz()
                     print("retry")
                 } label: {
-                    Text("Retry")
+                    Image(systemName: "arrow.counterclockwise")
                         .bold()
                         .foregroundColor(.white)
                         .padding()
                         .frame(maxWidth: .infinity)
-                        .background(.orange)
+                        .background(.purple)
                         .cornerRadius(10)
                 }
                 Button {
+                    viewModel.didTapNavigateToMainView()
                     print("exit")
                 } label: {
                     Text("Exit")
@@ -45,9 +45,18 @@ struct QuizFinishedView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .padding()
     }
 }
 
 #Preview {
-    QuizFinishedView(viewModel: QuizViewModel(score: 12, currentQuestion: 16, router: Router(), showingCorrectAnswerSheet: false))
+    FinishedQuizView(
+        viewModel: QuizViewModel(
+            score: 6,
+            currentQuestion: 16,
+            router: Router(),
+            showingCorrectAnswerSheet: false
+        )
+    )
 }

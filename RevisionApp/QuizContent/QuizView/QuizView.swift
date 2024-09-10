@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  QuizView.swift
 //  RevisionApp
 //
 //  Created by Joe Taylor on 12/08/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct QuizView: View {
     
     @ObservedObject var viewModel: QuizViewModel
     
@@ -51,7 +51,7 @@ struct ContentView: View {
                         }
                     }
                     .padding()
-                    .sheet(isPresented: $viewModel.showingCorrectAnswerSheet) {
+                    .sheet(isPresented: $viewModel.showingAnswerSheet) {
                         AnswerSheetView(viewModel: viewModel)
                         
                         //add for ios18
@@ -64,17 +64,13 @@ struct ContentView: View {
                 }
             }
         }
-        .navigationDestination(for: Route.self) { route in
-            switch route {
-            case .quizView(let viewModel):
-                ContentView(viewModel: viewModel)
-            }
-        }
+        .navigationDestination(for: Route.self) { $0 }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Text("Score: \(viewModel.score)")
                     .bold()
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }

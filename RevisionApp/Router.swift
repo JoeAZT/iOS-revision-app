@@ -27,13 +27,17 @@ extension Route {
     
     static func == (lhs: Route, rhs: Route) -> Bool {
         switch (lhs, rhs) {
-            case (.quizView, .quizView):
-                return true
+        case (.quizView, .quizView):
+            return true
+        case (.finishedQuizView, .finishedQuizView):
+            return true
+        case (.finishedQuizView, .quizView), (.quizView, .finishedQuizView):
+            return true
         }
     }
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(self.hashValue)
+        
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(self.hashValue)
     }
 }
 
@@ -41,7 +45,9 @@ extension Route: View {
     var body: some View {
         switch self {
         case .quizView(let viewModel):
-            return ContentView(viewModel: viewModel)
+            QuizView(viewModel: viewModel)
+        case .finishedQuizView(let viewModel):
+            FinishedQuizView(viewModel: viewModel)
         }
     }
 }
