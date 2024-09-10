@@ -32,7 +32,7 @@ class QuizViewModel: ObservableObject {
     }
     
     func loadQuestionsFromJSON() {
-        if let url = Bundle.main.url(forResource: "combineQuestions", withExtension: "json") {
+        if let url = Bundle.main.url(forResource: "architectureQuestions", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()

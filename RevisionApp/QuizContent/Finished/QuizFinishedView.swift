@@ -12,41 +12,62 @@ struct FinishedQuizView: View {
     @ObservedObject var viewModel: QuizViewModel
     
     var body: some View {
-        VStack {
-            Text("🙌 Quiz Complete! 🙌")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            Text("Score: \(viewModel.score)/\(viewModel.questionModel.count)")
-                .font(.title)
-            HStack {
-                Button {
-                    viewModel.resetQuiz()
-                    print("retry")
-                } label: {
-                    Image(systemName: "arrow.counterclockwise")
-                        .bold()
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(.purple)
-                        .cornerRadius(10)
-                }
-                Button {
-                    viewModel.didTapNavigateToMainView()
-                    print("exit")
-                } label: {
-                    Text("Exit")
-                        .bold()
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(.green)
-                        .cornerRadius(10)
+        ZStack {
+            
+            LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.15), Color.white.opacity(0.1)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                .ignoresSafeArea(.all)
+            VStack {
+                Text("Quiz Complete!")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                Spacer()
+                Text("\(viewModel.score)/\(viewModel.questionModel.count)")
+                    .font(.system(size: 80))
+                    .bold()
+                    .padding()
+                //could we change this text based on the users score from the quiz.
+                Text("Users who score 80% or more are more likely to pass their technical interviews and secure employment.")
+                    .opacity(0.7)
+                    .font(.subheadline)
+                    .padding(.horizontal, 20)
+                Spacer()
+                HStack {
+                    Button {
+                        viewModel.resetQuiz()
+                        print("retry")
+                    } label: {
+                        Image(systemName: "arrow.counterclockwise")
+                            .bold()
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .cornerRadius(10)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .strokeBorder(.white, lineWidth: 4)
+                            )
+                    }
+                    Button {
+                        viewModel.didTapNavigateToMainView()
+                        print("exit")
+                    } label: {
+                        Text("Exit")
+                            .bold()
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(.green)
+                            .cornerRadius(10)
+                    }
                 }
             }
+            .foregroundColor(.white)
+            .navigationBarBackButtonHidden(true)
+            .padding()
         }
-        .navigationBarBackButtonHidden(true)
-        .padding()
+        .background(
+            Color.black.ignoresSafeArea()
+        )
     }
 }
 

@@ -70,6 +70,14 @@ struct QuizView: View {
                 Text("Score: \(viewModel.score)")
                     .bold()
             }
+            
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    viewModel.didTapNavigateToMainView()
+                } label: {
+                    Image(systemName: "chevron.left")
+                }
+            }
         }
         .navigationBarBackButtonHidden(true)
     }
