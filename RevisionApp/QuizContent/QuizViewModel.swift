@@ -15,7 +15,7 @@ class QuizViewModel: ObservableObject {
     @Published var router: RouterProtocol
     @Published var showingAnswerSheet: Bool = false
     @Published var selectedAnswer: String = ""
-    @Published var shuffledAnswers: [OptionModel] = []  // New property for shuffled answers
+    @Published var shuffledAnswers: [OptionModel] = []
     
     init(
         score: Int,
@@ -28,7 +28,7 @@ class QuizViewModel: ObservableObject {
         self.router = router
         self.showingAnswerSheet = showingCorrectAnswerSheet
         loadQuestionsFromJSON()
-        shuffleAnswers()  // Shuffle answers at the start
+        shuffleAnswers()
     }
     
     func loadQuestionsFromJSON() {
@@ -37,18 +37,15 @@ class QuizViewModel: ObservableObject {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 let decodedData = try decoder.decode([QuestionModel].self, from: data)
-                print("Decoded Data: \(decodedData)")  // Debug print statement
                 self.questionModel = decodedData
-                shuffleAnswers()  // Shuffle answers after loading questions
             } catch {
                 print("Error decoding JSON: \(error)")
             }
         } else {
-            print("Could not find questions.json")  // Debug print statement
+            print("Could not find questions.json")
         }
     }
     
-    // New method to shuffle the possible answers for the current question
     func shuffleAnswers() {
         if !questionModel.isEmpty && currentQuestion < questionModel.count {
             shuffledAnswers = questionModel[currentQuestion].possibleAnswers.shuffled()
@@ -65,7 +62,7 @@ class QuizViewModel: ObservableObject {
     }
     
     func answerPressed(answerIndex: Int) {
-        selectedAnswer = shuffledAnswers[answerIndex].optionText  // Use shuffled answers here
+        selectedAnswer = shuffledAnswers[answerIndex].optionText 
         showingAnswerSheet = true
     }
     
@@ -88,7 +85,6 @@ class QuizViewModel: ObservableObject {
 //        return currentQuestion >= questionModel.count
     }
     
-    //to be used on retry
     func resetQuiz() {
         score = 0
         currentQuestion = 0
@@ -97,7 +93,6 @@ class QuizViewModel: ObservableObject {
         didTapNavigateToQuiz()
     }
     
-    //To be used to navigate back to quiz from here
     func didTapNavigateToQuiz() {
         router.pop()
     }
