@@ -1,0 +1,92 @@
+[
+    {
+        "questionText": "What is the Model-View-Controller (MVC) architecture pattern?",
+        "possibleAnswers": [
+            { "optionText": "A pattern that divides an application into three interconnected components, allowing for efficient code reuse and parallel development.", "isAnswer": true },
+            { "optionText": "A networking pattern that handles data synchronization between a server and a client.", "isAnswer": false },
+            { "optionText": "A database management pattern used exclusively for handling large data sets.", "isAnswer": false },
+            { "optionText": "A user interface design pattern that focuses solely on the aesthetics of an application.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "In MVVM architecture, what role does the ViewModel play?",
+        "possibleAnswers": [
+            { "optionText": "It manages the app's navigation logic and user input.", "isAnswer": false },
+            { "optionText": "It serves as an intermediary between the Model and the View, handling the presentation logic and state.", "isAnswer": true },
+            { "optionText": "It stores all the data needed for the application’s user interface.", "isAnswer": false },
+            { "optionText": "It handles all database transactions in the application.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What distinguishes the VIPER architecture from MVC and MVVM?",
+        "possibleAnswers": [
+            { "optionText": "VIPER modules are based on single responsibility principle, making it easier to isolate dependencies and test.", "isAnswer": true },
+            { "optionText": "VIPER is primarily used for client-server communication.", "isAnswer": false },
+            { "optionText": "VIPER simplifies user interface code by merging all logic into a single component.", "isAnswer": false },
+            { "optionText": "VIPER uses dynamic typing to manage its components, unlike MVC or MVVM.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "How does the Clean Architecture pattern enhance an application’s maintainability?",
+        "possibleAnswers": [
+            { "optionText": "By tightly coupling components to ensure faster runtime speeds.", "isAnswer": false },
+            { "optionText": "By organizing code into layers of responsibility, which helps in managing dependencies and simplifying testing.", "isAnswer": true },
+            { "optionText": "By reducing the number of classes and objects used in the application.", "isAnswer": false },
+            { "optionText": "By focusing only on the front-end components to enhance user experience.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "Which architecture pattern emphasizes the use of Entities for defining business rules?",
+        "possibleAnswers": [
+            { "optionText": "Singleton", "isAnswer": false },
+            { "optionText": "Observer", "isAnswer": false },
+            { "optionText": "Clean Architecture", "isAnswer": true },
+            { "optionText": "Decorator", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What is the primary benefit of using the Coordinator pattern in iOS app development?",
+        "possibleAnswers": [
+            { "optionText": "It simplifies data storage solutions.", "isAnswer": false },
+            { "optionText": "It enhances graphic rendering performance.", "isAnswer": false },
+            { "optionText": "It separates navigation logic from view controllers, aiding in better modularity and navigation management.", "isAnswer": true },
+            { "optionText": "It automates the testing process.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What does the Repository pattern provide in the context of an iOS application?",
+        "possibleAnswers": [
+            { "optionText": "A direct access point to hardware features of iOS devices.", "isAnswer": false },
+            { "optionText": "A mechanism to decouple the network and data layer from the rest of the app.", "isAnswer": true },
+            { "optionText": "Animation tools for interactive UI designs.", "isAnswer": false },
+            { "optionText": "Location-based services only.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "In the context of software design, what is an 'anti-pattern'?",
+        "possibleAnswers": [
+            { "optionText": "A standard response to a recurring problem that is generally accepted as the best solution.", "isAnswer": false },
+            { "optionText": "A common response to a problem that is ineffective and risks being counterproductive.", "isAnswer": true },
+            { "optionText": "A newly introduced feature in Swift language.", "isAnswer": false },
+            { "optionText": "A type of networking protocol used in databases.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "How does the Model-View-Presenter (MVP) pattern distribute responsibilities in an application?",
+        "possibleAnswers": [
+            { "optionText": "The Model handles data logic, the View renders the user interface, and the Presenter bridges the Model and the View.", "isAnswer": true },
+            { "optionText": "The Model manages the user interface, the View handles data, and the Presenter controls navigation.", "isAnswer": false },
+            { "optionText": "The Model, View, and Presenter all equally share data and user interface responsibilities.", "isAnswer": false },
+            { "optionText": "The Presenter handles all responsibilities, making other components obsolete.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "Which pattern is particularly useful for reducing the complexity of user interface code in large applications?",
+        "possibleAnswers": [
+            { "optionText": "Service Locator", "isAnswer": false },
+            { "optionText": "Factory", "isAnswer": false },
+            { "optionText": "Facade", "isAnswer": false },
+            { "optionText": "MVVM", "isAnswer": true }
+        ]
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "questionText": "What does the 'private' access modifier do in Swift?",
+        "possibleAnswers": [
+            { "optionText": "It restricts access to the entity to the same source file where it is defined.", "isAnswer": false },
+            { "optionText": "It restricts the use of an entity to the enclosing declaration, and to extensions of that declaration that are in the same file.", "isAnswer": true },
+            { "optionText": "It allows the entity to be used anywhere in the same module.", "isAnswer": false },
+            { "optionText": "It restricts usage to subclasses only.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "How does 'fileprivate' differ from 'private' in Swift?",
+        "possibleAnswers": [
+            { "optionText": "Fileprivate allows access anywhere in the same module, whereas private is restricted to the file.", "isAnswer": false },
+            { "optionText": "Fileprivate restricts access to the entire file, whereas private restricts access to the enclosing declaration.", "isAnswer": true },
+            { "optionText": "There is no difference; both provide the same level of access control.", "isAnswer": false },
+            { "optionText": "Fileprivate is more restrictive than private.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What is the default access level in Swift and what does it allow?",
+        "possibleAnswers": [
+            { "optionText": "Private, allowing access only within the same class or file.", "isAnswer": false },
+            { "optionText": "Fileprivate, allowing access within the same file.", "isAnswer": false },
+            { "optionText": "Internal, allowing access anywhere within the same module.", "isAnswer": true },
+            { "optionText": "Public, allowing unrestricted access across different modules.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "Which access level should you use to restrict usage of a class to within a single framework?",
+        "possibleAnswers": [
+            { "optionText": "Private", "isAnswer": false },
+            { "optionText": "Fileprivate", "isAnswer": false },
+            { "optionText": "Internal", "isAnswer": true },
+            { "optionText": "Public", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "When should you use 'open' access control in Swift?",
+        "possibleAnswers": [
+            { "optionText": "When you need to hide implementation details from other modules.", "isAnswer": false },
+            { "optionText": "When allowing a class or method to be subclassed or overridden outside of its defining module.", "isAnswer": true },
+            { "optionText": "When the code is only used within a single file.", "isAnswer": false },
+            { "optionText": "When the class or method should never be subclassed or overridden.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What is the purpose of making a property or method 'public' in Swift?",
+        "possibleAnswers": [
+            { "optionText": "To ensure that it can be accessed only within its defining class.", "isAnswer": false },
+            { "optionText": "To enable access from any source file within the same module but not outside the module.", "isAnswer": false },
+            { "optionText": "To restrict access to the file where it's declared.", "isAnswer": false },
+            { "optionText": "To allow it to be used in any code that imports the module where it is defined.", "isAnswer": true }
+        ]
+    },
+    {
+        "questionText": "How does changing a class from 'public' to 'open' affect its accessibility?",
+        "possibleAnswers": [
+            { "optionText": "It restricts the class to be usable only within the same module.", "isAnswer": false },
+            { "optionText": "It allows the class to be subclassed and its methods overridden outside the module.", "isAnswer": true },
+            { "optionText": "It makes the class accessible only within the same source file.", "isAnswer": false },
+            { "optionText": "It has no effect; both levels offer the same accessibility.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What does 'internal' access control allow in a multi-target application?",
+        "possibleAnswers": [
+            { "optionText": "Access from any target within the project.", "isAnswer": false },
+            { "optionText": "Usage only within the same file.", "isAnswer": false },
+            { "optionText": "Usage within any file of the same module or target.", "isAnswer": true },
+            { "optionText": "Full access from any other module or target.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "Why might you use 'fileprivate' over 'private'?",
+        "possibleAnswers": [
+            { "optionText": "To improve performance by limiting access to a narrower scope.", "isAnswer": false },
+            { "optionText": "To allow access among all classes and extensions within the same file.", "isAnswer": true },
+            { "optionText": "Because it is less restrictive and easier to manage in large projects.", "isAnswer": false },
+            { "optionText": "There is no practical reason; 'private' is always preferable.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "Can a 'private' member in a Swift class be accessed by an extension of that class in the same file?",
+        "possibleAnswers": [
+            { "optionText": "Yes, if the extension is marked with the same access level.", "isAnswer": false },
+            { "optionText": "No, 'private' members can only be accessed within the class itself.", "isAnswer": false },
+            { "optionText": "Yes, 'private' members are accessible within the same file, including extensions.", "isAnswer": true },
+            { "optionText": "No, because extensions cannot access any private members.", "isAnswer": false }
+        ]
+    }
+]

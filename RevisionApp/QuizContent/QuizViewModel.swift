@@ -104,7 +104,7 @@ class QuizViewModel: ObservableObject {
     }
     
     func loadQuestionsFromJSON() {
-        if let url = Bundle.main.url(forResource: "interviewQuestions", withExtension: "json") {
+        if let url = Bundle.main.url(forResource: "combineQuestions", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
@@ -147,6 +147,14 @@ class QuizViewModel: ObservableObject {
             self.backgroundColor = .white
             self.currentQuestion += 1
         }
-        shuffleAnswers()  // Shuffle answers when moving to the next question
+        if checkIfQuizComplete() == true {
+            
+        } else {
+            shuffleAnswers()
+        }
+    }
+    
+    func checkIfQuizComplete() -> Bool {
+        return currentQuestion >= questionModel.count
     }
 }

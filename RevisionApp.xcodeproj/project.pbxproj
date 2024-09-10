@@ -23,6 +23,11 @@
 		C2F361BF2C87A150000546A1 /* AnswerSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361BE2C87A150000546A1 /* AnswerSheetView.swift */; };
 		C2F361C22C89093C000546A1 /* IncorrectAnswerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361C12C89093C000546A1 /* IncorrectAnswerSheet.swift */; };
 		C2F361C52C890A4D000546A1 /* CorrectAnswerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361C42C890A4D000546A1 /* CorrectAnswerSheet.swift */; };
+		C2F361C92C9060C2000546A1 /* combineQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361C82C9060C2000546A1 /* combineQuestions.json */; };
+		C2F361CB2C90617D000546A1 /* architectureQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361CA2C90617D000546A1 /* architectureQuestions.json */; };
+		C2F361CD2C9062F6000546A1 /* swiftUIPropertyWrappersQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361CC2C9062F6000546A1 /* swiftUIPropertyWrappersQuestions.json */; };
+		C2F361CF2C90651E000546A1 /* accessAndVisibilityQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361CE2C90651E000546A1 /* accessAndVisibilityQuestions.json */; };
+		C2F361D12C906B6C000546A1 /* QuizFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361D02C906B6C000546A1 /* QuizFinishedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,11 @@
 		C2F361BE2C87A150000546A1 /* AnswerSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerSheetView.swift; sourceTree = "<group>"; };
 		C2F361C12C89093C000546A1 /* IncorrectAnswerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncorrectAnswerSheet.swift; sourceTree = "<group>"; };
 		C2F361C42C890A4D000546A1 /* CorrectAnswerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectAnswerSheet.swift; sourceTree = "<group>"; };
+		C2F361C82C9060C2000546A1 /* combineQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = combineQuestions.json; sourceTree = "<group>"; };
+		C2F361CA2C90617D000546A1 /* architectureQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = architectureQuestions.json; sourceTree = "<group>"; };
+		C2F361CC2C9062F6000546A1 /* swiftUIPropertyWrappersQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = swiftUIPropertyWrappersQuestions.json; sourceTree = "<group>"; };
+		C2F361CE2C90651E000546A1 /* accessAndVisibilityQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = accessAndVisibilityQuestions.json; sourceTree = "<group>"; };
+		C2F361D02C906B6C000546A1 /* QuizFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizFinishedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +91,10 @@
 				C2F361802C7FCA81000546A1 /* MainView */,
 				C2F361812C7FCAE8000546A1 /* QuizContent */,
 				C20CF2E82C6BED8C009CE98E /* interviewQuestions.json */,
+				C2F361C82C9060C2000546A1 /* combineQuestions.json */,
+				C2F361CA2C90617D000546A1 /* architectureQuestions.json */,
+				C2F361CC2C9062F6000546A1 /* swiftUIPropertyWrappersQuestions.json */,
+				C2F361CE2C90651E000546A1 /* accessAndVisibilityQuestions.json */,
 				C20CF2C62C6A974C009CE98E /* Assets.xcassets */,
 				C20CF2C82C6A974C009CE98E /* Preview Content */,
 			);
@@ -111,6 +125,7 @@
 				C2F361C02C87A421000546A1 /* QuizView */,
 				C20CF2D22C6A9ABD009CE98E /* QuizViewModel.swift */,
 				C20CF2D02C6A9A53009CE98E /* QuestionModel.swift */,
+				C2F361D22C906F7F000546A1 /* Finished */,
 			);
 			path = QuizContent;
 			sourceTree = "<group>";
@@ -133,6 +148,14 @@
 				C2F361C12C89093C000546A1 /* IncorrectAnswerSheet.swift */,
 			);
 			path = AnswerSheet;
+			sourceTree = "<group>";
+		};
+		C2F361D22C906F7F000546A1 /* Finished */ = {
+			isa = PBXGroup;
+			children = (
+				C2F361D02C906B6C000546A1 /* QuizFinishedView.swift */,
+			);
+			path = Finished;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,9 +221,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F361CF2C90651E000546A1 /* accessAndVisibilityQuestions.json in Resources */,
+				C2F361C92C9060C2000546A1 /* combineQuestions.json in Resources */,
 				C20CF2CA2C6A974C009CE98E /* Preview Assets.xcassets in Resources */,
+				C2F361CD2C9062F6000546A1 /* swiftUIPropertyWrappersQuestions.json in Resources */,
 				C20CF2E92C6BED8C009CE98E /* interviewQuestions.json in Resources */,
 				C20CF2C72C6A974C009CE98E /* Assets.xcassets in Resources */,
+				C2F361CB2C90617D000546A1 /* architectureQuestions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +243,7 @@
 				C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */,
 				C20CF2D52C6BD866009CE98E /* AnswerButton.swift in Sources */,
 				C2F361C52C890A4D000546A1 /* CorrectAnswerSheet.swift in Sources */,
+				C2F361D12C906B6C000546A1 /* QuizFinishedView.swift in Sources */,
 				C2F3617D2C7FC993000546A1 /* MainView.swift in Sources */,
 				C20CF2D12C6A9A53009CE98E /* QuestionModel.swift in Sources */,
 				C2F361BD2C84FA9F000546A1 /* MainButtonModifier.swift in Sources */,

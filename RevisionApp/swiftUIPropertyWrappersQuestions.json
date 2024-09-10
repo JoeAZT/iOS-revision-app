@@ -1,0 +1,93 @@
+[
+    {
+        "questionText": "What is the purpose of the @State property wrapper in SwiftUI?",
+        "possibleAnswers": [
+            { "optionText": "To create a constant property that never changes.", "isAnswer": false },
+            { "optionText": "To manage local state data within a SwiftUI view.", "isAnswer": true },
+            { "optionText": "To inject dependencies into SwiftUI views.", "isAnswer": false },
+            { "optionText": "To manage data fetched from a network request.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "How does @Binding differ from @State in SwiftUI?",
+        "possibleAnswers": [
+            { "optionText": "There is no difference; they perform the same function.", "isAnswer": false },
+            { "optionText": "It declares a property that always holds a URL.", "isAnswer": false },
+            { "optionText": "It provides a way to create two-way bindings between properties of different views.", "isAnswer": true },
+            { "optionText": "It allows for the encryption of sensitive data within a view.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What is the main function of the @ObservedObject property wrapper?",
+        "possibleAnswers": [
+            { "optionText": "To observe and respond to changes in an external model object provided by a parent view.", "isAnswer": true },
+            { "optionText": "To keep track of GPS location data.", "isAnswer": false },
+            { "optionText": "To store user preferences locally on the device.", "isAnswer": false },
+            { "optionText": "To generate mock data for testing.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What role does @Published play in SwiftUI?",
+        "possibleAnswers": [
+            { "optionText": "It marks a property to automatically publish changes and trigger view updates when the property's value changes.", "isAnswer": true },
+            { "optionText": "It marks properties to be saved to the cloud automatically.", "isAnswer": false },
+            { "optionText": "It defines properties that are only updated once.", "isAnswer": false },
+            { "optionText": "It encrypts properties for secure data handling.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "Why would you use @EnvironmentObject in your SwiftUI application?",
+        "possibleAnswers": [
+            { "optionText": "To pass data deeply through a view hierarchy without manually passing it down.", "isAnswer": true },
+            { "optionText": "To improve the performance of network calls.", "isAnswer": false },
+            { "optionText": "To enhance the resolution of images in a view.", "isAnswer": false },
+            { "optionText": "To encrypt sensitive information.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "When should you use @Environment instead of @State?",
+        "possibleAnswers": [
+            { "optionText": "When you need to manage large arrays of data.", "isAnswer": false },
+            { "optionText": "When you need to access or modify global environment values like locale, theme, or layout direction.", "isAnswer": true },
+            { "optionText": "When you are handling user input within a form.", "isAnswer": false },
+            { "optionText": "When you are storing user credentials securely.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What does @GestureState do in SwiftUI?",
+        "possibleAnswers": [
+            { "optionText": "It provides a way to handle device orientation changes.", "isAnswer": false },
+            { "optionText": "It automatically manages the lifecycle of URLSession network requests.", "isAnswer": false },
+            { "optionText": "It manages transient UI state specifically related to gestures in a view.", "isAnswer": true },
+            { "optionText": "It synchronizes video playback states across multiple views.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "How does @AppStorage help in SwiftUI applications?",
+        "possibleAnswers": [
+            { "optionText": "It automatically scales the application to fit all device sizes.", "isAnswer": false },
+            { "optionText": "It stores simple user preferences in the UserDefaults in a property-wrapper way.", "isAnswer": true },
+            { "optionText": "It manages database connections in a multi-threaded environment.", "isAnswer": false },
+            { "optionText": "It provides end-to-end encryption for sensitive user data.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What is the advantage of using @SceneStorage in a multi-window application?",
+        "possibleAnswers": [
+            { "optionText": "It enhances graphic rendering in each window.", "isAnswer": false },
+            { "optionText": "It saves and restores state for UI components across app sessions per scene, beneficial in multi-window applications.", "isAnswer": true },
+            { "optionText": "It reduces the application's overall memory footprint.", "isAnswer": false },
+            { "optionText": "It provides real-time syncing between multiple user devices.", "isAnswer": false }
+        ]
+    },
+    {
+        "questionText": "What functionality does @Lazy provide in SwiftUI?",
+        "possibleAnswers": [
+            { "optionText": "It forces all properties to update in real-time.", "isAnswer": false },
+            { "optionText": "It delays property initialization until it's actually needed, not at the point of struct initialization.", "isAnswer": true },
+            { "optionText": "It encrypts data as it is stored in memory.", "isAnswer": false },
+            { "optionText": "It tracks changes in device orientation and adjusts the view accordingly.", "isAnswer": false }
+        ]
+    }
+]
+

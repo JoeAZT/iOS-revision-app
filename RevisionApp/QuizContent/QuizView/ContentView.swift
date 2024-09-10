@@ -64,6 +64,12 @@ struct ContentView: View {
                 }
             }
         }
+        .navigationDestination(for: Route.self) { route in
+            switch route {
+            case .quizView(let viewModel):
+                ContentView(viewModel: viewModel)
+            }
+        }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Text("Score: \(viewModel.score)")
