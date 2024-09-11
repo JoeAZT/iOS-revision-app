@@ -68,21 +68,22 @@ class QuizViewModel: ObservableObject {
     
     func nextQuestion() {
         showingAnswerSheet = false
+        
         withAnimation(.easeInOut(duration: 0.5)) {
             self.backgroundColor = .white
-            self.currentQuestion += 1
         }
-        if checkIfQuizComplete() == true {
+        
+        guard currentQuestion < questionModel.count - 1 else {
             router.push(to: .finishedQuizView(viewModel: self))
-        } else {
-            shuffleAnswers()
+            return
         }
+        
+        self.currentQuestion += 1
+        shuffleAnswers()
     }
     
     func checkIfQuizComplete() -> Bool {
-        //added for testing
-        return currentQuestion == 1
-//        return currentQuestion >= questionModel.count
+        return currentQuestion >= questionModel.count
     }
     
     func resetQuiz() {

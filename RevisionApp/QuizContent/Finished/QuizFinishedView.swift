@@ -13,7 +13,6 @@ struct FinishedQuizView: View {
     
     var body: some View {
         ZStack {
-            
             RadialGradient(gradient: Gradient(colors: [.purple.opacity(0.1), .pink.opacity(0.1)]), center: .bottom, startRadius: 100, endRadius: 400)
                 .ignoresSafeArea(.all)
             
