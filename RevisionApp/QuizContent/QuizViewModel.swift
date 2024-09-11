@@ -62,7 +62,7 @@ class QuizViewModel: ObservableObject {
     }
     
     func answerPressed(answerIndex: Int) {
-        selectedAnswer = shuffledAnswers[answerIndex].optionText 
+        selectedAnswer = shuffledAnswers[answerIndex].optionText
         showingAnswerSheet = true
     }
     

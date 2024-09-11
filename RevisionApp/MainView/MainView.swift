@@ -22,7 +22,7 @@ struct MainView: View {
                         HStack {
                             Text("Easy quiz")
                             Spacer()
-                            //amend this sbased on the users score - bronze, silver, gold
+                            //amend this based on the users score - bronze, silver, gold
                             Image(systemName: "trophy.fill")
                                 .foregroundColor(.gray.opacity(0.75))
                         }

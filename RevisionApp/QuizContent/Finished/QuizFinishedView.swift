@@ -14,8 +14,9 @@ struct FinishedQuizView: View {
     var body: some View {
         ZStack {
             
-            LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.15), Color.white.opacity(0.1)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            RadialGradient(gradient: Gradient(colors: [.purple.opacity(0.1), .pink.opacity(0.1)]), center: .bottom, startRadius: 100, endRadius: 400)
                 .ignoresSafeArea(.all)
+            
             VStack {
                 Text("Quiz Complete!")
                     .font(.largeTitle)
