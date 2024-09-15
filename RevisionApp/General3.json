@@ -1,0 +1,97 @@
+
+{
+    "name": "General3",
+    "questions": [
+        {
+            "questionText": "What is the difference between a struct and a class in Swift?",
+            "possibleAnswers": [
+                { "optionText": "Structs are value types; classes are reference types", "isAnswer": true },
+                { "optionText": "Structs are for small data; classes for complex data", "isAnswer": false },
+                { "optionText": "Structs are immutable by default; classes are mutable", "isAnswer": false },
+                { "optionText": "There is no significant difference; both are interchangeable", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "When would you use a struct over a class in Swift?",
+            "possibleAnswers": [
+                { "optionText": "Use structs for simple, immutable data models; use classes for inheritance", "isAnswer": true },
+                { "optionText": "Always use structs for better memory efficiency", "isAnswer": false },
+                { "optionText": "Always use classes for more flexible inheritance", "isAnswer": false },
+                { "optionText": "Use structs for any data model; they are faster", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the difference between synchronous and asynchronous tasks?",
+            "possibleAnswers": [
+                { "optionText": "Synchronous tasks block the current thread; asynchronous tasks allow it to continue", "isAnswer": true },
+                { "optionText": "Asynchronous tasks are always faster than synchronous tasks", "isAnswer": false },
+                { "optionText": "Synchronous tasks must run on the main thread", "isAnswer": false },
+                { "optionText": "There is no difference; both are handled the same", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What are optionals in Swift?",
+            "possibleAnswers": [
+                { "optionText": "A type that can hold either a value or nil", "isAnswer": true },
+                { "optionText": "A type that must always have a value", "isAnswer": false },
+                { "optionText": "A type used only for error handling in Swift", "isAnswer": false },
+                { "optionText": "A function that returns a value or nil", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the purpose of a guard statement in Swift?",
+            "possibleAnswers": [
+                { "optionText": "To check conditions and exit early if they aren't met", "isAnswer": true },
+                { "optionText": "To break out of a loop when a condition is met", "isAnswer": false },
+                { "optionText": "To declare variables that must be initialized before exiting", "isAnswer": false },
+                { "optionText": "To create loops that run while a condition is true", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is GCD (Grand Central Dispatch) used for in iOS?",
+            "possibleAnswers": [
+                { "optionText": "For managing tasks in a multi-threaded environment", "isAnswer": true },
+                { "optionText": "For handling database queries across threads", "isAnswer": false },
+                { "optionText": "For creating and managing user interfaces across threads", "isAnswer": false },
+                { "optionText": "For handling image processing and compute-intensive tasks", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is a completion handler?",
+            "possibleAnswers": [
+                { "optionText": "A closure called when an asynchronous task completes", "isAnswer": true },
+                { "optionText": "A function called when a loop completes its execution", "isAnswer": false },
+                { "optionText": "A closure that handles errors within a function", "isAnswer": false },
+                { "optionText": "A tool to manage and synchronize multiple threads", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is a closure in Swift?",
+            "possibleAnswers": [
+                { "optionText": "A self-contained block of code that can be passed around and used", "isAnswer": true },
+                { "optionText": "A function without a name that is executed immediately", "isAnswer": false },
+                { "optionText": "A method used for error handling in Swift applications", "isAnswer": false },
+                { "optionText": "A special data structure for managing memory in Swift", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is a delegate in iOS development?",
+            "possibleAnswers": [
+                { "optionText": "A design pattern allowing communication between objects via a protocol", "isAnswer": true },
+                { "optionText": "A class defining a blueprint of methods for another class", "isAnswer": false },
+                { "optionText": "A tool for managing multithreading within an application", "isAnswer": false },
+                { "optionText": "A UIView subclass handling user input and gestures", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the difference between weak and strong references?",
+            "possibleAnswers": [
+                { "optionText": "Strong references increase reference count; weak references do not", "isAnswer": true },
+                { "optionText": "Weak references are faster and more memory-efficient", "isAnswer": false },
+                { "optionText": "Strong references are used within closures only", "isAnswer": false },
+                { "optionText": "No significant difference; both serve the same purpose", "isAnswer": false }
+            ]
+        }
+    ]
+}
+

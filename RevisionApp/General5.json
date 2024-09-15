@@ -1,0 +1,63 @@
+
+{
+    "name": "General5",
+    "questions": [
+        {
+            "questionText": "What is the difference between @State and @Binding in SwiftUI?",
+            "possibleAnswers": [
+                { "optionText": "@State manages local state; @Binding passes a reference for two-way binding", "isAnswer": true },
+                { "optionText": "@State is for local variables; @Binding is for global constants", "isAnswer": false },
+                { "optionText": "@Binding is for managing classes; @State is for structs", "isAnswer": false },
+                { "optionText": "No significant difference; both can be used interchangeably", "isAnswer": false }
+            ]
+        },
+        
+        
+        {
+            "questionText": "What is MVVM?",
+            "possibleAnswers": [
+                { "optionText": "A design pattern separating objects into Model, View, and ViewModel for testability and separation of concerns", "isAnswer": true },
+                { "optionText": "A method for managing memory and resources within an iOS application", "isAnswer": false },
+                { "optionText": "A framework for creating animations and handling real-time rendering", "isAnswer": false },
+                { "optionText": "A data structure for organizing and managing lists and collections", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the Combine framework in iOS?",
+            "possibleAnswers": [
+                { "optionText": "A framework for handling asynchronous events and data streams using a declarative Swift API", "isAnswer": true },
+                { "optionText": "A framework for managing images and media content within an iOS application", "isAnswer": false },
+                { "optionText": "A tool for debugging and optimizing network requests in iOS applications", "isAnswer": false },
+                { "optionText": "A UI framework for creating and managing animations", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How do you handle errors in Swift?",
+            "possibleAnswers": [
+                { "optionText": "Using do-catch blocks to catch and handle errors thrown by functions", "isAnswer": true },
+                { "optionText": "Using try-catch blocks like in other programming languages", "isAnswer": false },
+                { "optionText": "Using guard statements to catch and handle errors", "isAnswer": false },
+                { "optionText": "Using if-else statements to check for errors", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the difference between map, flatMap, and compactMap?",
+            "possibleAnswers": [
+                { "optionText": "map transforms elements; flatMap flattens collections; compactMap removes nils and unwraps optionals", "isAnswer": true },
+                { "optionText": "flatMap and compactMap are for optionals; map is for non-optionals", "isAnswer": false },
+                { "optionText": "map removes duplicates; flatMap and compactMap handle nested collections", "isAnswer": false },
+                { "optionText": "No significant difference; all can be used interchangeably", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is a tuple in Swift?",
+            "possibleAnswers": [
+                { "optionText": "A group of values of different types, grouped into a single compound value", "isAnswer": true },
+                { "optionText": "A loop that iterates over a collection and performs operations", "isAnswer": false },
+                { "optionText": "A data structure for storing key-value pairs, like a dictionary", "isAnswer": false },
+                { "optionText": "A UIView subclass used for grouping and organizing UI elements", "isAnswer": false }
+            ]
+        }
+    ]
+}
+

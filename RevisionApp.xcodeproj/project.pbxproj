@@ -30,6 +30,10 @@
 		C2F361D12C906B6C000546A1 /* QuizFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361D02C906B6C000546A1 /* QuizFinishedView.swift */; };
 		C2F361D42C95C098000546A1 /* Quizzes.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361D32C95C098000546A1 /* Quizzes.json */; };
 		C2F361D62C973ED6000546A1 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361D52C973ED6000546A1 /* ScoreManager.swift */; };
+		C2F361DB2C9764A9000546A1 /* General2.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361DA2C9764A9000546A1 /* General2.json */; };
+		C2F361DD2C976530000546A1 /* General3.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361DC2C976530000546A1 /* General3.json */; };
+		C2F361DF2C976566000546A1 /* General4.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361DE2C976566000546A1 /* General4.json */; };
+		C2F361E32C9767C3000546A1 /* General5.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361E22C9767C3000546A1 /* General5.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +61,10 @@
 		C2F361D02C906B6C000546A1 /* QuizFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizFinishedView.swift; sourceTree = "<group>"; };
 		C2F361D32C95C098000546A1 /* Quizzes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Quizzes.json; sourceTree = "<group>"; };
 		C2F361D52C973ED6000546A1 /* ScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
+		C2F361DA2C9764A9000546A1 /* General2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = General2.json; sourceTree = "<group>"; };
+		C2F361DC2C976530000546A1 /* General3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = General3.json; sourceTree = "<group>"; };
+		C2F361DE2C976566000546A1 /* General4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = General4.json; sourceTree = "<group>"; };
+		C2F361E22C9767C3000546A1 /* General5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = General5.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +103,10 @@
 				C2F361802C7FCA81000546A1 /* MainView */,
 				C2F361812C7FCAE8000546A1 /* QuizContent */,
 				C20CF2E82C6BED8C009CE98E /* General.json */,
+				C2F361DA2C9764A9000546A1 /* General2.json */,
+				C2F361DC2C976530000546A1 /* General3.json */,
+				C2F361DE2C976566000546A1 /* General4.json */,
+				C2F361E22C9767C3000546A1 /* General5.json */,
 				C2F361D32C95C098000546A1 /* Quizzes.json */,
 				C2F361C82C9060C2000546A1 /* Combine.json */,
 				C2F361CA2C90617D000546A1 /* Architecture.json */,
@@ -235,13 +247,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F361E32C9767C3000546A1 /* General5.json in Resources */,
+				C2F361DB2C9764A9000546A1 /* General2.json in Resources */,
 				C2F361CF2C90651E000546A1 /* Access and Visibility.json in Resources */,
 				C2F361C92C9060C2000546A1 /* Combine.json in Resources */,
 				C20CF2CA2C6A974C009CE98E /* Preview Assets.xcassets in Resources */,
 				C2F361CD2C9062F6000546A1 /* SwiftUI.json in Resources */,
 				C20CF2E92C6BED8C009CE98E /* General.json in Resources */,
+				C2F361DD2C976530000546A1 /* General3.json in Resources */,
 				C20CF2C72C6A974C009CE98E /* Assets.xcassets in Resources */,
 				C2F361CB2C90617D000546A1 /* Architecture.json in Resources */,
+				C2F361DF2C976566000546A1 /* General4.json in Resources */,
 				C2F361D42C95C098000546A1 /* Quizzes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
