@@ -14,7 +14,7 @@ struct AnswerSheetView: View {
     var body: some View {
         
         VStack(alignment: .leading) {
-        if viewModel.selectedAnswer == viewModel.questionModel[viewModel.currentQuestion].possibleAnswers.first(where: { $0.isAnswer })!.optionText {
+            if viewModel.selectedAnswer == viewModel.quizModel?.questions[viewModel.currentQuestionIndex].possibleAnswers.first(where: { $0.isAnswer })!.optionText {
             CorrectAnswerSheet()
         } else {
             IncorrectAnswerSheet(viewModel: viewModel)
@@ -39,11 +39,6 @@ struct AnswerSheetView: View {
 
 #Preview {
     AnswerSheetView(
-        viewModel: QuizViewModel(
-            score: 12,
-            currentQuestion: 16,
-            router: Router(),
-            showingCorrectAnswerSheet: false
-        )
+        viewModel: QuizViewModel(router: Router(), selectedQuiz: "")
     )
 }

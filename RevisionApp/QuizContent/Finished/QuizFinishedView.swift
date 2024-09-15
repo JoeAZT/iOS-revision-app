@@ -21,7 +21,8 @@ struct FinishedQuizView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                 Spacer()
-                Text("\(viewModel.score)/\(viewModel.questionModel.count)")
+                Text()
+                Text("\(viewModel.score)/\(viewModel.quizModel?.questions.count ?? 10)")
                     .font(.system(size: 80))
                     .bold()
                     .padding()
@@ -48,8 +49,7 @@ struct FinishedQuizView: View {
                             )
                     }
                     Button {
-                        viewModel.didTapNavigateToMainView()
-                        print("exit")
+                        viewModel.completeQuiz()
                     } label: {
                         Text("Exit")
                             .bold()
@@ -73,11 +73,6 @@ struct FinishedQuizView: View {
 
 #Preview {
     FinishedQuizView(
-        viewModel: QuizViewModel(
-            score: 6,
-            currentQuestion: 16,
-            router: Router(),
-            showingCorrectAnswerSheet: false
-        )
+        viewModel: QuizViewModel(router: Router(), selectedQuiz: "")
     )
 }

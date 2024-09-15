@@ -1,0 +1,95 @@
+{
+    "name": "Swift UI",
+    "questions": [
+        {
+            "questionText": "What does the @State property wrapper do?",
+            "possibleAnswers": [
+                { "optionText": "Manages state within a view and triggers updates.", "isAnswer": true },
+                { "optionText": "Provides a constant value that does not change.", "isAnswer": false },
+                { "optionText": "Injects dependencies from a parent view.", "isAnswer": false },
+                { "optionText": "Handles network requests.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How does @Binding differ from @State?",
+            "possibleAnswers": [
+                { "optionText": "It creates a reference to a state value from a parent view.", "isAnswer": true },
+                { "optionText": "It stores a new state value independently.", "isAnswer": false },
+                { "optionText": "It is used for dependency injection.", "isAnswer": false },
+                { "optionText": "It only works for immutable values.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the purpose of @EnvironmentObject?",
+            "possibleAnswers": [
+                { "optionText": "Shares a state object across many views.", "isAnswer": true },
+                { "optionText": "Injects local state into a view.", "isAnswer": false },
+                { "optionText": "Manages view layout and position.", "isAnswer": false },
+                { "optionText": "Handles network operations.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "When should you use @ObservedObject?",
+            "possibleAnswers": [
+                { "optionText": "To observe changes in an object that conforms to ObservableObject.", "isAnswer": true },
+                { "optionText": "To manage local state within a view.", "isAnswer": false },
+                { "optionText": "To store constants and immutable values.", "isAnswer": false },
+                { "optionText": "To handle user input and form validation.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What does @Published do in SwiftUI?",
+            "possibleAnswers": [
+                { "optionText": "Marks a property to emit change notifications.", "isAnswer": true },
+                { "optionText": "Defines a constant value that doesn't change.", "isAnswer": false },
+                { "optionText": "Handles user interface updates.", "isAnswer": false },
+                { "optionText": "Manages view hierarchy.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What role does @Environment play?",
+            "possibleAnswers": [
+                { "optionText": "Provides access to environmental values like color schemes.", "isAnswer": true },
+                { "optionText": "Manages internal state for a view.", "isAnswer": false },
+                { "optionText": "Handles network requests and responses.", "isAnswer": false },
+                { "optionText": "Defines layout constraints for views.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is @FocusState used for?",
+            "possibleAnswers": [
+                { "optionText": "Manages the focus state of views for keyboard interactions.", "isAnswer": true },
+                { "optionText": "Injects environment values into a view.", "isAnswer": false },
+                { "optionText": "Observes changes in a state object.", "isAnswer": false },
+                { "optionText": "Handles user input validation.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "When to use @AppStorage?",
+            "possibleAnswers": [
+                { "optionText": "To store and retrieve user preferences using UserDefaults.", "isAnswer": true },
+                { "optionText": "To manage state within a view.", "isAnswer": false },
+                { "optionText": "To handle form validation.", "isAnswer": false },
+                { "optionText": "To access shared resources across the app.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What does @StateObject handle?",
+            "possibleAnswers": [
+                { "optionText": "Manages the lifecycle of an observable object.", "isAnswer": true },
+                { "optionText": "Stores a value that doesn’t change.", "isAnswer": false },
+                { "optionText": "Provides a reference to an environment object.", "isAnswer": false },
+                { "optionText": "Handles view layout updates.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the function of @SceneStorage?",
+            "possibleAnswers": [
+                { "optionText": "Preserves view state across app scenes.", "isAnswer": true },
+                { "optionText": "Manages the app's global state.", "isAnswer": false },
+                { "optionText": "Handles asynchronous operations.", "isAnswer": false },
+                { "optionText": "Controls user interface design elements.", "isAnswer": false }
+            ]
+        }
+    ]
+}

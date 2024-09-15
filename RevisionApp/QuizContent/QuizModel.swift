@@ -1,5 +1,5 @@
 //
-//  QuestionModel.swift
+//  QuizModel.swift
 //  RevisionApp
 //
 //  Created by Joe Taylor on 12/08/2024.
@@ -17,8 +17,8 @@ struct QuestionModel: Codable {
     let possibleAnswers: [OptionModel]
 }
 
-struct QuizStats: Codable {
-    let quizName: String
+struct QuizModel: Codable {
+    let name: String
     var questions: [QuestionModel]
-    var bestScore: Int = 0
+//    var bestScore: Int = 0
 }

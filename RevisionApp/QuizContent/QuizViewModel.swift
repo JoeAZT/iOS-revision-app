@@ -8,48 +8,64 @@
 import SwiftUI
 
 class QuizViewModel: ObservableObject {
-    @Published var questionModel: [QuestionModel] = []
-    @Published var score: Int
-    @Published var currentQuestion: Int
+    var selectedQuiz: String
+    @Published var quizModel: QuizModel?
+    @Published var score: Int = 0
+    @Published var currentQuestionIndex: Int = 0
     @Published var backgroundColor: Color = .white
     @Published var router: RouterProtocol
     @Published var showingAnswerSheet: Bool = false
     @Published var selectedAnswer: String = ""
     @Published var shuffledAnswers: [OptionModel] = []
     
+    private let scoreManager = ScoreManager()
+
     init(
-        score: Int,
-        currentQuestion: Int,
         router: RouterProtocol,
-        showingCorrectAnswerSheet: Bool
+        selectedQuiz: String
     ) {
-        self.score = score
-        self.currentQuestion = currentQuestion
         self.router = router
-        self.showingAnswerSheet = showingCorrectAnswerSheet
-        loadQuestionsFromJSON()
+        self.selectedQuiz = selectedQuiz
+        loadQuestionsFromJSON(selectedQuiz: selectedQuiz)
         shuffleAnswers()
     }
     
-    func loadQuestionsFromJSON() {
-        if let url = Bundle.main.url(forResource: "architectureQuestions", withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                let decodedData = try decoder.decode([QuestionModel].self, from: data)
-                self.questionModel = decodedData
-            } catch {
-                print("Error decoding JSON: \(error)")
+    func loadQuestionsFromJSON(selectedQuiz: String) {
+        guard let url = Bundle.main.url(forResource: selectedQuiz, withExtension: "json") else {
+            print("Could not find \(selectedQuiz).json")
+            return
+        }
+
+        do {
+            let data = try Data(contentsOf: url)
+            
+            // Print the raw JSON data for debugging
+            if let jsonString = String(data: data, encoding: .utf8) {
+                print("JSON Data: \(jsonString)")
             }
-        } else {
-            print("Could not find questions.json")
+
+            // Decode the JSON data into QuizModel
+            let decoder = JSONDecoder()
+            let decodedData = try decoder.decode(QuizModel.self, from: data)
+            
+            // Print the decoded data
+            print(decodedData)
+            
+            // Assign to your quizModel and perform further actions
+            self.quizModel = decodedData
+            shuffleAnswers()
+            
+        } catch {
+            print("Error decoding JSON: \(error.localizedDescription)")
         }
     }
-    
+
     func shuffleAnswers() {
-        if !questionModel.isEmpty && currentQuestion < questionModel.count {
-            shuffledAnswers = questionModel[currentQuestion].possibleAnswers.shuffled()
+        guard let questions = quizModel?.questions, currentQuestionIndex < questions.count else {
+            shuffledAnswers = []
+            return
         }
+        shuffledAnswers = questions[currentQuestionIndex].possibleAnswers.shuffled()
     }
     
     func answerIsCorrect() {
@@ -62,6 +78,7 @@ class QuizViewModel: ObservableObject {
     }
     
     func answerPressed(answerIndex: Int) {
+        guard answerIndex < shuffledAnswers.count else { return }
         selectedAnswer = shuffledAnswers[answerIndex].optionText
         showingAnswerSheet = true
     }
@@ -73,22 +90,28 @@ class QuizViewModel: ObservableObject {
             self.backgroundColor = .white
         }
         
-        guard currentQuestion < questionModel.count - 1 else {
+        guard let questionsCount = quizModel?.questions.count, currentQuestionIndex < questionsCount - 1 else {
             router.push(to: .finishedQuizView(viewModel: self))
             return
         }
         
-        self.currentQuestion += 1
+        currentQuestionIndex += 1
         shuffleAnswers()
     }
     
     func checkIfQuizComplete() -> Bool {
-        return currentQuestion >= questionModel.count
+        guard let questionsCount = quizModel?.questions.count else { return false }
+        return currentQuestionIndex >= questionsCount
+    }
+    
+    func completeQuiz() {
+        scoreManager.updateScore(for: selectedQuiz, score: score)
+        didTapNavigateToMainView()
     }
     
     func resetQuiz() {
         score = 0
-        currentQuestion = 0
+        currentQuestionIndex = 0
         showingAnswerSheet = false
         shuffleAnswers()
         didTapNavigateToQuiz()

@@ -16,13 +16,13 @@ struct QuizView: View {
             LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.1), Color.purple.opacity(0.1)]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea(.all)
             VStack {
-                if viewModel.questionModel.isEmpty {
+                if viewModel.quizModel?.questions.isEmpty ?? true {
                     Text("Loading questions...")
                         .font(.title)
                 } else {
                     VStack {
                         HStack {
-                            Text(viewModel.questionModel[viewModel.currentQuestion].questionText)
+                            Text(viewModel.quizModel?.questions[viewModel.currentQuestionIndex].questionText ?? "")
                                 .font(.title)
                                 .bold()
                                 .multilineTextAlignment(.leading)
