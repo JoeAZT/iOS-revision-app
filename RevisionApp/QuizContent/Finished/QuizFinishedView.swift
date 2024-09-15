@@ -21,7 +21,6 @@ struct FinishedQuizView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                 Spacer()
-                Text()
                 Text("\(viewModel.score)/\(viewModel.quizModel?.questions.count ?? 10)")
                     .font(.system(size: 80))
                     .bold()

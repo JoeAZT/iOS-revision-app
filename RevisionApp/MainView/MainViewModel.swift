@@ -23,16 +23,13 @@ class MainViewModel: ObservableObject {
     }
     
     func trophyColor(for percentage: Double) -> Color {
-        print("Percentage: \(percentage)")
         switch percentage {
         case 100:
-            return .yellow
+            return Color("gold")
         case 90..<100:
-            return .blue
+            return Color("silver")
         case 70..<90:
-            return .red
-        case 10..<70:
-            return .purple
+            return Color("bronze")
         default:
             return .gray.opacity(0.75)
         }
