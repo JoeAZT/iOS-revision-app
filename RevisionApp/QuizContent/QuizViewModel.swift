@@ -38,20 +38,9 @@ class QuizViewModel: ObservableObject {
 
         do {
             let data = try Data(contentsOf: url)
-            
-            // Print the raw JSON data for debugging
-            if let jsonString = String(data: data, encoding: .utf8) {
-                print("JSON Data: \(jsonString)")
-            }
-
-            // Decode the JSON data into QuizModel
             let decoder = JSONDecoder()
             let decodedData = try decoder.decode(QuizModel.self, from: data)
             
-            // Print the decoded data
-            print(decodedData)
-            
-            // Assign to your quizModel and perform further actions
             self.quizModel = decodedData
             shuffleAnswers()
             

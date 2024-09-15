@@ -34,7 +34,6 @@ struct FinishedQuizView: View {
                 HStack {
                     Button {
                         viewModel.resetQuiz()
-                        print("retry")
                     } label: {
                         Image(systemName: "arrow.counterclockwise")
                             .bold()
