@@ -19,6 +19,7 @@ struct MainButtonStyle: ViewModifier {
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color.black, lineWidth: 2)
             )
+            .padding(.horizontal)
             .shadow(radius: 5, x: 5, y: 5)
     }
 }

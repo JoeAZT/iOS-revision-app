@@ -39,7 +39,6 @@ struct MainView: View {
                         }
                     }
                 }
-                .padding(.horizontal)
                 .navigationDestination(for: Route.self) { $0 }
             }
             .navigationTitle("Main menu")
