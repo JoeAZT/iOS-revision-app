@@ -20,7 +20,8 @@ struct MainView: View {
                     ScrollView {
                         ForEach(viewModel.quizzes, id: \.self) { quiz in
                             let bestScore = scoreManager.getScore(for: quiz)
-                            let totalQuestions = scoreManager.getTotalQuestions(for: quiz)
+//                            let totalQuestions = scoreManager.getTotalQuestions(for: quiz)
+                            let totalQuestions = quiz.count
                             let scorePercentage = totalQuestions > 0 ? (Double(bestScore) / Double(totalQuestions)) * 100 : 0
                             
                             Button {

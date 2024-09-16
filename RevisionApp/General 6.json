@@ -1,6 +1,6 @@
 
 {
-    "name": "General6",
+    "name": "General 6",
     "questions": [
         {
             "questionText": "What is the difference between @State and @Binding in SwiftUI?",

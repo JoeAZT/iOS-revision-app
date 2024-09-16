@@ -16,9 +16,7 @@ class ScoreManager {
     }
     
     func getTotalQuestions(for quiz: String) -> Int {
-        // This method should return the total number of questions for the quiz
-        // For now, it's a placeholder and should be implemented according to your app's structure
-        return 10 // Replace with actual implementation
+        return 10
     }
     
     func updateScore(for quiz: String, score: Int) {
@@ -27,9 +25,5 @@ class ScoreManager {
             scores[quiz] = score
             UserDefaults.standard.setValue(scores, forKey: scoresKey)
         }
-    }
-    
-    func newHighScore() -> String {
-        return "New high score"
     }
 }
