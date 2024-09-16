@@ -1,5 +1,5 @@
 {
-    "name": "Swift Access Control Quiz",
+    "name": "Access and Visibility",
     "questions": [
         {
             "questionText": "What does the 'private' access level restrict?",

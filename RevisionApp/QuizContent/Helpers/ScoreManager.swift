@@ -15,6 +15,7 @@ class ScoreManager {
         return scores[quiz] ?? 0
     }
     
+    //get quiz data from JSON file and implement quiz question count
     func getTotalQuestions(for quiz: String) -> Int {
         return 10
     }
