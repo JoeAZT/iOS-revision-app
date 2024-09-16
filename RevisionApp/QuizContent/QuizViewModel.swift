@@ -9,6 +9,7 @@ import SwiftUI
 
 class QuizViewModel: ObservableObject {
     var selectedQuiz: String
+    var highScoreText: String = ""
     @Published var quizModel: QuizModel?
     @Published var score: Int = 0
     @Published var currentQuestionIndex: Int = 0
@@ -19,7 +20,7 @@ class QuizViewModel: ObservableObject {
     @Published var shuffledAnswers: [OptionModel] = []
     
     private let scoreManager = ScoreManager()
-
+    
     init(
         router: RouterProtocol,
         selectedQuiz: String
@@ -35,7 +36,7 @@ class QuizViewModel: ObservableObject {
             print("Could not find \(selectedQuiz).json")
             return
         }
-
+        
         do {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
@@ -48,7 +49,7 @@ class QuizViewModel: ObservableObject {
             print("Error decoding JSON: \(error.localizedDescription)")
         }
     }
-
+    
     func shuffleAnswers() {
         guard let questions = quizModel?.questions, currentQuestionIndex < questions.count else {
             shuffledAnswers = []
@@ -80,6 +81,7 @@ class QuizViewModel: ObservableObject {
         }
         
         guard let questionsCount = quizModel?.questions.count, currentQuestionIndex < questionsCount - 1 else {
+            highScoreText = setHighScoreText(quiz: selectedQuiz)
             router.push(to: .finishedQuizView(viewModel: self))
             return
         }
@@ -91,6 +93,16 @@ class QuizViewModel: ObservableObject {
     func checkIfQuizComplete() -> Bool {
         guard let questionsCount = quizModel?.questions.count else { return false }
         return currentQuestionIndex >= questionsCount
+    }
+    
+    func setHighScoreText(quiz: String) -> String {
+        if score > scoreManager.getScore(for: quiz) {
+            return "New High Score"
+        } else if score == scoreManager.getScore(for: quiz) {
+            return "Matched High Score"
+        } else {
+            return ""
+        }
     }
     
     func completeQuiz() {

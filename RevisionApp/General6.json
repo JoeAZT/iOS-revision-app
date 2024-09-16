@@ -1,0 +1,16 @@
+
+{
+    "name": "General6",
+    "questions": [
+        {
+            "questionText": "What is the difference between @State and @Binding in SwiftUI?",
+            "possibleAnswers": [
+                { "optionText": "@State manages local state; @Binding passes a reference for two-way binding", "isAnswer": true },
+                { "optionText": "@State is for local variables; @Binding is for global constants", "isAnswer": false },
+                { "optionText": "@Binding is for managing classes; @State is for structs", "isAnswer": false },
+                { "optionText": "No significant difference; both can be used interchangeably", "isAnswer": false }
+            ]
+        }
+    ]
+}
+

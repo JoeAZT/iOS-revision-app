@@ -21,10 +21,12 @@ struct FinishedQuizView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                 Spacer()
+                Text(viewModel.highScoreText)
+                    .font(.title2)
+                    .bold()
                 Text("\(viewModel.score)/\(viewModel.quizModel?.questions.count ?? 10)")
                     .font(.system(size: 80))
                     .bold()
-                    .padding()
                 //could we change this text based on the users score from the quiz.
                 Text("Users who score 80% or more are more likely to pass their technical interviews and secure employment.")
                     .opacity(0.7)

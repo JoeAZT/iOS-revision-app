@@ -21,17 +21,15 @@ class ScoreManager {
         return 10 // Replace with actual implementation
     }
     
-    func getScorePercentage(for quiz: String) -> Double {
-        let score = getScore(for: quiz)
-        let totalQuestions = getTotalQuestions(for: quiz)
-        return totalQuestions > 0 ? (Double(score) / Double(totalQuestions)) * 100 : 0
-    }
-    
     func updateScore(for quiz: String, score: Int) {
         var scores = UserDefaults.standard.dictionary(forKey: scoresKey) as? [String: Int] ?? [:]
         if score > (scores[quiz] ?? 0) {
             scores[quiz] = score
             UserDefaults.standard.setValue(scores, forKey: scoresKey)
         }
+    }
+    
+    func newHighScore() -> String {
+        return "New high score"
     }
 }

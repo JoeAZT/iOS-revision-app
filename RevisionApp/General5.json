@@ -11,8 +11,6 @@
                 { "optionText": "No significant difference; both can be used interchangeably", "isAnswer": false }
             ]
         },
-        
-        
         {
             "questionText": "What is MVVM?",
             "possibleAnswers": [

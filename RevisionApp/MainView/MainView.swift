@@ -29,8 +29,6 @@ struct MainView: View {
                                 HStack {
                                     Text(quiz)
                                     Spacer()
-                                    
-                                    // Determine trophy color based on score percentage
                                     Image(systemName: "trophy.fill")
                                         .foregroundColor(viewModel.trophyColor(for: scorePercentage))
                                 }
