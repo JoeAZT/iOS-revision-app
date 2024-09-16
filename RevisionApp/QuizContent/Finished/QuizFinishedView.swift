@@ -16,7 +16,7 @@ struct FinishedQuizView: View {
             RadialGradient(gradient: Gradient(colors: [.purple.opacity(0.1), .pink.opacity(0.1)]), center: .bottom, startRadius: 100, endRadius: 400)
                 .ignoresSafeArea(.all)
             
-            VStack {
+            VStack(spacing: 20) {
                 Text("Quiz Complete!")
                     .font(.largeTitle)
                     .fontWeight(.bold)

@@ -82,6 +82,7 @@ class QuizViewModel: ObservableObject {
         
         guard let questionsCount = quizModel?.questions.count, currentQuestionIndex < questionsCount - 1 else {
             highScoreText = setHighScoreText(quiz: selectedQuiz)
+            scoreManager.updateScore(for: selectedQuiz, score: score)
             router.push(to: .finishedQuizView(viewModel: self))
             return
         }
@@ -97,16 +98,17 @@ class QuizViewModel: ObservableObject {
     
     func setHighScoreText(quiz: String) -> String {
         if score > scoreManager.getScore(for: quiz) {
-            return "New High Score"
+            return "🎉 New High Score 🎉"
         } else if score == scoreManager.getScore(for: quiz) {
-            return "Matched High Score"
+            return "😎 Matched High Score 😎"
         } else {
             return ""
         }
     }
     
     func completeQuiz() {
-        scoreManager.updateScore(for: selectedQuiz, score: score)
+        //may need to rerender the view here? - can we just use @Published?
+        scoreManager.getScore(for: selectedQuiz)
         didTapNavigateToMainView()
     }
     
