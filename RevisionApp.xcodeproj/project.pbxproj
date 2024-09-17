@@ -38,6 +38,7 @@
 		C2F361E72C99E084000546A1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361E62C99E084000546A1 /* ProfileView.swift */; };
 		C2F361EA2C99E1C7000546A1 /* ProfileStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361E92C99E1C7000546A1 /* ProfileStatView.swift */; };
 		C2F361EC2C9A020D000546A1 /* DailyQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361EB2C9A020D000546A1 /* DailyQuizView.swift */; };
+		C2F361EE2C9A4466000546A1 /* QuizCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361ED2C9A4466000546A1 /* QuizCarouselView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		C2F361E62C99E084000546A1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C2F361E92C99E1C7000546A1 /* ProfileStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStatView.swift; sourceTree = "<group>"; };
 		C2F361EB2C9A020D000546A1 /* DailyQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuizView.swift; sourceTree = "<group>"; };
+		C2F361ED2C9A4466000546A1 /* QuizCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCarouselView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				C2F3617C2C7FC993000546A1 /* MainView.swift */,
 				C2F361EB2C9A020D000546A1 /* DailyQuizView.swift */,
+				C2F361ED2C9A4466000546A1 /* QuizCarouselView.swift */,
 				C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */,
 				C2F361BC2C84FA9F000546A1 /* MainButtonModifier.swift */,
 			);
@@ -297,6 +300,7 @@
 				C2F361C52C890A4D000546A1 /* CorrectAnswerSheet.swift in Sources */,
 				C2F361EA2C99E1C7000546A1 /* ProfileStatView.swift in Sources */,
 				C2F361D12C906B6C000546A1 /* QuizFinishedView.swift in Sources */,
+				C2F361EE2C9A4466000546A1 /* QuizCarouselView.swift in Sources */,
 				C2F361EC2C9A020D000546A1 /* DailyQuizView.swift in Sources */,
 				C2F3617D2C7FC993000546A1 /* MainView.swift in Sources */,
 				C20CF2D12C6A9A53009CE98E /* QuizModel.swift in Sources */,
