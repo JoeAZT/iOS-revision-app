@@ -18,9 +18,13 @@ struct MainView: View {
                     .ignoresSafeArea(.all)
                 VStack {
                     ScrollView {
-
                         DailyQuizView()
-
+                        Text("Next quizzes")
+                            .font(.title3)
+                            .padding(.top)
+                            .padding(.horizontal)
+                            .bold()
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         ForEach(viewModel.quizzes, id: \.self) { quiz in
                             let bestScore = scoreManager.getScore(for: quiz)
                             let totalQuestions = scoreManager.getTotalQuestions(for: quiz)
@@ -42,7 +46,7 @@ struct MainView: View {
                 }
                 .navigationDestination(for: Route.self) { $0 }
             }
-            .navigationTitle("Main menu")
+            .navigationTitle("Quiz")
         }
     }
 }
@@ -52,19 +56,19 @@ struct MainView: View {
 //struct MainView: View {
 //    @ObservedObject var viewModel: MainViewModel
 //    private let scoreManager = ScoreManager()
-//    
+//
 //    var body: some View {
 //        NavigationStack(path: $viewModel.router.stack) {
 //            ZStack {
 //                LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.1), Color.purple.opacity(0.1)]), startPoint: .topLeading, endPoint: .bottomTrailing)
 //                    .ignoresSafeArea(.all)
-//                
+//
 //                // Define the grid layout with two columns
 //                let columns = [
 //                    GridItem(.flexible(minimum: 200, maximum: 200)),
 //                    GridItem(.flexible(minimum: 200, maximum: 200))
 //                ]
-//                
+//
 //                ScrollView {
 //                    DailyQuizView()
 //                    LazyVGrid(columns: columns, spacing: 20) {
@@ -72,7 +76,7 @@ struct MainView: View {
 //                            let bestScore = scoreManager.getScore(for: quiz)
 //                            let totalQuestions = scoreManager.getTotalQuestions(for: quiz)
 //                            let scorePercentage = totalQuestions > 0 ? (Double(bestScore) / Double(totalQuestions)) * 100 : 0
-//                            
+//
 //                            Button(action: {
 //                                viewModel.didTapNavigateToQuiz(selectedQuiz: quiz)
 //                            }) {
