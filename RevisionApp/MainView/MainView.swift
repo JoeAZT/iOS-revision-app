@@ -18,6 +18,9 @@ struct MainView: View {
                     .ignoresSafeArea(.all)
                 VStack {
                     ScrollView {
+                        
+                        DailyQuizView()
+                        
                         ForEach(viewModel.quizzes, id: \.self) { quiz in
                             let bestScore = scoreManager.getScore(for: quiz)
                             let totalQuestions = scoreManager.getTotalQuestions(for: quiz)

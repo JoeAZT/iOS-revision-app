@@ -14,11 +14,7 @@ struct MainButtonStyle: ViewModifier {
             .foregroundColor(.white)
             .padding()
             .background(Color.black)
-            .cornerRadius(10)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.black, lineWidth: 2)
-            )
+            .cornerRadius(20)
             .padding(.horizontal)
             .shadow(radius: 5, x: 5, y: 5)
     }
