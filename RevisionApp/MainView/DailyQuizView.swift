@@ -10,14 +10,12 @@ import SwiftUI
 struct DailyQuizView: View {
     var body: some View {
         HStack {
-            VStack(alignment: .leading) {
-                Text("Daily quiz")
-                    .font(.title)
-                    .bold()
-                Text("Test your general iOS knowledge")
-                    .font(.subheadline)
+            VStack(alignment: .leading, spacing: 12) {
+                Text("Test your iOS knowledge everyday with new questions!")
+                    .font(.title3)
+                    .fontWeight(.semibold)
                 Text("Start now")
-                    .font(.headline)
+                    .font(.subheadline)
                     .bold()
                     .padding(8)
                     .padding(.horizontal, 6)
@@ -25,18 +23,14 @@ struct DailyQuizView: View {
                     .foregroundColor(.white)
                     .cornerRadius(30)
             }
-            .padding()
             Spacer()
-            Image(systemName: "questionmark.bubble.fill")
-                .resizable()
-                .frame(width: 100, height: 100)
-                .padding()
         }
         .padding()
-        .background(.white)
+        .foregroundColor(.white)
+        .background(RadialGradient(colors: [.pink, .purple.opacity(0.5)], center: .leading, startRadius: 5, endRadius: 400))
         .cornerRadius(20)
         .shadow(radius: 2)
-        .padding()
+        .padding(.horizontal)
     }
 }
 
