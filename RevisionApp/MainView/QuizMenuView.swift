@@ -22,6 +22,7 @@ struct QuizMenuView: View {
                         //change the route here to go to the category view
                         QuizCarouselView(viewModel: QuizCarouselViewModel(quizzess: viewModel.quizzes))
                         BannerView(isDailyQuiz: false, viewModel: viewModel, quiz: "Mistakes")
+                            .padding(.top, 10)
                         Text("Next quizzes")
                             .font(.title3)
                             .padding(.top)

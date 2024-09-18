@@ -25,7 +25,7 @@ struct BannerView: View {
                         .multilineTextAlignment(.leading)
                         .font(.title3)
                         .fontWeight(.semibold)
-                    Text("Show me the questions")
+                    Text(isDailyQuiz == true ? "Start quiz" : "Show me the questions")
                         .font(.subheadline)
                         .bold()
                         .padding(8)
@@ -38,7 +38,7 @@ struct BannerView: View {
             }
             .padding()
             .foregroundColor(.white)
-            .background(isDailyQuiz == true ? RadialGradient(colors: [.pink, .purple], center: .leading, startRadius: 5, endRadius: 400) : RadialGradient(colors: [.black.opacity(0.8), .green], center: .leading, startRadius: 5, endRadius: 400))
+            .background(isDailyQuiz == true ? RadialGradient(colors: [.pink, .purple], center: .leading, startRadius: 5, endRadius: 400) : RadialGradient(colors: [.black.opacity(0.5), .green], center: .leading, startRadius: 5, endRadius: 400))
             .cornerRadius(20)
             .shadow(radius: 2)
             .padding(.horizontal)
