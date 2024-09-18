@@ -14,7 +14,7 @@ struct MainView: View {
     var body: some View {
         NavigationStack(path: $viewModel.router.stack) {
             ZStack {
-                RadialGradient(colors: [Color.blue.opacity(0.2), Color.purple.opacity(0.2)], center: .center, startRadius: 50, endRadius: 400)
+                RadialGradient(colors: [Color.blue.opacity(0.2), Color.purple.opacity(0.1)], center: .center, startRadius: 50, endRadius: 400)
                     .ignoresSafeArea(.all)
                 VStack {
                     ScrollView {

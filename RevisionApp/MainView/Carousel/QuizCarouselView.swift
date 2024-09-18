@@ -24,7 +24,6 @@ struct QuizCarouselView: View {
                             .background(.thinMaterial)
                             .cornerRadius(20)
                         Text(quiz)
-                            .padding(.top, 5)
                     }
                     .padding(.trailing, 10)
                 }
