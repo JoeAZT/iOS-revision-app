@@ -8,20 +8,21 @@
 import SwiftUI
 
 struct QuizCarouselView: View {
-    var colors: [Color] = [.pink, .pink.opacity(0.5), .purple, .purple.opacity(0.5), .blue, .blue.opacity(0.5)]
-    var quizzess: [String]
+    
+    var viewModel: QuizCarouselViewModel
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                ForEach(Array(zip(quizzess.indices, quizzess)), id: \.1) { index, quiz in
+                ForEach(Array(zip(viewModel.quizzess.indices, viewModel.quizzess)), id: \.1) { index, quiz in
                     VStack {
+                        //Change for circle stroke graphic for progress
                         Image(systemName: "iphone.gen2")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 60, height: 60)
                             .padding()
-                            .background(LinearGradient(gradient: Gradient(colors: getGradientColors(for: index)), startPoint: .topLeading, endPoint: .bottomTrailing))
+                            .background(LinearGradient(gradient: Gradient(colors: viewModel.getGradientColors(for: index)), startPoint: .topLeading, endPoint: .bottomTrailing))
                             .cornerRadius(20)
                             .shadow(radius: 3)
                         Text(quiz)
@@ -33,13 +34,6 @@ struct QuizCarouselView: View {
         }
         .frame(height: 120)
         .padding(.top, 10)
-    }
-    
-    private func getGradientColors(for index: Int) -> [Color] {
-        let colorCount = colors.count
-        let firstColor = colors[index % colorCount]
-        let secondColor = colors[(index + 1) % colorCount]
-        return [firstColor, secondColor]
     }
 }
 
