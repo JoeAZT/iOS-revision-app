@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DailyQuizView: View {
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 12) {

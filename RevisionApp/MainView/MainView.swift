@@ -19,6 +19,7 @@ struct MainView: View {
                 VStack {
                     ScrollView {
                         DailyQuizView()
+                        QuizCarouselView(quizzess: viewModel.quizzes)
                         Text("Next quizzes")
                             .font(.title3)
                             .padding(.top)
