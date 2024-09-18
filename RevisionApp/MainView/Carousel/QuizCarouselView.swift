@@ -13,19 +13,19 @@ struct QuizCarouselView: View {
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
+            HStack(spacing: 20) {
                 ForEach(Array(zip(viewModel.quizzess.indices, viewModel.quizzess)), id: \.1) { index, quiz in
                     VStack {
                         Circle()
                             .stroke(lineWidth: 5)
-                            .foregroundColor(.pink.opacity(0.8))
+                            .foregroundColor(.black)
                             .frame(width: 60, height: 60)
                             .padding()
-                            .background(.thinMaterial)
+                            .background(.white)
+//                            .background(.thinMaterial)
                             .cornerRadius(20)
                         Text(quiz)
                     }
-                    .padding(.trailing, 10)
                 }
             }
             .padding(.leading, 20)
