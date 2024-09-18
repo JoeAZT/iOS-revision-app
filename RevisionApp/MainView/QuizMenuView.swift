@@ -18,9 +18,10 @@ struct QuizMenuView: View {
                     .ignoresSafeArea(.all)
                 VStack {
                     ScrollView {
-                        DailyQuizBannerView(viewModel: viewModel)
+                        BannerView(viewModel: viewModel, quiz: "Daily Quiz")
                         //change the route here to go to the category view
                         QuizCarouselView(viewModel: QuizCarouselViewModel(quizzess: viewModel.quizzes))
+                        BannerView(isDailyQuiz: false, viewModel: viewModel, quiz: "Mistakes")
                         Text("Next quizzes")
                             .font(.title3)
                             .padding(.top)

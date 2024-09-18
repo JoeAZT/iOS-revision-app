@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct DailyQuizBannerView: View {
+struct BannerView: View {
     
+    var isDailyQuiz: Bool = true
     var viewModel: MainViewModel
-    var quiz = "Daily Quiz"
+    var quiz: String
     
     var body: some View {
         
@@ -19,11 +20,12 @@ struct DailyQuizBannerView: View {
         } label: {
             HStack {
                 VStack(alignment: .leading, spacing: 12) {
-                    Text("Test your iOS knowledge everyday with new questions!")
+                    
+                    Text(isDailyQuiz == true ? "Test your iOS knowledge everyday with new questions!" : "Fix your previous mistakes and fill any gaps in your knowledge")
                         .multilineTextAlignment(.leading)
                         .font(.title3)
                         .fontWeight(.semibold)
-                    Text("Start now")
+                    Text("Show me the questions")
                         .font(.subheadline)
                         .bold()
                         .padding(8)
@@ -36,7 +38,7 @@ struct DailyQuizBannerView: View {
             }
             .padding()
             .foregroundColor(.white)
-            .background(RadialGradient(colors: [.pink, .purple], center: .leading, startRadius: 5, endRadius: 400))
+            .background(isDailyQuiz == true ? RadialGradient(colors: [.pink, .purple], center: .leading, startRadius: 5, endRadius: 400) : RadialGradient(colors: [.black.opacity(0.8), .green], center: .leading, startRadius: 5, endRadius: 400))
             .cornerRadius(20)
             .shadow(radius: 2)
             .padding(.horizontal)
@@ -45,5 +47,5 @@ struct DailyQuizBannerView: View {
 }
 
 #Preview {
-    DailyQuizBannerView(viewModel: MainViewModel(router: Router()))
+    BannerView(viewModel: MainViewModel(router: Router()), quiz: "Daily Quiz")
 }

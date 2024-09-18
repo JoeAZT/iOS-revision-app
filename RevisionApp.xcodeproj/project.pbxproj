@@ -37,7 +37,7 @@
 		C2F361E52C98BF36000546A1 /* General 6.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361E42C98BF36000546A1 /* General 6.json */; };
 		C2F361E72C99E084000546A1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361E62C99E084000546A1 /* ProfileView.swift */; };
 		C2F361EA2C99E1C7000546A1 /* ProfileStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361E92C99E1C7000546A1 /* ProfileStatView.swift */; };
-		C2F361EC2C9A020D000546A1 /* DailyQuizBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361EB2C9A020D000546A1 /* DailyQuizBannerView.swift */; };
+		C2F361EC2C9A020D000546A1 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361EB2C9A020D000546A1 /* BannerView.swift */; };
 		C2F361EE2C9A4466000546A1 /* QuizCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361ED2C9A4466000546A1 /* QuizCarouselView.swift */; };
 		C2F361F02C9B0746000546A1 /* QuizCarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361EF2C9B0746000546A1 /* QuizCarouselViewModel.swift */; };
 		C2F361F22C9B0BB9000546A1 /* Daily Quiz.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361F12C9B0BB9000546A1 /* Daily Quiz.json */; };
@@ -77,7 +77,7 @@
 		C2F361E42C98BF36000546A1 /* General 6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "General 6.json"; sourceTree = "<group>"; };
 		C2F361E62C99E084000546A1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C2F361E92C99E1C7000546A1 /* ProfileStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStatView.swift; sourceTree = "<group>"; };
-		C2F361EB2C9A020D000546A1 /* DailyQuizBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuizBannerView.swift; sourceTree = "<group>"; };
+		C2F361EB2C9A020D000546A1 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		C2F361ED2C9A4466000546A1 /* QuizCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCarouselView.swift; sourceTree = "<group>"; };
 		C2F361EF2C9B0746000546A1 /* QuizCarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCarouselViewModel.swift; sourceTree = "<group>"; };
 		C2F361F12C9B0BB9000546A1 /* Daily Quiz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Daily Quiz.json"; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */,
-				C2F361EB2C9A020D000546A1 /* DailyQuizBannerView.swift */,
+				C2F361EB2C9A020D000546A1 /* BannerView.swift */,
 				C2F361F52C9B1B1F000546A1 /* Carousel */,
 				C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */,
 				C2F361BC2C84FA9F000546A1 /* MainButtonModifier.swift */,
@@ -325,7 +325,7 @@
 				C2F361EA2C99E1C7000546A1 /* ProfileStatView.swift in Sources */,
 				C2F361D12C906B6C000546A1 /* QuizFinishedView.swift in Sources */,
 				C2F361EE2C9A4466000546A1 /* QuizCarouselView.swift in Sources */,
-				C2F361EC2C9A020D000546A1 /* DailyQuizBannerView.swift in Sources */,
+				C2F361EC2C9A020D000546A1 /* BannerView.swift in Sources */,
 				C2F3617D2C7FC993000546A1 /* QuizMenuView.swift in Sources */,
 				C20CF2D12C6A9A53009CE98E /* QuizModel.swift in Sources */,
 				C2F361E72C99E084000546A1 /* ProfileView.swift in Sources */,
