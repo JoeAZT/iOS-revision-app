@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QuizCarouselView: View {
-    var colors: [Color] = [.red, .pink, .purple, .blue, .green, .yellow, .orange]
+    var colors: [Color] = [.pink, .pink.opacity(0.5), .purple, .purple.opacity(0.5), .blue, .blue.opacity(0.5)]
     var quizzess: [String]
     
     var body: some View {
