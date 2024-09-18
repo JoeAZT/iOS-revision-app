@@ -86,7 +86,6 @@ class QuizViewModel: ObservableObject {
             router.push(to: .finishedQuizView(viewModel: self))
             return
         }
-        
         currentQuestionIndex += 1
         shuffleAnswers()
     }
@@ -107,7 +106,6 @@ class QuizViewModel: ObservableObject {
     }
     
     func completeQuiz() {
-        //may need to rerender the view here? - can we just use @Published?
         scoreManager.getScore(for: selectedQuiz)
         didTapNavigateToMainView()
     }

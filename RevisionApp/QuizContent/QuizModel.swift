@@ -20,5 +20,4 @@ struct QuestionModel: Codable {
 struct QuizModel: Codable {
     let name: String
     var questions: [QuestionModel]
-//    var bestScore: Int = 0
 }

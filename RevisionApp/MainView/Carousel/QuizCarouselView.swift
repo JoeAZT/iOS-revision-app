@@ -16,16 +16,15 @@ struct QuizCarouselView: View {
             HStack {
                 ForEach(Array(zip(viewModel.quizzess.indices, viewModel.quizzess)), id: \.1) { index, quiz in
                     VStack {
-                        //Change for circle stroke graphic for progress
-                        Image(systemName: "iphone.gen2")
-                            .resizable()
-                            .scaledToFit()
+                        Circle()
+                            .stroke(lineWidth: 5)
+                            .foregroundColor(.pink.opacity(0.8))
                             .frame(width: 60, height: 60)
                             .padding()
-                            .background(LinearGradient(gradient: Gradient(colors: viewModel.getGradientColors(for: index)), startPoint: .topLeading, endPoint: .bottomTrailing))
+                            .background(.thinMaterial)
                             .cornerRadius(20)
-                            .shadow(radius: 3)
                         Text(quiz)
+                            .padding(.top, 5)
                     }
                     .padding(.trailing, 10)
                 }
