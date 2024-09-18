@@ -12,7 +12,7 @@ struct RevisionAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MainView(viewModel: MainViewModel(router: Router()))
+            QuizMenuView(viewModel: MainViewModel(router: Router()))
         }
     }
 }

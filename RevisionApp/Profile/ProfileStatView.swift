@@ -7,8 +7,9 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct ProfileStatView: View {
-    
     var statValue: Int
     var statName: String
     
@@ -20,6 +21,11 @@ struct ProfileStatView: View {
             Text(statName)
                 .opacity(0.75)
         }
+        .frame(maxWidth: .infinity) // Ensure full width
+        .padding()
+        .background(Color.white) // Use Color.white for the background
+        .cornerRadius(10)
+        .shadow(radius: 2)
     }
 }
 

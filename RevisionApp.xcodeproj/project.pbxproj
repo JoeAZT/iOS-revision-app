@@ -15,7 +15,7 @@
 		C20CF2D32C6A9ABD009CE98E /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20CF2D22C6A9ABD009CE98E /* QuizViewModel.swift */; };
 		C20CF2D52C6BD866009CE98E /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20CF2D42C6BD866009CE98E /* AnswerButton.swift */; };
 		C20CF2E92C6BED8C009CE98E /* General.json in Resources */ = {isa = PBXBuildFile; fileRef = C20CF2E82C6BED8C009CE98E /* General.json */; };
-		C2F3617D2C7FC993000546A1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617C2C7FC993000546A1 /* MainView.swift */; };
+		C2F3617D2C7FC993000546A1 /* QuizMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */; };
 		C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */; };
 		C2F361832C7FCB4E000546A1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361822C7FCB4E000546A1 /* Router.swift */; };
 		C2F361852C7FCBFB000546A1 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361842C7FCBFB000546A1 /* RouterProtocol.swift */; };
@@ -42,6 +42,7 @@
 		C2F361F02C9B0746000546A1 /* QuizCarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361EF2C9B0746000546A1 /* QuizCarouselViewModel.swift */; };
 		C2F361F22C9B0BB9000546A1 /* Daily Quiz.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361F12C9B0BB9000546A1 /* Daily Quiz.json */; };
 		C2F361F42C9B1AF3000546A1 /* Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361F32C9B1AF3000546A1 /* Categories.json */; };
+		C2F361F72C9B5BA0000546A1 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361F62C9B5BA0000546A1 /* TabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +55,7 @@
 		C20CF2D22C6A9ABD009CE98E /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		C20CF2D42C6BD866009CE98E /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		C20CF2E82C6BED8C009CE98E /* General.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = General.json; sourceTree = "<group>"; };
-		C2F3617C2C7FC993000546A1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMenuView.swift; sourceTree = "<group>"; };
 		C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C2F361822C7FCB4E000546A1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		C2F361842C7FCBFB000546A1 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		C2F361EF2C9B0746000546A1 /* QuizCarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCarouselViewModel.swift; sourceTree = "<group>"; };
 		C2F361F12C9B0BB9000546A1 /* Daily Quiz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Daily Quiz.json"; sourceTree = "<group>"; };
 		C2F361F32C9B1AF3000546A1 /* Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Categories.json; sourceTree = "<group>"; };
+		C2F361F62C9B5BA0000546A1 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				C20CF2C22C6A974A009CE98E /* RevisionAppApp.swift */,
 				C2F361822C7FCB4E000546A1 /* Router.swift */,
 				C2F361842C7FCBFB000546A1 /* RouterProtocol.swift */,
+				C2F361F62C9B5BA0000546A1 /* TabView.swift */,
 				C2F361E82C99E08F000546A1 /* Profile */,
 				C2F361802C7FCA81000546A1 /* MainView */,
 				C2F361812C7FCAE8000546A1 /* QuizContent */,
@@ -149,7 +152,7 @@
 		C2F361802C7FCA81000546A1 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				C2F3617C2C7FC993000546A1 /* MainView.swift */,
+				C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */,
 				C2F361EB2C9A020D000546A1 /* DailyQuizBannerView.swift */,
 				C2F361F52C9B1B1F000546A1 /* Carousel */,
 				C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */,
@@ -316,13 +319,14 @@
 				C2F361BF2C87A150000546A1 /* AnswerSheetView.swift in Sources */,
 				C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */,
 				C20CF2D52C6BD866009CE98E /* AnswerButton.swift in Sources */,
+				C2F361F72C9B5BA0000546A1 /* TabView.swift in Sources */,
 				C2F361C52C890A4D000546A1 /* CorrectAnswerSheet.swift in Sources */,
 				C2F361F02C9B0746000546A1 /* QuizCarouselViewModel.swift in Sources */,
 				C2F361EA2C99E1C7000546A1 /* ProfileStatView.swift in Sources */,
 				C2F361D12C906B6C000546A1 /* QuizFinishedView.swift in Sources */,
 				C2F361EE2C9A4466000546A1 /* QuizCarouselView.swift in Sources */,
 				C2F361EC2C9A020D000546A1 /* DailyQuizBannerView.swift in Sources */,
-				C2F3617D2C7FC993000546A1 /* MainView.swift in Sources */,
+				C2F3617D2C7FC993000546A1 /* QuizMenuView.swift in Sources */,
 				C20CF2D12C6A9A53009CE98E /* QuizModel.swift in Sources */,
 				C2F361E72C99E084000546A1 /* ProfileView.swift in Sources */,
 				C2F361BD2C84FA9F000546A1 /* MainButtonModifier.swift in Sources */,

@@ -11,10 +11,10 @@ struct MainButtonStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
             .bold()
-            .foregroundColor(.white)
+            .foregroundColor(.black)
             .padding()
             .frame(maxWidth: .infinity, minHeight: 100, maxHeight: 100)
-            .background(Color.black)
+            .background(Color.white)
             .cornerRadius(20)
             .shadow(radius: 5, x: 5, y: 5)
             .padding(.horizontal)

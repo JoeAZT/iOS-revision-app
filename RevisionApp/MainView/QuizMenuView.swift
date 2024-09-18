@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct QuizMenuView: View {
     @ObservedObject var viewModel: MainViewModel
     private let scoreManager = ScoreManager()
 
