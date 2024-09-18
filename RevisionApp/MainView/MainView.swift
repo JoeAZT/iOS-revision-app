@@ -38,7 +38,11 @@ struct MainView: View {
                                     Text(quiz)
                                     Spacer()
                                     Image(systemName: "trophy.fill")
+                                        .resizable()
+                                        .scaledToFit()
                                         .foregroundColor(viewModel.trophyColor(for: scorePercentage))
+                                        .padding(.vertical)
+                                       
                                 }
                                 .modifier(MainButtonStyle())
                             }
