@@ -1,0 +1,95 @@
+{
+    "name": "Combine 2",
+    "questions": [
+        {
+            "questionText": "What is Combine in iOS?",
+            "possibleAnswers": [
+                { "optionText": "A framework for reactive programming", "isAnswer": true },
+                { "optionText": "A UI framework for animations", "isAnswer": false },
+                { "optionText": "A framework for managing databases", "isAnswer": false },
+                { "optionText": "A tool for optimizing network requests", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What does a Publisher do in Combine?",
+            "possibleAnswers": [
+                { "optionText": "Emits values over time", "isAnswer": true },
+                { "optionText": "Subscribes to data streams", "isAnswer": false },
+                { "optionText": "Transforms streams to other types", "isAnswer": false },
+                { "optionText": "Handles errors in the stream", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is a Subscriber in Combine?",
+            "possibleAnswers": [
+                { "optionText": "Consumes values from a Publisher", "isAnswer": true },
+                { "optionText": "Emits events over time", "isAnswer": false },
+                { "optionText": "Creates new Publishers", "isAnswer": false },
+                { "optionText": "Cancels subscriptions", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How do you cancel a subscription in Combine?",
+            "possibleAnswers": [
+                { "optionText": "Call .cancel() on the Cancellable", "isAnswer": true },
+                { "optionText": "Set the publisher to nil", "isAnswer": false },
+                { "optionText": "Call .stop() on the Publisher", "isAnswer": false },
+                { "optionText": "Throw an error from Subscriber", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the role of sink in Combine?",
+            "possibleAnswers": [
+                { "optionText": "Attaches a subscriber to a publisher", "isAnswer": true },
+                { "optionText": "Transforms emitted values", "isAnswer": false },
+                { "optionText": "Schedules tasks on the main queue", "isAnswer": false },
+                { "optionText": "Cancels a subscription", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is a Subject in Combine?",
+            "possibleAnswers": [
+                { "optionText": "A publisher you can send values to", "isAnswer": true },
+                { "optionText": "A subscriber that cancels streams", "isAnswer": false },
+                { "optionText": "A publisher that never emits values", "isAnswer": false },
+                { "optionText": "A tool for data storage", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is Just in Combine?",
+            "possibleAnswers": [
+                { "optionText": "A Publisher that emits a single value", "isAnswer": true },
+                { "optionText": "A Publisher that emits multiple values", "isAnswer": false },
+                { "optionText": "A method to handle errors", "isAnswer": false },
+                { "optionText": "A function to create Subscribers", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How do you handle errors in Combine?",
+            "possibleAnswers": [
+                { "optionText": "Use the .catch operator", "isAnswer": true },
+                { "optionText": "Call the .retry() method", "isAnswer": false },
+                { "optionText": "Use .sink without completion handler", "isAnswer": false },
+                { "optionText": "Pass a nil value to the stream", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What does the map operator do?",
+            "possibleAnswers": [
+                { "optionText": "Transforms emitted values", "isAnswer": true },
+                { "optionText": "Combines two publishers", "isAnswer": false },
+                { "optionText": "Filters values from a stream", "isAnswer": false },
+                { "optionText": "Cancels subscriptions", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is a Combine pipeline?",
+            "possibleAnswers": [
+                { "optionText": "A chain of publisher and subscriber", "isAnswer": true },
+                { "optionText": "An iOS debugging tool", "isAnswer": false },
+                { "optionText": "A framework for animations", "isAnswer": false },
+                { "optionText": "A stream that never completes", "isAnswer": false }
+            ]
+        }
+    ]
+}
