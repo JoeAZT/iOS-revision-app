@@ -2,39 +2,39 @@
     "name": "Architecture",
     "questions": [
         {
-            "questionText": "What does the Repository pattern achieve?",
+            "questionText": "What does the ViewModel do in MVVM?",
             "possibleAnswers": [
-                { "optionText": "Decouples data access from the app logic.", "isAnswer": true },
-                { "optionText": "Enhances network performance.", "isAnswer": false },
-                { "optionText": "Manages UI state.", "isAnswer": false },
-                { "optionText": "Handles authentication tasks.", "isAnswer": false }
-            ]
-        },
-        {
-            "questionText": "In VIPER, what does the Interactor do?",
-            "possibleAnswers": [
-                { "optionText": "Handles business logic and data processing.", "isAnswer": true },
-                { "optionText": "Manages user interface updates.", "isAnswer": false },
+                { "optionText": "Acts as an intermediary between the View and Model.", "isAnswer": true },
+                { "optionText": "Handles UI rendering directly.", "isAnswer": false },
                 { "optionText": "Controls navigation flows.", "isAnswer": false },
-                { "optionText": "Defines data models.", "isAnswer": false }
+                { "optionText": "Manages data persistence.", "isAnswer": false }
             ]
         },
         {
-            "questionText": "What is the role of the Presenter in MVP?",
+            "questionText": "How does data flow in the MVC pattern?",
             "possibleAnswers": [
-                { "optionText": "Acts as the mediator between Model and View.", "isAnswer": true },
-                { "optionText": "Manages data storage and retrieval.", "isAnswer": false },
-                { "optionText": "Renders the UI elements.", "isAnswer": false },
-                { "optionText": "Handles network requests.", "isAnswer": false }
+                { "optionText": "Model updates View via the Controller.", "isAnswer": true },
+                { "optionText": "View directly updates Model.", "isAnswer": false },
+                { "optionText": "Model controls View updates.", "isAnswer": false },
+                { "optionText": "Controller stores data in Model.", "isAnswer": false }
             ]
         },
         {
-            "questionText": "What does the Clean Architecture emphasize?",
+            "questionText": "How does MVVM differ from MVC?",
             "possibleAnswers": [
-                { "optionText": "Layered separation of concerns.", "isAnswer": true },
-                { "optionText": "High coupling between components.", "isAnswer": false },
-                { "optionText": "Direct manipulation of UI elements.", "isAnswer": false },
-                { "optionText": "Single responsibility for each class.", "isAnswer": false }
+                { "optionText": "MVVM separates data-binding logic to ViewModel.", "isAnswer": true },
+                { "optionText": "MVC allows two-way binding.", "isAnswer": false },
+                { "optionText": "MVC includes the concept of ViewModel.", "isAnswer": false },
+                { "optionText": "MVVM introduces a new Controller component.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the primary role of the Controller in MVC?",
+            "possibleAnswers": [
+                { "optionText": "Manages user input and updates the Model.", "isAnswer": true },
+                { "optionText": "Directly updates UI elements.", "isAnswer": false },
+                { "optionText": "Handles business logic.", "isAnswer": false },
+                { "optionText": "Stores and retrieves data.", "isAnswer": false }
             ]
         },
         {
@@ -74,21 +74,21 @@
             ]
         },
         {
-            "questionText": "What does VIPER stand for?",
+            "questionText": "What is the role of the View in MVC?",
             "possibleAnswers": [
-                { "optionText": "View, Interactor, Presenter, Entity, Router.", "isAnswer": true },
-                { "optionText": "View, Interface, Presenter, Entity, Router.", "isAnswer": false },
-                { "optionText": "View, Input, Presenter, Entity, Router.", "isAnswer": false },
-                { "optionText": "View, Interceptor, Presenter, Entity, Responder.", "isAnswer": false }
+                { "optionText": "Displays the data from the Model to the user.", "isAnswer": true },
+                { "optionText": "Processes user input and updates the Model.", "isAnswer": false },
+                { "optionText": "Handles business logic and database interactions.", "isAnswer": false },
+                { "optionText": "Manages navigation between views.", "isAnswer": false }
             ]
         },
         {
-            "questionText": "What is an 'anti-pattern'?",
+            "questionText": "How does MVVM help in testability?",
             "possibleAnswers": [
-                { "optionText": "An ineffective solution that creates more problems.", "isAnswer": true },
-                { "optionText": "A design pattern that is widely accepted.", "isAnswer": false },
-                { "optionText": "A new programming feature or tool.", "isAnswer": false },
-                { "optionText": "A type of design documentation.", "isAnswer": false }
+                { "optionText": "The ViewModel is easily unit-testable.", "isAnswer": true },
+                { "optionText": "The View and Model can be tested independently.", "isAnswer": false },
+                { "optionText": "The ViewController handles testing.", "isAnswer": false },
+                { "optionText": "MVVM has built-in testing tools.", "isAnswer": false }
             ]
         }
     ]
