@@ -1,0 +1,65 @@
+{
+    "name": "Combine 3",
+    "questions": [
+        {
+            "questionText": "What is the difference between merge, zip, and combineLatest?",
+            "possibleAnswers": [
+                { "optionText": "merge combines; zip pairs; combineLatest pairs latest", "isAnswer": true },
+                { "optionText": "zip and combineLatest are identical", "isAnswer": false },
+                { "optionText": "merge emits the latest pair of values", "isAnswer": false },
+                { "optionText": "combineLatest emits paired values on merge", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How can you handle backpressure in Combine?",
+            "possibleAnswers": [
+                { "optionText": "Use .buffer or .throttle", "isAnswer": true },
+                { "optionText": "Use .debounce only", "isAnswer": false },
+                { "optionText": "Apply .collect and .map", "isAnswer": false },
+                { "optionText": "Control it using .flatMap", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the difference between flatMap and switchToLatest?",
+            "possibleAnswers": [
+                { "optionText": "flatMap flattens; switchToLatest cancels prior streams", "isAnswer": true },
+                { "optionText": "switchToLatest combines values; flatMap transforms", "isAnswer": false },
+                { "optionText": "Both operate similarly on single streams", "isAnswer": false },
+                { "optionText": "They are used interchangeably", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How do you debounce values in Combine?",
+            "possibleAnswers": [
+                { "optionText": "Use the .debounce operator", "isAnswer": true },
+                { "optionText": "Apply .collect() and .throttle", "isAnswer": false },
+                { "optionText": "Chain .map and .buffer", "isAnswer": false },
+                { "optionText": "Use .merge and .filter", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What does the @Published property wrapper do in Combine?",
+            "possibleAnswers": [
+                { "optionText": "Publishes changes to its value", "isAnswer": true },
+                { "optionText": "Stores cancellables automatically", "isAnswer": false },
+                { "optionText": "Creates a subscriber internally", "isAnswer": false },
+                { "optionText": "Debounces property updates", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the difference between PassthroughSubject and CurrentValueSubject?",
+            "possibleAnswers": [
+                { "optionText": "Passthrough doesn’t store state; CurrentValue does", "isAnswer": true },
+                { "optionText": "CurrentValueSubject handles errors", "isAnswer": false },
+                { "optionText": "Passthrough stores the latest value", "isAnswer": false },
+                { "optionText": "They are identical in functionality", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How would you chain multiple network requests with Combine?",
+            "possibleAnswers": [
+                { "optionText": "Use flatMap to chain requests", "isAnswer": true },
+                { "optionText": "Use map and then .zip", "isAnswer": false },
+                { "optionText": "Use switchToLatest to merge requests", "isAnswer": false },
+                {
+
