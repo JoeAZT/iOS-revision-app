@@ -45,6 +45,9 @@
 		C2F361F72C9B5BA0000546A1 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361F62C9B5BA0000546A1 /* TabView.swift */; };
 		C2F361F92CA1A12D000546A1 /* Combine 2.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361F82CA1A12D000546A1 /* Combine 2.json */; };
 		C2F361FB2CA1A3E2000546A1 /* Combine 3.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361FA2CA1A3E2000546A1 /* Combine 3.json */; };
+		C2F361FD2CA1DF7F000546A1 /* UIKit 1.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361FC2CA1DF7F000546A1 /* UIKit 1.json */; };
+		C2F361FF2CA1DF9B000546A1 /* UIKit 2.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361FE2CA1DF9B000546A1 /* UIKit 2.json */; };
+		C2F362012CA1DFB0000546A1 /* UIKit 3.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F362002CA1DFB0000546A1 /* UIKit 3.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +90,9 @@
 		C2F361F62C9B5BA0000546A1 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		C2F361F82CA1A12D000546A1 /* Combine 2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Combine 2.json"; sourceTree = "<group>"; };
 		C2F361FA2CA1A3E2000546A1 /* Combine 3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Combine 3.json"; sourceTree = "<group>"; };
+		C2F361FC2CA1DF7F000546A1 /* UIKit 1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "UIKit 1.json"; sourceTree = "<group>"; };
+		C2F361FE2CA1DF9B000546A1 /* UIKit 2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "UIKit 2.json"; sourceTree = "<group>"; };
+		C2F362002CA1DFB0000546A1 /* UIKit 3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "UIKit 3.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,9 @@
 				C2F361F82CA1A12D000546A1 /* Combine 2.json */,
 				C2F361FA2CA1A3E2000546A1 /* Combine 3.json */,
 				C2F361CA2C90617D000546A1 /* Architecture.json */,
+				C2F361FC2CA1DF7F000546A1 /* UIKit 1.json */,
+				C2F361FE2CA1DF9B000546A1 /* UIKit 2.json */,
+				C2F362002CA1DFB0000546A1 /* UIKit 3.json */,
 				C2F361CC2C9062F6000546A1 /* SwiftUI.json */,
 				C2F361CE2C90651E000546A1 /* Access and Visibility.json */,
 				C20CF2C62C6A974C009CE98E /* Assets.xcassets */,
@@ -296,6 +305,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F361FD2CA1DF7F000546A1 /* UIKit 1.json in Resources */,
+				C2F361FF2CA1DF9B000546A1 /* UIKit 2.json in Resources */,
 				C2F361E32C9767C3000546A1 /* General 5.json in Resources */,
 				C2F361DB2C9764A9000546A1 /* General 2.json in Resources */,
 				C2F361FB2CA1A3E2000546A1 /* Combine 3.json in Resources */,
@@ -307,6 +318,7 @@
 				C2F361F22C9B0BB9000546A1 /* Daily Quiz.json in Resources */,
 				C2F361CD2C9062F6000546A1 /* SwiftUI.json in Resources */,
 				C20CF2E92C6BED8C009CE98E /* General.json in Resources */,
+				C2F362012CA1DFB0000546A1 /* UIKit 3.json in Resources */,
 				C2F361F42C9B1AF3000546A1 /* Categories.json in Resources */,
 				C2F361DD2C976530000546A1 /* General 3.json in Resources */,
 				C20CF2C72C6A974C009CE98E /* Assets.xcassets in Resources */,

@@ -1,0 +1,96 @@
+{
+    "name": "UIKit 3",
+    "questions": [
+        {
+            "questionText": "What does the ViewModel do in MVVM?",
+            "possibleAnswers": [
+                { "optionText": "Acts as an intermediary between the View and Model.", "isAnswer": true },
+                { "optionText": "Handles UI rendering directly.", "isAnswer": false },
+                { "optionText": "Controls navigation flows.", "isAnswer": false },
+                { "optionText": "Manages data persistence.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How does data flow in the MVC pattern?",
+            "possibleAnswers": [
+                { "optionText": "Model updates View via the Controller.", "isAnswer": true },
+                { "optionText": "View directly updates Model.", "isAnswer": false },
+                { "optionText": "Model controls View updates.", "isAnswer": false },
+                { "optionText": "Controller stores data in Model.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How does MVVM differ from MVC?",
+            "possibleAnswers": [
+                { "optionText": "MVVM separates data-binding logic to ViewModel.", "isAnswer": true },
+                { "optionText": "MVC allows two-way binding.", "isAnswer": false },
+                { "optionText": "MVC includes the concept of ViewModel.", "isAnswer": false },
+                { "optionText": "MVVM introduces a new Controller component.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the primary role of the Controller in MVC?",
+            "possibleAnswers": [
+                { "optionText": "Manages user input and updates the Model.", "isAnswer": true },
+                { "optionText": "Directly updates UI elements.", "isAnswer": false },
+                { "optionText": "Handles business logic.", "isAnswer": false },
+                { "optionText": "Stores and retrieves data.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How does MVVM handle data-binding?",
+            "possibleAnswers": [
+                { "optionText": "Through data binding between ViewModel and View.", "isAnswer": true },
+                { "optionText": "By using direct property updates in the View.", "isAnswer": false },
+                { "optionText": "Through static data assignments.", "isAnswer": false },
+                { "optionText": "By manually passing data between components.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "Which architecture helps with scalable iOS projects?",
+            "possibleAnswers": [
+                { "optionText": "MVC", "isAnswer": false },
+                { "optionText": "MVVM", "isAnswer": true },
+                { "optionText": "Singleton", "isAnswer": false },
+                { "optionText": "Observer", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "In MVC, what does the Model represent?",
+            "possibleAnswers": [
+                { "optionText": "The data and business logic of the application.", "isAnswer": true },
+                { "optionText": "The visual elements and user interface.", "isAnswer": false },
+                { "optionText": "The communication between different app modules.", "isAnswer": false },
+                { "optionText": "The application’s navigation flow.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is an advantage of using the Coordinator pattern?",
+            "possibleAnswers": [
+                { "optionText": "Manages navigation and routing more efficiently.", "isAnswer": true },
+                { "optionText": "Handles all network communications.", "isAnswer": false },
+                { "optionText": "Optimizes data storage.", "isAnswer": false },
+                { "optionText": "Improves UI rendering performance.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the role of the View in MVC?",
+            "possibleAnswers": [
+                { "optionText": "Displays the data from the Model to the user.", "isAnswer": true },
+                { "optionText": "Processes user input and updates the Model.", "isAnswer": false },
+                { "optionText": "Handles business logic and database interactions.", "isAnswer": false },
+                { "optionText": "Manages navigation between views.", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How does MVVM help in testability?",
+            "possibleAnswers": [
+                { "optionText": "The ViewModel is easily unit-testable.", "isAnswer": true },
+                { "optionText": "The View and Model can be tested independently.", "isAnswer": false },
+                { "optionText": "The ViewController handles testing.", "isAnswer": false },
+                { "optionText": "MVVM has built-in testing tools.", "isAnswer": false }
+            ]
+        }
+    ]
+}
+
