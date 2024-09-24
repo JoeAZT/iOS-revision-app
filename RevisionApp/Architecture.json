@@ -74,12 +74,12 @@
             ]
         },
         {
-            "questionText": "What is the role of the View in MVC?",
+            "questionText": "How does dependency injection improve testability in MVVM?",
             "possibleAnswers": [
-                { "optionText": "Displays the data from the Model to the user.", "isAnswer": true },
-                { "optionText": "Processes user input and updates the Model.", "isAnswer": false },
-                { "optionText": "Handles business logic and database interactions.", "isAnswer": false },
-                { "optionText": "Manages navigation between views.", "isAnswer": false }
+                { "optionText": "It allows injecting mock objects into the ViewModel.", "isAnswer": true },
+                { "optionText": "It automatically generates unit tests for the Model.", "isAnswer": false },
+                { "optionText": "It reduces the number of ViewModel dependencies.", "isAnswer": false },
+                { "optionText": "It enables faster UI rendering by injecting data.", "isAnswer": false }
             ]
         },
         {
