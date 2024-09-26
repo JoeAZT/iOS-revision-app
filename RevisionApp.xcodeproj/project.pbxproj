@@ -49,7 +49,8 @@
 		C2F361FF2CA1DF9B000546A1 /* UIKit 2.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361FE2CA1DF9B000546A1 /* UIKit 2.json */; };
 		C2F362012CA1DFB0000546A1 /* UIKit 3.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F362002CA1DFB0000546A1 /* UIKit 3.json */; };
 		C2F3622E2CA41194000546A1 /* RevisionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3622D2CA41194000546A1 /* RevisionAppTests.swift */; };
-		C2F362342CA41198000546A1 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F362252CA41150000546A1 /* Tests.swift */; };
+		C2F362342CA41198000546A1 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F362252CA41150000546A1 /* MainViewModelTests.swift */; };
+		C2F362362CA5F016000546A1 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F362352CA5F016000546A1 /* QuizViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,9 +106,10 @@
 		C2F361FC2CA1DF7F000546A1 /* UIKit 1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "UIKit 1.json"; sourceTree = "<group>"; };
 		C2F361FE2CA1DF9B000546A1 /* UIKit 2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "UIKit 2.json"; sourceTree = "<group>"; };
 		C2F362002CA1DFB0000546A1 /* UIKit 3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "UIKit 3.json"; sourceTree = "<group>"; };
-		C2F362252CA41150000546A1 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		C2F362252CA41150000546A1 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		C2F3622B2CA41193000546A1 /* RevisionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevisionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F3622D2CA41194000546A1 /* RevisionAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionAppTests.swift; sourceTree = "<group>"; };
+		C2F362352CA5F016000546A1 /* QuizViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,7 +279,8 @@
 		C2F3622C2CA41194000546A1 /* RevisionAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				C2F362252CA41150000546A1 /* Tests.swift */,
+				C2F362252CA41150000546A1 /* MainViewModelTests.swift */,
+				C2F362352CA5F016000546A1 /* QuizViewModel.swift */,
 				C2F3622D2CA41194000546A1 /* RevisionAppTests.swift */,
 			);
 			path = RevisionAppTests;
@@ -434,8 +437,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F362362CA5F016000546A1 /* QuizViewModel.swift in Sources */,
 				C2F3622E2CA41194000546A1 /* RevisionAppTests.swift in Sources */,
-				C2F362342CA41198000546A1 /* Tests.swift in Sources */,
+				C2F362342CA41198000546A1 /* MainViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
