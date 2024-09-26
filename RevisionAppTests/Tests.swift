@@ -1,9 +1,9 @@
-//
+
 //  Tests.swift
 //  RevisionApp
 //
 //  Created by Joe Taylor on 25/09/2024.
-//
+
 
 import XCTest
 import Combine
@@ -13,14 +13,28 @@ import SwiftUI
 class MainViewModelTests: XCTestCase {
     
     func makeSUT() -> MainViewModel {
-        MainViewModel(router: RouterMock(), quizzes)
+        MainViewModel(router: RouterMock())
     }
 
-    func testTrophyUIBronze(userScoreAsPercentage: Double) {
+    func testTrophyUIBelow() {
         let viewModel = makeSUT()
-        XCTAssertEqual(viewModel.trophyColor(for: userScoreAsPercentage), Color("bronze"))
+        XCTAssertEqual(viewModel.trophyColor(for: 69), .gray.opacity(0.75))
     }
     
+    func testTrophyUIBronze() {
+        let viewModel = makeSUT()
+        XCTAssertEqual(viewModel.trophyColor(for: 70), Color("bronze"))
+    }
+    
+    func testTrophyUISilver() {
+        let viewModel = makeSUT()
+        XCTAssertEqual(viewModel.trophyColor(for: 90), Color("silver"))
+    }
+    
+    func testTrophyUIGold() {
+        let viewModel = makeSUT()
+        XCTAssertEqual(viewModel.trophyColor(for: 100), Color("gold"))
+    }
 }
 
 
