@@ -3,4 +3,52 @@
    uuid = "B8264C9C-BD7E-4210-8F14-C2DF22550F77"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B3EB5722-6278-4A7D-BDF3-D2D16EAF210B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RevisionApp/QuizContent/QuizViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "nextQuestion()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B3EB5722-6278-4A7D-BDF3-D2D16EAF210B - e789d06812485935"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RevisionApp.QuizViewModel.nextQuestion() -&gt; ()"
+                  moduleName = "RevisionApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joetaylor/Desktop/Development/RevisionApp/RevisionApp/QuizContent/QuizViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90">
+               </Location>
+               <Location
+                  uuid = "B3EB5722-6278-4A7D-BDF3-D2D16EAF210B - e789d06812485954"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RevisionApp.QuizViewModel.nextQuestion() -&gt; ()"
+                  moduleName = "RevisionApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joetaylor/Desktop/Development/RevisionApp/RevisionApp/QuizContent/QuizViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
