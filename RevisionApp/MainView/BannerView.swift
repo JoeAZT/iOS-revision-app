@@ -40,7 +40,7 @@ struct BannerView: View {
             .foregroundColor(.white)
             .background(isDailyQuiz == true ? RadialGradient(colors: [.pink, .purple], center: .leading, startRadius: 5, endRadius: 400) : RadialGradient(colors: [.black.opacity(0.5), .green], center: .leading, startRadius: 5, endRadius: 400))
             .cornerRadius(20)
-            .shadow(radius: 2)
+            .shadow(radius: 4, x: 2, y: 2)
             .padding(.horizontal)
         }
     }

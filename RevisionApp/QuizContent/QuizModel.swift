@@ -20,4 +20,9 @@ struct QuestionModel: Codable {
 struct QuizModel: Codable {
     let name: String
     var questions: [QuestionModel]
+    let category: Category?
+}
+
+enum Category: String, CaseIterable, Codable {
+    case general, combine, architecture, swiftUI, uikit, accessibility, testing, debugging, coreData, networking, concurrency, security, designPatterns, appStore, other
 }
