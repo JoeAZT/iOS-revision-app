@@ -16,7 +16,7 @@ struct MainButtonStyle: ViewModifier {
             .frame(maxWidth: .infinity, minHeight: 100, maxHeight: 100)
             .background(Color.white)
             .cornerRadius(20)
-            .shadow(radius: 5, x: 5, y: 5)
+            .shadow(radius: 2, x: 5, y: 5)
             .padding(.horizontal)
     }
 }

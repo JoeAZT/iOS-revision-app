@@ -68,7 +68,6 @@ class QuizViewModel: ObservableObject {
         backgroundColor = Color("incorrect")
         if let currentQuestion = quizModel?.questions[currentQuestionIndex] {
             addIncorrectQuestion(currentQuestion)
-            print(incorrectlyAnsweredQuestions)
         }
     }
     
@@ -115,7 +114,7 @@ class QuizViewModel: ObservableObject {
     }
     
     func completeQuiz() {
-        scoreManager.getScore(for: selectedQuiz)
+        scoreManager.markQuizAsCompleted(quiz: selectedQuiz)
         didTapNavigateToMainView()
     }
     

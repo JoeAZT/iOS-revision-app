@@ -29,7 +29,7 @@ struct QuizMenuView: View {
                             .padding(.horizontal)
                             .bold()
                             .frame(maxWidth: .infinity, alignment: .leading)
-                        ForEach(viewModel.quizzes, id: \.self) { quiz in
+                        ForEach(viewModel.quizzes.filter { !scoreManager.isQuizCompleted(quiz: $0) }, id: \.self) { quiz in
                             let bestScore = scoreManager.getScore(for: quiz)
                             let totalQuestions = scoreManager.getTotalQuestions(for: quiz)
                             let scorePercentage = totalQuestions > 0 ? (Double(bestScore) / Double(totalQuestions)) * 100 : 0
@@ -45,7 +45,35 @@ struct QuizMenuView: View {
                                         .scaledToFit()
                                         .foregroundColor(viewModel.trophyColor(for: scorePercentage))
                                         .padding(.vertical)
-                                       
+                                }
+                                .modifier(MainButtonStyle())
+                            }
+                        }
+
+                        // Completed Quizzes
+                        Text("Completed Quizzes")
+                            .font(.title3)
+                            .padding(.top)
+                            .padding(.horizontal)
+                            .bold()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        ForEach(viewModel.quizzes.filter { scoreManager.isQuizCompleted(quiz: $0) }, id: \.self) { quiz in
+                            let bestScore = scoreManager.getScore(for: quiz)
+                            let totalQuestions = scoreManager.getTotalQuestions(for: quiz)
+                            let scorePercentage = totalQuestions > 0 ? (Double(bestScore) / Double(totalQuestions)) * 100 : 0
+
+                            Button {
+                                // Optionally handle navigation or show results
+                                viewModel.didTapNavigateToQuiz(selectedQuiz: quiz)
+                            } label: {
+                                HStack {
+                                    Text(quiz)
+                                    Spacer()
+                                    Image(systemName: "trophy.fill")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .foregroundColor(viewModel.trophyColor(for: scorePercentage))
+                                        .padding(.vertical)
                                 }
                                 .modifier(MainButtonStyle())
                             }
