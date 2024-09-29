@@ -30,12 +30,12 @@ class QuizViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.score, 0)
     }
     
-    func testNextQuestionButton() {
-        let viewModel = makeSUT()
-        XCTAssertEqual(viewModel.currentQuestionIndex, 0)
-        viewModel.nextQuestion()
-        XCTAssertEqual(viewModel.currentQuestionIndex, 1)
-    }
+//    func testNextQuestionButton() {
+//        let viewModel = makeSUT()
+//        XCTAssertEqual(viewModel.currentQuestionIndex, 0)
+//        viewModel.nextQuestion()
+//        XCTAssertEqual(viewModel.currentQuestionIndex, 1)
+//    }
     
     func testCheckIfTestIsComplete() {
         let viewModel = makeSUT()

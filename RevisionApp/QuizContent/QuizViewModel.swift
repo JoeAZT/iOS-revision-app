@@ -19,6 +19,7 @@ class QuizViewModel: ObservableObject {
     @Published var selectedAnswer: String = ""
     @Published var shuffledAnswers: [OptionModel] = []
     
+    private var incorrectlyAnsweredQuestions: [QuestionModel] = []
     private let scoreManager = ScoreManager()
     
     init(
@@ -65,6 +66,10 @@ class QuizViewModel: ObservableObject {
     
     func answerIsIncorrect() {
         backgroundColor = Color("incorrect")
+        if let currentQuestion = quizModel?.questions[currentQuestionIndex] {
+            addIncorrectQuestion(currentQuestion)
+            print(incorrectlyAnsweredQuestions)
+        }
     }
     
     func answerPressed(answerIndex: Int) {
@@ -88,6 +93,10 @@ class QuizViewModel: ObservableObject {
         }
         currentQuestionIndex += 1
         shuffleAnswers()
+    }
+    
+    func addIncorrectQuestion(_ question: QuestionModel) {
+        incorrectlyAnsweredQuestions.append(question)
     }
     
     func checkIfQuizComplete() -> Bool {
