@@ -12,7 +12,8 @@ struct RevisionAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            QuizMenuView(viewModel: MainViewModel(router: Router()))
+            TabViewInnt()
+                .environment(\.colorScheme, .light)
         }
     }
 }
