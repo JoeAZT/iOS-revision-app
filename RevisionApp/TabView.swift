@@ -22,16 +22,17 @@ struct TabViewInnt: View {
         TabView {
             QuizMenuView(viewModel: MainViewModel(router: Router()))
                 .tabItem {
-                    Label("Quizzes", systemImage: "questionmark.circle")
+                    Image(systemName: "questionmark.circle")
                 }
                 .tag(Tab.quizMenu)
             
             ProfileView()
                 .tabItem {
-                    Label("Profile", systemImage: "person.circle")
+                    Image(systemName: "circle.fill")
                 }
                 .tag(Tab.profile)
         }
+        .accentColor(.black)
     }
 }
 
