@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    @State var presentFriendSheet: Bool = false
+    @State var presentShareSheet: Bool = false
+    
     var body: some View {
+        
         NavigationStack {
             ScrollView {
                 VStack {
@@ -29,7 +34,7 @@ struct ProfileView: View {
                     
                     HStack {
                         Button {
-                            print("add friends")
+                            presentFriendSheet.toggle()
                         } label: {
                             HStack {
                                 Text("Add friends")
@@ -39,12 +44,20 @@ struct ProfileView: View {
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(.black)
+                            .background(Color.black)
                             .cornerRadius(20)
                         }
+                        .sheet(isPresented: $presentFriendSheet) {
+                            VStack {
+                                Text("This feature isn't available yet")
+                                    .padding()
+                            }
+                            .presentationDetents([.fraction(0.35)])
+                        }
+                        
                         
                         Button {
-                            print("share")
+                            presentShareSheet.toggle()
                         } label: {
                             HStack {
                                 Text("Share")
@@ -56,6 +69,13 @@ struct ProfileView: View {
                             .padding()
                             .background(.black)
                             .cornerRadius(20)
+                        }
+                        .sheet(isPresented: $presentShareSheet) {
+                            VStack {
+                                Text("This feature isn't available yet")
+                                    .padding()
+                            }
+                            .presentationDetents([.fraction(0.35)])
                         }
                     }
                     
@@ -97,7 +117,7 @@ struct ProfileView: View {
                                         .opacity(0.8)
                                 }
                                 Spacer()
-                                Text("\(Int.random(in: 30...100))%")
+                                Text("\(Int.random(in: 3...10)*10)%")
                                     .font(.title3)
                                     .bold()
                                     .foregroundColor(.black)
