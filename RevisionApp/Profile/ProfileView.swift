@@ -48,27 +48,8 @@ struct ProfileView: View {
                             .cornerRadius(20)
                         }
                         .sheet(isPresented: $presentFriendSheet) {
-                            VStack {
-                                Text("Feature coming soon")
-                                    .font(.title2)
-                                    .bold()
-                                Text("We're working on a way to add friends. Stay tuned!")
-                                Button {
-                                    presentFriendSheet.toggle()
-                                } label: {
-                                    Text("Okay")
-                                        .bold()
-                                        .foregroundColor(.white)
-                                        .padding()
-                                        .background(.black)
-                                        .cornerRadius(10)
-                                        .frame(maxWidth: .infinity)
-                                }
-                            }
-                            .padding(.horizontal, 32)
-                            .presentationDetents([.fraction(0.2)])
+                            ProfileSheetView(sheetType: .friend)
                         }
-                        
                         
                         Button {
                             presentShareSheet.toggle()
@@ -85,25 +66,7 @@ struct ProfileView: View {
                             .cornerRadius(20)
                         }
                         .sheet(isPresented: $presentShareSheet) {
-                            VStack {
-                                Text("Feature coming soon")
-                                    .font(.title2)
-                                    .bold()
-                                Text("We're working on a way to share your profile with friends. Stay tuned!")
-                                Button {
-                                    presentShareSheet.toggle()
-                                } label: {
-                                    Text("Okay")
-                                        .bold()
-                                        .foregroundColor(.white)
-                                        .padding()
-                                        .background(.black)
-                                        .cornerRadius(10)
-                                        .frame(maxWidth: .infinity)
-                                }
-                            }
-                            .padding(.horizontal, 32)
-                            .presentationDetents([.fraction(0.2)])
+                            ProfileSheetView(sheetType: .share)
                         }
                     }
                     
