@@ -49,10 +49,24 @@ struct ProfileView: View {
                         }
                         .sheet(isPresented: $presentFriendSheet) {
                             VStack {
-                                Text("This feature isn't available yet")
-                                    .padding()
+                                Text("Feature coming soon")
+                                    .font(.title2)
+                                    .bold()
+                                Text("We're working on a way to add friends. Stay tuned!")
+                                Button {
+                                    presentFriendSheet.toggle()
+                                } label: {
+                                    Text("Okay")
+                                        .bold()
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .background(.black)
+                                        .cornerRadius(10)
+                                        .frame(maxWidth: .infinity)
+                                }
                             }
-                            .presentationDetents([.fraction(0.35)])
+                            .padding(.horizontal, 32)
+                            .presentationDetents([.fraction(0.2)])
                         }
                         
                         
@@ -72,10 +86,24 @@ struct ProfileView: View {
                         }
                         .sheet(isPresented: $presentShareSheet) {
                             VStack {
-                                Text("This feature isn't available yet")
-                                    .padding()
+                                Text("Feature coming soon")
+                                    .font(.title2)
+                                    .bold()
+                                Text("We're working on a way to share your profile with friends. Stay tuned!")
+                                Button {
+                                    presentShareSheet.toggle()
+                                } label: {
+                                    Text("Okay")
+                                        .bold()
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .background(.black)
+                                        .cornerRadius(10)
+                                        .frame(maxWidth: .infinity)
+                                }
                             }
-                            .presentationDetents([.fraction(0.35)])
+                            .padding(.horizontal, 32)
+                            .presentationDetents([.fraction(0.2)])
                         }
                     }
                     
