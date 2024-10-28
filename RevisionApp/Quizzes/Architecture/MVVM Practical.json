@@ -1,0 +1,96 @@
+{
+    "name": "Practical MVVM",
+    "questions": [
+        {
+            "questionText": "Where would network calls be handled in MVVM?",
+            "possibleAnswers": [
+                { "optionText": "In the ViewModel", "isAnswer": true },
+                { "optionText": "In the View", "isAnswer": false },
+                { "optionText": "In the Model", "isAnswer": false },
+                { "optionText": "In the ViewController", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "Where does user input processing occur in MVVM?",
+            "possibleAnswers": [
+                { "optionText": "In the ViewModel", "isAnswer": true },
+                { "optionText": "In the Model", "isAnswer": false },
+                { "optionText": "In the View", "isAnswer": false },
+                { "optionText": "In the Coordinator", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "Where would button tap actions be handled in MVVM?",
+            "possibleAnswers": [
+                { "optionText": "In the ViewModel", "isAnswer": true },
+                { "optionText": "In the View", "isAnswer": false },
+                { "optionText": "In the Model", "isAnswer": false },
+                { "optionText": "In the Service Layer", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "Where should formatted display text be generated in MVVM?",
+            "possibleAnswers": [
+                { "optionText": "In the ViewModel", "isAnswer": true },
+                { "optionText": "In the View", "isAnswer": false },
+                { "optionText": "In the Model", "isAnswer": false },
+                { "optionText": "In the Controller", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "Where should an alert for user feedback be created in MVVM?",
+            "possibleAnswers": [
+                { "optionText": "In the View", "isAnswer": true },
+                { "optionText": "In the Model", "isAnswer": false },
+                { "optionText": "In the ViewModel", "isAnswer": false },
+                { "optionText": "In the Coordinator", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "Where should data validation logic live in MVVM?",
+            "possibleAnswers": [
+                { "optionText": "In the ViewModel", "isAnswer": true },
+                { "optionText": "In the Model", "isAnswer": false },
+                { "optionText": "In the View", "isAnswer": false },
+                { "optionText": "In the Controller", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "Where would database calls be managed in MVVM?",
+            "possibleAnswers": [
+                { "optionText": "In the Model", "isAnswer": true },
+                { "optionText": "In the ViewModel", "isAnswer": false },
+                { "optionText": "In the View", "isAnswer": false },
+                { "optionText": "In the Controller", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "Where should asynchronous data loading be handled in MVVM?",
+            "possibleAnswers": [
+                { "optionText": "In the ViewModel", "isAnswer": true },
+                { "optionText": "In the View", "isAnswer": false },
+                { "optionText": "In the Model", "isAnswer": false },
+                { "optionText": "In the Presenter", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "Where does binding logic for UI elements belong in MVVM?",
+            "possibleAnswers": [
+                { "optionText": "In the ViewModel", "isAnswer": true },
+                { "optionText": "In the Model", "isAnswer": false },
+                { "optionText": "In the View", "isAnswer": false },
+                { "optionText": "In the Service Layer", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "Where would a data model transformation occur in MVVM?",
+            "possibleAnswers": [
+                { "optionText": "In the ViewModel", "isAnswer": true },
+                { "optionText": "In the View", "isAnswer": false },
+                { "optionText": "In the Model", "isAnswer": false },
+                { "optionText": "In the Coordinator", "isAnswer": false }
+            ]
+        }
+    ]
+}
+

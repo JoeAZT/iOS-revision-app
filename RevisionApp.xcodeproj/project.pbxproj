@@ -15,6 +15,7 @@
 		C20CF2D32C6A9ABD009CE98E /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20CF2D22C6A9ABD009CE98E /* QuizViewModel.swift */; };
 		C20CF2D52C6BD866009CE98E /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20CF2D42C6BD866009CE98E /* AnswerButton.swift */; };
 		C20CF2E92C6BED8C009CE98E /* General.json in Resources */ = {isa = PBXBuildFile; fileRef = C20CF2E82C6BED8C009CE98E /* General.json */; };
+		C2542F902CD006AD003188E7 /* MVVM Practical.json in Resources */ = {isa = PBXBuildFile; fileRef = C2542F8F2CD006AD003188E7 /* MVVM Practical.json */; };
 		C2549A6D2CC6AC740088A1A9 /* ProfileSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2549A6C2CC6AC730088A1A9 /* ProfileSheetView.swift */; };
 		C2F3617D2C7FC993000546A1 /* QuizMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */; };
 		C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */; };
@@ -74,6 +75,7 @@
 		C20CF2D22C6A9ABD009CE98E /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		C20CF2D42C6BD866009CE98E /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		C20CF2E82C6BED8C009CE98E /* General.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = General.json; sourceTree = "<group>"; };
+		C2542F8F2CD006AD003188E7 /* MVVM Practical.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "MVVM Practical.json"; sourceTree = "<group>"; };
 		C2549A6C2CC6AC730088A1A9 /* ProfileSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSheetView.swift; sourceTree = "<group>"; };
 		C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMenuView.swift; sourceTree = "<group>"; };
 		C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				C2F361CA2C90617D000546A1 /* Architecture.json */,
+				C2542F8F2CD006AD003188E7 /* MVVM Practical.json */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				C2F361C92C9060C2000546A1 /* Combine.json in Resources */,
 				C2F361F92CA1A12D000546A1 /* Combine 2.json in Resources */,
 				C20CF2CA2C6A974C009CE98E /* Preview Assets.xcassets in Resources */,
+				C2542F902CD006AD003188E7 /* MVVM Practical.json in Resources */,
 				C2F361F22C9B0BB9000546A1 /* Daily Quiz.json in Resources */,
 				C2F361CD2C9062F6000546A1 /* SwiftUI.json in Resources */,
 				C20CF2E92C6BED8C009CE98E /* General.json in Resources */,
