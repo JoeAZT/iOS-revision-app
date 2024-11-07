@@ -12,6 +12,7 @@ class MainViewModel: ObservableObject {
     
     @Published var router: RouterProtocol
     @Published var quizzes: [String] = []
+    @Published var categories: [String] = []
     private var cancellables = Set<AnyCancellable>()
     
     init(
@@ -20,6 +21,7 @@ class MainViewModel: ObservableObject {
         self.router = router
         configureSubscriptions()
         loadQuizNamesFromJSON()
+        loadQuizCategoriesFromJSON()
     }
     
     func trophyColor(for percentage: Double) -> Color {
@@ -55,6 +57,23 @@ class MainViewModel: ObservableObject {
             print("Error decoding JSON: \(error.localizedDescription)")
         }
     }
+    
+    func loadQuizCategoriesFromJSON() {
+        guard let url = Bundle.main.url(forResource: "Categories", withExtension: "json") else {
+            print("Could not find Quizzes.json")
+            return
+        }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            let decodedData = try decoder.decode([String].self, from: data)
+            categories = decodedData
+        } catch {
+            print("Error decoding JSON: \(error.localizedDescription)")
+        }
+    }
+    
 }
 
 private extension MainViewModel {

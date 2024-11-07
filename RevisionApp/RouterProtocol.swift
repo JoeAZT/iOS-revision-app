@@ -18,4 +18,5 @@ protocol RouterProtocol {
 enum Route: Hashable {
     case quizView(viewModel: QuizViewModel)
     case finishedQuizView(viewModel: QuizViewModel)
+    case quizCatergories(viewModel: CatergoriesViewModel)
 }

@@ -25,11 +25,14 @@ class Router: RouterProtocol, ObservableObject {
 
 extension Route {
     
+    //need to fix the routes below because we need to be able to go to the new view
     static func == (lhs: Route, rhs: Route) -> Bool {
         switch (lhs, rhs) {
         case (.quizView, .quizView):
             return true
         case (.finishedQuizView, .finishedQuizView):
+            return true
+        case (.quizCatergories, .quizCatergories):
             return true
         case (.finishedQuizView, .quizView), (.quizView, .finishedQuizView):
             return true
@@ -48,6 +51,8 @@ extension Route: View {
             QuizView(viewModel: viewModel)
         case .finishedQuizView(let viewModel):
             FinishedQuizView(viewModel: viewModel)
+        case .quizCatergories(let viewModel):
+            (viewModel: viewModel)
         }
     }
 }

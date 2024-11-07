@@ -15,15 +15,19 @@ struct QuizCarouselView: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 20) {
                 ForEach(Array(zip(viewModel.quizzess.indices, viewModel.quizzess)), id: \.1) { index, quiz in
-                    VStack {
-                        Circle()
-                            .stroke(lineWidth: 5)
-                            .foregroundColor(.black)
-                            .frame(width: 60, height: 60)
-                            .padding()
-                            .background(.white)
-                            .cornerRadius(20)
-                        Text(quiz)
+                        Button {
+                            viewModel.didTapNavigateToCategories(selectedCategory: viewModel.selectedCategory)
+                        } label: {
+                            VStack {
+                            Circle()
+                                .stroke(lineWidth: 5)
+                                .foregroundColor(.black)
+                                .frame(width: 60, height: 60)
+                                .padding()
+                                .background(.white)
+                                .cornerRadius(20)
+                            Text(quiz)
+                        }
                     }
                 }
             }
@@ -33,5 +37,3 @@ struct QuizCarouselView: View {
         .padding(.top, 10)
     }
 }
-
-
