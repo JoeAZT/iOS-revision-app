@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -46,7 +46,6 @@
 		C2F361F02C9B0746000546A1 /* QuizCarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361EF2C9B0746000546A1 /* QuizCarouselViewModel.swift */; };
 		C2F361F22C9B0BB9000546A1 /* Daily Quiz.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361F12C9B0BB9000546A1 /* Daily Quiz.json */; };
 		C2F361F42C9B1AF3000546A1 /* Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361F32C9B1AF3000546A1 /* Categories.json */; };
-		C2F361F72C9B5BA0000546A1 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361F62C9B5BA0000546A1 /* TabView.swift */; };
 		C2F361F92CA1A12D000546A1 /* Combine 2.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361F82CA1A12D000546A1 /* Combine 2.json */; };
 		C2F361FB2CA1A3E2000546A1 /* Combine 3.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361FA2CA1A3E2000546A1 /* Combine 3.json */; };
 		C2F361FD2CA1DF7F000546A1 /* UIKit 1.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361FC2CA1DF7F000546A1 /* UIKit 1.json */; };
@@ -108,7 +107,6 @@
 		C2F361EF2C9B0746000546A1 /* QuizCarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCarouselViewModel.swift; sourceTree = "<group>"; };
 		C2F361F12C9B0BB9000546A1 /* Daily Quiz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Daily Quiz.json"; sourceTree = "<group>"; };
 		C2F361F32C9B1AF3000546A1 /* Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Categories.json; sourceTree = "<group>"; };
-		C2F361F62C9B5BA0000546A1 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		C2F361F82CA1A12D000546A1 /* Combine 2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Combine 2.json"; sourceTree = "<group>"; };
 		C2F361FA2CA1A3E2000546A1 /* Combine 3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Combine 3.json"; sourceTree = "<group>"; };
 		C2F361FC2CA1DF7F000546A1 /* UIKit 1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "UIKit 1.json"; sourceTree = "<group>"; };
@@ -119,6 +117,10 @@
 		C2F3622D2CA41194000546A1 /* RevisionAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionAppTests.swift; sourceTree = "<group>"; };
 		C2F362352CA5F016000546A1 /* QuizViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		C2542FDB2CE2C3F0003188E7 /* Tabs */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Tabs; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C20CF2BC2C6A974A009CE98E /* Frameworks */ = {
@@ -160,9 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				C20CF2C22C6A974A009CE98E /* RevisionAppApp.swift */,
-				C2F361822C7FCB4E000546A1 /* Router.swift */,
-				C2F361842C7FCBFB000546A1 /* RouterProtocol.swift */,
-				C2F361F62C9B5BA0000546A1 /* TabView.swift */,
+				C2542FDA2CE2C3E9003188E7 /* Route */,
+				C2542FDB2CE2C3F0003188E7 /* Tabs */,
 				C2F361E82C99E08F000546A1 /* Profile */,
 				C2F361802C7FCA81000546A1 /* MainView */,
 				C2F361812C7FCAE8000546A1 /* QuizContent */,
@@ -212,6 +213,15 @@
 				C2F361BC2C84FA9F000546A1 /* MainButtonModifier.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		C2542FDA2CE2C3E9003188E7 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				C2F361822C7FCB4E000546A1 /* Router.swift */,
+				C2F361842C7FCBFB000546A1 /* RouterProtocol.swift */,
+			);
+			path = Route;
 			sourceTree = "<group>";
 		};
 		C2997DAD2CA9C9BF007C69D6 /* OverviewLists */ = {
@@ -401,6 +411,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				C2542FDB2CE2C3F0003188E7 /* Tabs */,
+			);
 			name = RevisionApp;
 			packageProductDependencies = (
 			);
@@ -514,7 +527,6 @@
 				C2F361BF2C87A150000546A1 /* AnswerSheetView.swift in Sources */,
 				C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */,
 				C20CF2D52C6BD866009CE98E /* AnswerButton.swift in Sources */,
-				C2F361F72C9B5BA0000546A1 /* TabView.swift in Sources */,
 				C2542F972CDD665B003188E7 /* CatergoriesViewModel.swift in Sources */,
 				C2F361C52C890A4D000546A1 /* CorrectAnswerSheet.swift in Sources */,
 				C2F361F02C9B0746000546A1 /* QuizCarouselViewModel.swift in Sources */,
