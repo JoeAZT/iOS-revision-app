@@ -14,9 +14,9 @@ struct QuizCarouselView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 20) {
-                ForEach(Array(zip(viewModel.quizzess.indices, viewModel.quizzess)), id: \.1) { index, quiz in
+                ForEach(Array(zip(viewModel.categories.indices, viewModel.categories)), id: \.1) { index, categoryName in
                         Button {
-                            viewModel.didTapNavigateToCategories(selectedCategory: viewModel.selectedCategory)
+                            viewModel.didTapNavigateToCategoryView(selectedCategory: viewModel.selectedCategory)
                         } label: {
                             VStack {
                             Circle()
@@ -26,7 +26,7 @@ struct QuizCarouselView: View {
                                 .padding()
                                 .background(.white)
                                 .cornerRadius(20)
-                            Text(quiz)
+                            Text(categoryName)
                         }
                     }
                 }

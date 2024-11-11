@@ -12,25 +12,28 @@ class QuizCarouselViewModel: ObservableObject {
     
     @Published var router: RouterProtocol
     @Published var selectedCategory: String
-    var quizzess: [String] = []
+    var categories: [String]
     private var cancellables = Set<AnyCancellable>()
     
     init(
         router: RouterProtocol,
-        selectedCategory: String
+        selectedCategory: String,
+        categories: [String]
     ) {
         self.router = router
         self.selectedCategory = selectedCategory
+        self.categories = categories
         configureSubscriptions()
     }
     
-    //this needs to be navigate to category view
-    func didTapNavigateToCategories(selectedCategory: String) {
-        let catergoryViewModel = CatergoriesViewModel(category: selectedCategory)
-        router.push(to: .quizCatergories(viewModel: catergoryViewModel))
+    func didTapNavigateToCategoryView(selectedCategory: String) {
+        let catergoryViewModel = CatergoriesViewModel(
+            category: selectedCategory
+        )
+        router.push(to: .categoryView(viewModel: catergoryViewModel))
     }
-    
 }
+
 private extension QuizCarouselViewModel {
     func configureSubscriptions() {
         guard let router = router as? Router else { return }

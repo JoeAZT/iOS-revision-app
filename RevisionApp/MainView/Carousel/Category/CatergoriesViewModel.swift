@@ -16,5 +16,4 @@ class CatergoriesViewModel: ObservableObject {
     ) {
         self.category = category
     }
-    
 }

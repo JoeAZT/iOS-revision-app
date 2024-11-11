@@ -19,14 +19,13 @@ struct QuizMenuView: View {
                 VStack {
                     ScrollView {
                         BannerView(viewModel: viewModel, quiz: "Daily Quiz")
-                        //change the route here to go to the category view
                         QuizCarouselView(
                             viewModel: QuizCarouselViewModel(
                                 router: viewModel.router,
-                                selectedCategory: ""
+                                selectedCategory: "",
+                                categories: viewModel.categories
                             )
                         )
-//                        QuizCarouselView(viewModel: QuizCarouselViewModel(quizzess: viewModel.categories))
                         BannerView(isDailyQuiz: false, viewModel: viewModel, quiz: "Mistakes")
                             .padding(.top, 10)
                         Text("Next quizzes")

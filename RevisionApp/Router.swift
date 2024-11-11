@@ -24,7 +24,6 @@ class Router: RouterProtocol, ObservableObject {
 }
 
 extension Route {
-    
     //need to fix the routes below because we need to be able to go to the new view
     static func == (lhs: Route, rhs: Route) -> Bool {
         switch (lhs, rhs) {
@@ -32,10 +31,13 @@ extension Route {
             return true
         case (.finishedQuizView, .finishedQuizView):
             return true
-        case (.quizCatergories, .quizCatergories):
+        case (.categoryView, .categoryView):
             return true
-        case (.finishedQuizView, .quizView), (.quizView, .finishedQuizView):
-            return true
+        default:
+            print("default hit")
+            return false
+//        case (.finishedQuizView, .quizView), (.quizView, .finishedQuizView):
+//            return true
         }
     }
         
@@ -44,6 +46,26 @@ extension Route {
     }
 }
 
+
+//extension Route: Hashable {
+//    static func == (lhs: Route, rhs: Route) -> Bool {
+//        switch (lhs, rhs) {
+//        case (.quizView, .quizView):
+//            return lhs == rhs
+//        case (.finishedQuizView, .finishedQuizView):
+//            return true
+//        case (.quizCatergories, .quizCatergories):
+//            return true
+//        default:
+//            return false
+//        }
+//    }
+//
+//    func hash(into hasher: inout Hasher) {
+//        hasher.combine(self.hashValue)
+//    }
+//}
+
 extension Route: View {
     var body: some View {
         switch self {
@@ -51,8 +73,8 @@ extension Route: View {
             QuizView(viewModel: viewModel)
         case .finishedQuizView(let viewModel):
             FinishedQuizView(viewModel: viewModel)
-        case .quizCatergories(let viewModel):
-            (viewModel: viewModel)
+        case .categoryView(let viewModel):
+            CategoryView(selectedCategory: "", viewModel: viewModel)
         }
     }
 }
