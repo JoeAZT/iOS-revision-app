@@ -16,7 +16,7 @@ struct QuizCarouselView: View {
             HStack(spacing: 20) {
                 ForEach(Array(zip(viewModel.categories.indices, viewModel.categories)), id: \.1) { index, categoryName in
                         Button {
-                            viewModel.didTapNavigateToCategoryView(selectedCategory: viewModel.selectedCategory)
+                            viewModel.didTapNavigateToCategoryView(selectedCategory: categoryName)
                         } label: {
                             VStack {
                             Circle()

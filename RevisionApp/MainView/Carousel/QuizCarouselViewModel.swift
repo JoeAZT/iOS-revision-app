@@ -28,9 +28,29 @@ class QuizCarouselViewModel: ObservableObject {
     
     func didTapNavigateToCategoryView(selectedCategory: String) {
         let catergoryViewModel = CatergoriesViewModel(
-            category: selectedCategory
+            category: selectedCategory,
+            quizzes: loadCategoryFromJSON(selectedCategory: selectedCategory + " Categories") ?? ["why are you not here", "wtf is this"]
         )
         router.push(to: .categoryView(viewModel: catergoryViewModel))
+    }
+}
+
+private extension QuizCarouselViewModel {
+    func loadCategoryFromJSON(selectedCategory: String) -> [String]? {
+        guard let url = Bundle.main.url(forResource: selectedCategory, withExtension: "json") else {
+            print("Could not find \(selectedCategory).json")
+            return nil
+        }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            let decodedData = try decoder.decode(CategoryGroupModel.self, from: data)
+            return decodedData.quizzes
+        } catch {
+            print("Error decoding JSON: \(error.localizedDescription)")
+            return nil
+        }
     }
 }
 

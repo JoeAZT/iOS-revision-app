@@ -18,6 +18,8 @@
 		C2542F902CD006AD003188E7 /* Practical MVVM.json in Resources */ = {isa = PBXBuildFile; fileRef = C2542F8F2CD006AD003188E7 /* Practical MVVM.json */; };
 		C2542F922CDD4945003188E7 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2542F912CDD4945003188E7 /* CategoryView.swift */; };
 		C2542F972CDD665B003188E7 /* CatergoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2542F962CDD665B003188E7 /* CatergoriesViewModel.swift */; };
+		C2542FDD2CE5571B003188E7 /* General Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C2542FDC2CE5571B003188E7 /* General Categories.json */; };
+		C2542FDF2CE55AFF003188E7 /* CategoryGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2542FDE2CE55AFF003188E7 /* CategoryGroupModel.swift */; };
 		C2549A6D2CC6AC740088A1A9 /* ProfileSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2549A6C2CC6AC730088A1A9 /* ProfileSheetView.swift */; };
 		C2F3617D2C7FC993000546A1 /* QuizMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */; };
 		C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */; };
@@ -27,7 +29,7 @@
 		C2F361BF2C87A150000546A1 /* AnswerSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361BE2C87A150000546A1 /* AnswerSheetView.swift */; };
 		C2F361C22C89093C000546A1 /* IncorrectAnswerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361C12C89093C000546A1 /* IncorrectAnswerSheet.swift */; };
 		C2F361C52C890A4D000546A1 /* CorrectAnswerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361C42C890A4D000546A1 /* CorrectAnswerSheet.swift */; };
-		C2F361C92C9060C2000546A1 /* Combine.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361C82C9060C2000546A1 /* Combine.json */; };
+		C2F361C92C9060C2000546A1 /* Combine 1.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361C82C9060C2000546A1 /* Combine 1.json */; };
 		C2F361CB2C90617D000546A1 /* Architecture.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361CA2C90617D000546A1 /* Architecture.json */; };
 		C2F361CD2C9062F6000546A1 /* SwiftUI.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361CC2C9062F6000546A1 /* SwiftUI.json */; };
 		C2F361CF2C90651E000546A1 /* Access and Visibility.json in Resources */ = {isa = PBXBuildFile; fileRef = C2F361CE2C90651E000546A1 /* Access and Visibility.json */; };
@@ -79,6 +81,8 @@
 		C2542F8F2CD006AD003188E7 /* Practical MVVM.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Practical MVVM.json"; sourceTree = "<group>"; };
 		C2542F912CDD4945003188E7 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		C2542F962CDD665B003188E7 /* CatergoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatergoriesViewModel.swift; sourceTree = "<group>"; };
+		C2542FDC2CE5571B003188E7 /* General Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "General Categories.json"; sourceTree = "<group>"; };
+		C2542FDE2CE55AFF003188E7 /* CategoryGroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryGroupModel.swift; sourceTree = "<group>"; };
 		C2549A6C2CC6AC730088A1A9 /* ProfileSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSheetView.swift; sourceTree = "<group>"; };
 		C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMenuView.swift; sourceTree = "<group>"; };
 		C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -88,7 +92,7 @@
 		C2F361BE2C87A150000546A1 /* AnswerSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerSheetView.swift; sourceTree = "<group>"; };
 		C2F361C12C89093C000546A1 /* IncorrectAnswerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncorrectAnswerSheet.swift; sourceTree = "<group>"; };
 		C2F361C42C890A4D000546A1 /* CorrectAnswerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectAnswerSheet.swift; sourceTree = "<group>"; };
-		C2F361C82C9060C2000546A1 /* Combine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Combine.json; sourceTree = "<group>"; };
+		C2F361C82C9060C2000546A1 /* Combine 1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Combine 1.json"; sourceTree = "<group>"; };
 		C2F361CA2C90617D000546A1 /* Architecture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Architecture.json; sourceTree = "<group>"; };
 		C2F361CC2C9062F6000546A1 /* SwiftUI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SwiftUI.json; sourceTree = "<group>"; };
 		C2F361CE2C90651E000546A1 /* Access and Visibility.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Access and Visibility.json"; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 			children = (
 				C2542F912CDD4945003188E7 /* CategoryView.swift */,
 				C2542F962CDD665B003188E7 /* CatergoriesViewModel.swift */,
+				C2542FDE2CE55AFF003188E7 /* CategoryGroupModel.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 		C2997DAE2CA9C9CD007C69D6 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				C2542FDC2CE5571B003188E7 /* General Categories.json */,
 				C20CF2E82C6BED8C009CE98E /* General.json */,
 				C2F361DA2C9764A9000546A1 /* General 2.json */,
 				C2F361DC2C976530000546A1 /* General 3.json */,
@@ -249,7 +255,7 @@
 		C2997DAF2CA9C9D6007C69D6 /* Combine */ = {
 			isa = PBXGroup;
 			children = (
-				C2F361C82C9060C2000546A1 /* Combine.json */,
+				C2F361C82C9060C2000546A1 /* Combine 1.json */,
 				C2F361F82CA1A12D000546A1 /* Combine 2.json */,
 				C2F361FA2CA1A3E2000546A1 /* Combine 3.json */,
 			);
@@ -487,12 +493,13 @@
 			files = (
 				C2F361FD2CA1DF7F000546A1 /* UIKit 1.json in Resources */,
 				C2F361FF2CA1DF9B000546A1 /* UIKit 2.json in Resources */,
+				C2542FDD2CE5571B003188E7 /* General Categories.json in Resources */,
 				C2F361E32C9767C3000546A1 /* General 5.json in Resources */,
 				C2F361DB2C9764A9000546A1 /* General 2.json in Resources */,
 				C2F361FB2CA1A3E2000546A1 /* Combine 3.json in Resources */,
 				C2F361CF2C90651E000546A1 /* Access and Visibility.json in Resources */,
 				C2F361E52C98BF36000546A1 /* General 6.json in Resources */,
-				C2F361C92C9060C2000546A1 /* Combine.json in Resources */,
+				C2F361C92C9060C2000546A1 /* Combine 1.json in Resources */,
 				C2F361F92CA1A12D000546A1 /* Combine 2.json in Resources */,
 				C20CF2CA2C6A974C009CE98E /* Preview Assets.xcassets in Resources */,
 				C2542F902CD006AD003188E7 /* Practical MVVM.json in Resources */,
@@ -545,6 +552,7 @@
 				C2549A6D2CC6AC740088A1A9 /* ProfileSheetView.swift in Sources */,
 				C2F361D62C973ED6000546A1 /* ScoreManager.swift in Sources */,
 				C20CF2D32C6A9ABD009CE98E /* QuizViewModel.swift in Sources */,
+				C2542FDF2CE55AFF003188E7 /* CategoryGroupModel.swift in Sources */,
 				C2F361C22C89093C000546A1 /* IncorrectAnswerSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

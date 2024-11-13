@@ -10,10 +10,13 @@ import Foundation
 class CatergoriesViewModel: ObservableObject {
     
     var category: String = ""
+    let quizzes: [String]
     
     init(
-        category: String
+        category: String,
+        quizzes: [String]
     ) {
         self.category = category
+        self.quizzes = quizzes
     }
 }

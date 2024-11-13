@@ -15,12 +15,11 @@ struct CategoryView: View {
     var body: some View {
         VStack {
             Text("we here now bro")
-//            ForEach(viewModel.quizzes, id: \.self) { quiz in
-//                VStack {
-//                    Text(quiz)
-//                }
-//            }
-            
+            ForEach(viewModel.quizzes, id: \.self) { quiz in
+                VStack {
+                    Text(quiz)
+                }
+            }
 //            ForEach(viewModel.quizzes.filter { !scoreManager.isQuizCompleted(quiz: $0) }, id: \.self) { quiz in
 //                let bestScore = scoreManager.getScore(for: quiz)
 //                let totalQuestions = scoreManager.getTotalQuestions(for: quiz)
@@ -48,6 +47,9 @@ struct CategoryView: View {
 #Preview {
     CategoryView(
         selectedCategory: "General",
-        viewModel: CatergoriesViewModel(category: "General")
+        viewModel: CatergoriesViewModel(
+            category: "General",
+            quizzes: []
+        )
     )
 }

@@ -73,7 +73,6 @@ class MainViewModel: ObservableObject {
             print("Error decoding JSON: \(error.localizedDescription)")
         }
     }
-    
 }
 
 private extension MainViewModel {
