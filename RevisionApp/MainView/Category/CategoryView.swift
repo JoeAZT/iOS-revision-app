@@ -14,7 +14,6 @@ struct CategoryView: View {
     
     var body: some View {
         VStack {
-            Text("we here now bro")
             ForEach(viewModel.quizzes, id: \.self) { quiz in
                 VStack {
                     Text(quiz)

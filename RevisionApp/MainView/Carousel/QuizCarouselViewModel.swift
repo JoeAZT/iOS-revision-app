@@ -29,7 +29,7 @@ class QuizCarouselViewModel: ObservableObject {
     func didTapNavigateToCategoryView(selectedCategory: String) {
         let catergoryViewModel = CatergoriesViewModel(
             category: selectedCategory,
-            quizzes: loadCategoryFromJSON(selectedCategory: selectedCategory + " Categories") ?? ["why are you not here", "wtf is this"]
+            quizzes: loadCategoryFromJSON(selectedCategory: selectedCategory + " Categories") ?? ["No quiz data available"]
         )
         router.push(to: .categoryView(viewModel: catergoryViewModel))
     }
