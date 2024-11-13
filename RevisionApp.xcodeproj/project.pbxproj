@@ -20,6 +20,11 @@
 		C2542F972CDD665B003188E7 /* CatergoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2542F962CDD665B003188E7 /* CatergoriesViewModel.swift */; };
 		C2542FDD2CE5571B003188E7 /* General Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C2542FDC2CE5571B003188E7 /* General Categories.json */; };
 		C2542FDF2CE55AFF003188E7 /* CategoryGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2542FDE2CE55AFF003188E7 /* CategoryGroupModel.swift */; };
+		C2542FE12CE560A6003188E7 /* Combine Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C2542FE02CE560A6003188E7 /* Combine Categories.json */; };
+		C2542FE32CE560DE003188E7 /* Architecture Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C2542FE22CE560DE003188E7 /* Architecture Categories.json */; };
+		C2542FE52CE56111003188E7 /* UIKit Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C2542FE42CE56111003188E7 /* UIKit Categories.json */; };
+		C2542FE72CE5619D003188E7 /* SwiftUI Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C2542FE62CE5619D003188E7 /* SwiftUI Categories.json */; };
+		C2542FE92CE561C4003188E7 /* Access Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C2542FE82CE561C4003188E7 /* Access Categories.json */; };
 		C2549A6D2CC6AC740088A1A9 /* ProfileSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2549A6C2CC6AC730088A1A9 /* ProfileSheetView.swift */; };
 		C2F3617D2C7FC993000546A1 /* QuizMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */; };
 		C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */; };
@@ -83,6 +88,11 @@
 		C2542F962CDD665B003188E7 /* CatergoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatergoriesViewModel.swift; sourceTree = "<group>"; };
 		C2542FDC2CE5571B003188E7 /* General Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "General Categories.json"; sourceTree = "<group>"; };
 		C2542FDE2CE55AFF003188E7 /* CategoryGroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryGroupModel.swift; sourceTree = "<group>"; };
+		C2542FE02CE560A6003188E7 /* Combine Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Combine Categories.json"; sourceTree = "<group>"; };
+		C2542FE22CE560DE003188E7 /* Architecture Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Architecture Categories.json"; sourceTree = "<group>"; };
+		C2542FE42CE56111003188E7 /* UIKit Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "UIKit Categories.json"; sourceTree = "<group>"; };
+		C2542FE62CE5619D003188E7 /* SwiftUI Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "SwiftUI Categories.json"; sourceTree = "<group>"; };
+		C2542FE82CE561C4003188E7 /* Access Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Access Categories.json"; sourceTree = "<group>"; };
 		C2549A6C2CC6AC730088A1A9 /* ProfileSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSheetView.swift; sourceTree = "<group>"; };
 		C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMenuView.swift; sourceTree = "<group>"; };
 		C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -255,6 +265,7 @@
 		C2997DAF2CA9C9D6007C69D6 /* Combine */ = {
 			isa = PBXGroup;
 			children = (
+				C2542FE02CE560A6003188E7 /* Combine Categories.json */,
 				C2F361C82C9060C2000546A1 /* Combine 1.json */,
 				C2F361F82CA1A12D000546A1 /* Combine 2.json */,
 				C2F361FA2CA1A3E2000546A1 /* Combine 3.json */,
@@ -265,6 +276,7 @@
 		C2997DB02CA9C9DF007C69D6 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				C2542FE22CE560DE003188E7 /* Architecture Categories.json */,
 				C2F361CA2C90617D000546A1 /* Architecture.json */,
 				C2542F8F2CD006AD003188E7 /* Practical MVVM.json */,
 			);
@@ -274,6 +286,7 @@
 		C2997DB12CA9C9E6007C69D6 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				C2542FE42CE56111003188E7 /* UIKit Categories.json */,
 				C2F361FC2CA1DF7F000546A1 /* UIKit 1.json */,
 				C2F361FE2CA1DF9B000546A1 /* UIKit 2.json */,
 				C2F362002CA1DFB0000546A1 /* UIKit 3.json */,
@@ -284,6 +297,7 @@
 		C2997DB22CA9C9F4007C69D6 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				C2542FE62CE5619D003188E7 /* SwiftUI Categories.json */,
 				C2F361CC2C9062F6000546A1 /* SwiftUI.json */,
 			);
 			path = SwiftUI;
@@ -292,6 +306,7 @@
 		C2997DB32CA9C9F9007C69D6 /* Access and Visibility */ = {
 			isa = PBXGroup;
 			children = (
+				C2542FE82CE561C4003188E7 /* Access Categories.json */,
 				C2F361CE2C90651E000546A1 /* Access and Visibility.json */,
 			);
 			path = "Access and Visibility";
@@ -491,14 +506,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2542FE52CE56111003188E7 /* UIKit Categories.json in Resources */,
 				C2F361FD2CA1DF7F000546A1 /* UIKit 1.json in Resources */,
 				C2F361FF2CA1DF9B000546A1 /* UIKit 2.json in Resources */,
 				C2542FDD2CE5571B003188E7 /* General Categories.json in Resources */,
 				C2F361E32C9767C3000546A1 /* General 5.json in Resources */,
 				C2F361DB2C9764A9000546A1 /* General 2.json in Resources */,
+				C2542FE32CE560DE003188E7 /* Architecture Categories.json in Resources */,
 				C2F361FB2CA1A3E2000546A1 /* Combine 3.json in Resources */,
+				C2542FE72CE5619D003188E7 /* SwiftUI Categories.json in Resources */,
 				C2F361CF2C90651E000546A1 /* Access and Visibility.json in Resources */,
+				C2542FE12CE560A6003188E7 /* Combine Categories.json in Resources */,
 				C2F361E52C98BF36000546A1 /* General 6.json in Resources */,
+				C2542FE92CE561C4003188E7 /* Access Categories.json in Resources */,
 				C2F361C92C9060C2000546A1 /* Combine 1.json in Resources */,
 				C2F361F92CA1A12D000546A1 /* Combine 2.json in Resources */,
 				C20CF2CA2C6A974C009CE98E /* Preview Assets.xcassets in Resources */,
