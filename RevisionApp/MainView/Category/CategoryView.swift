@@ -13,19 +13,21 @@ struct CategoryView: View {
     
     var body: some View {
         VStack {
-            ForEach(viewModel.quizzes, id: \.self) { quiz in
-                HStack {
-                    Text(quiz)
-                    Spacer()
-                    Image(systemName: "trophy.fill")
-                        .resizable()
-                        .scaledToFit()
+            ScrollView {
+                ForEach(viewModel.quizzes, id: \.self) { quiz in
+                    HStack {
+                        Text(quiz)
+                        Spacer()
+                        Image(systemName: "trophy.fill")
+                            .resizable()
+                            .scaledToFit()
                         //add trophy for the below
-                        .foregroundColor(.red)
-//                        .foregroundColor(viewModel.trophyColor(for: 100))
-                        .padding(.vertical)
+                            .foregroundColor(.red)
+                        //                        .foregroundColor(viewModel.trophyColor(for: 100))
+                            .padding(.vertical)
+                    }
+                    .modifier(MainButtonStyle())
                 }
-                .modifier(MainButtonStyle())
             }
             .navigationTitle(viewModel.category)
             //            ForEach(viewModel.quizzes.filter { !scoreManager.isQuizCompleted(quiz: $0) }, id: \.self) { quiz in
