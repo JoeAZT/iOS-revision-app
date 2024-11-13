@@ -21,8 +21,7 @@ struct QuizMenuView: View {
                         BannerView(viewModel: viewModel, quiz: "Daily Quiz")
                         QuizCarouselView(
                             viewModel: QuizCarouselViewModel(
-                                router: viewModel.router,
-                                selectedCategory: "",
+                                router: viewModel.router, selectedCategory: nil,
                                 categories: viewModel.categories
                             )
                         )

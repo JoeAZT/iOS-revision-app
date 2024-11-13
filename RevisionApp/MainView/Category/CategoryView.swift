@@ -9,16 +9,18 @@ import SwiftUI
 
 struct CategoryView: View {
     
-    var selectedCategory: String
     var viewModel: CatergoriesViewModel
     
     var body: some View {
-        VStack {
-            ForEach(viewModel.quizzes, id: \.self) { quiz in
-                VStack {
-                    Text(quiz)
+//        NavigationStack {
+            VStack {
+                ForEach(viewModel.quizzes, id: \.self) { quiz in
+                    VStack {
+                        Text(quiz)
+                    }
                 }
-            }
+                .navigationTitle(viewModel.category)
+//            }
 //            ForEach(viewModel.quizzes.filter { !scoreManager.isQuizCompleted(quiz: $0) }, id: \.self) { quiz in
 //                let bestScore = scoreManager.getScore(for: quiz)
 //                let totalQuestions = scoreManager.getTotalQuestions(for: quiz)
@@ -45,7 +47,6 @@ struct CategoryView: View {
 
 #Preview {
     CategoryView(
-        selectedCategory: "General",
         viewModel: CatergoriesViewModel(
             category: "General",
             quizzes: []

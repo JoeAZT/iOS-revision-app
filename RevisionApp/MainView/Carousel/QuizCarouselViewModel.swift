@@ -11,13 +11,13 @@ import Combine
 class QuizCarouselViewModel: ObservableObject {
     
     @Published var router: RouterProtocol
-    @Published var selectedCategory: String
+    @Published var selectedCategory: String?
     var categories: [String]
     private var cancellables = Set<AnyCancellable>()
     
     init(
         router: RouterProtocol,
-        selectedCategory: String,
+        selectedCategory: String?,
         categories: [String]
     ) {
         self.router = router

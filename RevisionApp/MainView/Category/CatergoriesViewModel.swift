@@ -9,7 +9,7 @@ import Foundation
 
 class CatergoriesViewModel: ObservableObject {
     
-    var category: String = ""
+    var category: String
     let quizzes: [String]
     
     init(
