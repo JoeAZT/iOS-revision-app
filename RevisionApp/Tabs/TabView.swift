@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabViewInnt: View {
+struct QuizTabView: View {
     
     // State to track the selected tab
     @State private var selectedTab: Tab = .quizMenu
@@ -20,11 +20,17 @@ struct TabViewInnt: View {
     
     var body: some View {
         TabView {
-            QuizMenuView(viewModel: MainViewModel(router: Router(), quizzes: [], categories: []))
-                .tabItem {
-                    Image(systemName: "questionmark.circle")
-                }
-                .tag(Tab.quizMenu)
+            QuizMenuView(
+                viewModel: MainViewModel(
+                    router: Router(),
+                    quizLoader: JSONQuizLoader(),
+                    trophyColorProvider: DefaultTrophyColorProvider()
+                )
+            )
+            .tabItem {
+                Image(systemName: "questionmark.circle")
+            }
+            .tag(Tab.quizMenu)
             
             ProfileView()
                 .tabItem {
@@ -37,5 +43,5 @@ struct TabViewInnt: View {
 }
 
 #Preview {
-    TabViewInnt()
+    QuizTabView()
 }

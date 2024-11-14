@@ -8,35 +8,29 @@
 import SwiftUI
 import Combine
 
+// MARK: - MainViewModel
 class MainViewModel: ObservableObject {
-    
     @Published var router: RouterProtocol
     @Published var quizzes: [String]?
     @Published var categories: [String]?
+    
+    private let quizLoader: QuizLoader
+    private let trophyColorProvider: TrophyColorProvider
     private var cancellables = Set<AnyCancellable>()
     
-    init(
-        router: RouterProtocol,
-        quizzes: [String]?,
-        categories: [String]?
-    ) {
+    init(router: RouterProtocol,
+         quizLoader: QuizLoader,
+         trophyColorProvider: TrophyColorProvider) {
         self.router = router
+        self.quizLoader = quizLoader
+        self.trophyColorProvider = trophyColorProvider
+        
         configureSubscriptions()
-        loadQuizNamesFromJSON()
-        loadQuizCategoriesFromJSON()
+        loadData()
     }
     
     func trophyColor(for percentage: Double) -> Color {
-        switch percentage {
-        case 100:
-            return Color("gold")
-        case 90..<100:
-            return Color("silver")
-        case 70..<90:
-            return Color("bronze")
-        default:
-            return .gray.opacity(0.75)
-        }
+        return trophyColorProvider.trophyColor(for: percentage)
     }
     
     func didTapNavigateToQuiz(selectedQuiz: String) {
@@ -44,44 +38,18 @@ class MainViewModel: ObservableObject {
         router.push(to: .quizView(viewModel: quizViewModel))
     }
     
-    func loadQuizNamesFromJSON() {
-        guard let url = Bundle.main.url(forResource: "Quizzes", withExtension: "json") else {
-            print("Could not find Quizzes.json")
-            return
-        }
-        
-        do {
-            let data = try Data(contentsOf: url)
-            let decoder = JSONDecoder()
-            let decodedData = try decoder.decode([String].self, from: data)
-            quizzes = decodedData
-        } catch {
-            print("Error decoding JSON: \(error.localizedDescription)")
-        }
-    }
-    
-    func loadQuizCategoriesFromJSON() {
-        guard let url = Bundle.main.url(forResource: "Categories", withExtension: "json") else {
-            print("Could not find Quizzes.json")
-            return
-        }
-        
-        do {
-            let data = try Data(contentsOf: url)
-            let decoder = JSONDecoder()
-            let decodedData = try decoder.decode([String].self, from: data)
-            categories = decodedData
-        } catch {
-            print("Error decoding JSON: \(error.localizedDescription)")
-        }
+    private func loadData() {
+        self.quizzes = quizLoader.loadQuizNames()
+        self.categories = quizLoader.loadQuizCategories()
     }
 }
 
+// MARK: - Private Methods
 private extension MainViewModel {
     func configureSubscriptions() {
         guard let router = router as? Router else { return }
         router.$stack
-            .sink { [weak self] (newStack: [Route]) in
+            .sink { [weak self] _ in
                 self?.objectWillChange.send()
             }
             .store(in: &cancellables)

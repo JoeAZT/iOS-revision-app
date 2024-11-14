@@ -27,6 +27,8 @@
 		C2542FE92CE561C4003188E7 /* Access Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C2542FE82CE561C4003188E7 /* Access Categories.json */; };
 		C2542FEF2CE611DE003188E7 /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = C2542FEE2CE611DE003188E7 /* InlineSnapshotTesting */; };
 		C2542FF12CE611DE003188E7 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = C2542FF02CE611DE003188E7 /* SnapshotTesting */; };
+		C2542FF72CE644D5003188E7 /* MainViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2542FF62CE644D2003188E7 /* MainViewModelProtocol.swift */; };
+		C2542FFD2CE64C2A003188E7 /* TrophyColorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2542FFB2CE64C29003188E7 /* TrophyColorProvider.swift */; };
 		C2549A6D2CC6AC740088A1A9 /* ProfileSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2549A6C2CC6AC730088A1A9 /* ProfileSheetView.swift */; };
 		C2F3617D2C7FC993000546A1 /* QuizMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */; };
 		C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */; };
@@ -95,6 +97,8 @@
 		C2542FE42CE56111003188E7 /* UIKit Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "UIKit Categories.json"; sourceTree = "<group>"; };
 		C2542FE62CE5619D003188E7 /* SwiftUI Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "SwiftUI Categories.json"; sourceTree = "<group>"; };
 		C2542FE82CE561C4003188E7 /* Access Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Access Categories.json"; sourceTree = "<group>"; };
+		C2542FF62CE644D2003188E7 /* MainViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelProtocol.swift; sourceTree = "<group>"; };
+		C2542FFB2CE64C29003188E7 /* TrophyColorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophyColorProvider.swift; sourceTree = "<group>"; };
 		C2549A6C2CC6AC730088A1A9 /* ProfileSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSheetView.swift; sourceTree = "<group>"; };
 		C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMenuView.swift; sourceTree = "<group>"; };
 		C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C2542FDB2CE2C3F0003188E7 /* Tabs */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Tabs; sourceTree = "<group>"; };
 		C2542FED2CE60C12003188E7 /* Snapshot Tests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Snapshot Tests"; sourceTree = "<group>"; };
+		C2542FFA2CE64C07003188E7 /* Quiz Loader Service */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Quiz Loader Service"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +187,7 @@
 			children = (
 				C20CF2C22C6A974A009CE98E /* RevisionAppApp.swift */,
 				C2542FDA2CE2C3E9003188E7 /* Route */,
+				C2542FFA2CE64C07003188E7 /* Quiz Loader Service */,
 				C2542FDB2CE2C3F0003188E7 /* Tabs */,
 				C2F361E82C99E08F000546A1 /* Profile */,
 				C2F361802C7FCA81000546A1 /* MainView */,
@@ -230,6 +236,7 @@
 		C2542FD92CE2C298003188E7 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				C2542FFE2CE64F30003188E7 /* Trophy Color */,
 				C2F361BC2C84FA9F000546A1 /* MainButtonModifier.swift */,
 			);
 			path = Modifiers;
@@ -242,6 +249,14 @@
 				C2F361842C7FCBFB000546A1 /* RouterProtocol.swift */,
 			);
 			path = Route;
+			sourceTree = "<group>";
+		};
+		C2542FFE2CE64F30003188E7 /* Trophy Color */ = {
+			isa = PBXGroup;
+			children = (
+				C2542FFB2CE64C29003188E7 /* TrophyColorProvider.swift */,
+			);
+			path = "Trophy Color";
 			sourceTree = "<group>";
 		};
 		C2997DAD2CA9C9BF007C69D6 /* OverviewLists */ = {
@@ -321,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */,
+				C2542FF62CE644D2003188E7 /* MainViewModelProtocol.swift */,
 				C2542FD72CE2C22C003188E7 /* Quiz Menu */,
 				C2542FD82CE2C27E003188E7 /* Banner */,
 				C2F361F52C9B1B1F000546A1 /* Carousel */,
@@ -440,6 +456,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				C2542FDB2CE2C3F0003188E7 /* Tabs */,
+				C2542FFA2CE64C07003188E7 /* Quiz Loader Service */,
 			);
 			name = RevisionApp;
 			packageProductDependencies = (
@@ -562,6 +579,7 @@
 			files = (
 				C2F361852C7FCBFB000546A1 /* RouterProtocol.swift in Sources */,
 				C2F361BF2C87A150000546A1 /* AnswerSheetView.swift in Sources */,
+				C2542FFD2CE64C2A003188E7 /* TrophyColorProvider.swift in Sources */,
 				C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */,
 				C20CF2D52C6BD866009CE98E /* AnswerButton.swift in Sources */,
 				C2542F972CDD665B003188E7 /* CatergoriesViewModel.swift in Sources */,
@@ -569,6 +587,7 @@
 				C2F361F02C9B0746000546A1 /* QuizCarouselViewModel.swift in Sources */,
 				C2F361EA2C99E1C7000546A1 /* ProfileStatView.swift in Sources */,
 				C2F361D12C906B6C000546A1 /* QuizFinishedView.swift in Sources */,
+				C2542FF72CE644D5003188E7 /* MainViewModelProtocol.swift in Sources */,
 				C2F361EE2C9A4466000546A1 /* QuizCarouselView.swift in Sources */,
 				C2F361EC2C9A020D000546A1 /* BannerView.swift in Sources */,
 				C2F3617D2C7FC993000546A1 /* QuizMenuView.swift in Sources */,

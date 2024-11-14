@@ -12,7 +12,7 @@ struct RevisionAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TabViewInnt()
+            QuizTabView()
                 .environment(\.colorScheme, .light)
         }
     }
