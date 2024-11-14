@@ -6,16 +6,13 @@
 //
 
 import SwiftUI
+import Combine
 
-protocol MainViewModelProtocol {
+protocol MainViewModelProtocol: ObservableObject {
     var router: RouterProtocol { get }
     var quizzes: [String]? { get }
     var categories: [String]? { get }
     
     func trophyColor(for percentage: Double) -> Color
     func didTapNavigateToQuiz(selectedQuiz: String)
-    
-    //Might be worth changing these out for a service layer
-    func loadQuizNamesFromJSON()
-    func loadQuizCategoriesFromJSON()
 }

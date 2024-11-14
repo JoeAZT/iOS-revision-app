@@ -9,7 +9,8 @@ import SwiftUI
 import Combine
 
 // MARK: - MainViewModel
-class MainViewModel: ObservableObject {
+class MainViewModel: MainViewModelProtocol {
+    
     @Published var router: RouterProtocol
     @Published var quizzes: [String]?
     @Published var categories: [String]?
