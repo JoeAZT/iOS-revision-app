@@ -11,12 +11,14 @@ import Combine
 class MainViewModel: ObservableObject {
     
     @Published var router: RouterProtocol
-    @Published var quizzes: [String] = []
-    @Published var categories: [String] = []
+    @Published var quizzes: [String]?
+    @Published var categories: [String]?
     private var cancellables = Set<AnyCancellable>()
     
     init(
-        router: RouterProtocol
+        router: RouterProtocol,
+        quizzes: [String]?,
+        categories: [String]?
     ) {
         self.router = router
         configureSubscriptions()

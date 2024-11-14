@@ -13,7 +13,11 @@ import SwiftUI
 class MainViewModelTests: XCTestCase {
     
     func makeSUT() -> MainViewModel {
-        MainViewModel(router: RouterMock())
+        MainViewModel(
+            router: RouterMock(),
+            quizzes: ["snapshot quiz 1", "snapshot quiz 2", "snapshot quiz 3"],
+            categories: ["snapshot category 1", "snapshot category 2", "snapshot category 3"]
+        )
     }
 
     func testTrophyUIBelow() {

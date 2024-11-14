@@ -47,5 +47,5 @@ struct BannerView: View {
 }
 
 #Preview {
-    BannerView(viewModel: MainViewModel(router: Router()), quiz: "Daily Quiz")
+    BannerView(viewModel: MainViewModel(router: Router(), quizzes: [], categories: []), quiz: "Daily Quiz")
 }

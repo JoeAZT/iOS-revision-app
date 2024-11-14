@@ -20,7 +20,7 @@ struct TabViewInnt: View {
     
     var body: some View {
         TabView {
-            QuizMenuView(viewModel: MainViewModel(router: Router()))
+            QuizMenuView(viewModel: MainViewModel(router: Router(), quizzes: [], categories: []))
                 .tabItem {
                     Image(systemName: "questionmark.circle")
                 }
