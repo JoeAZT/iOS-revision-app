@@ -1,6 +1,6 @@
 
 {
-    "name": "General",
+    "name": "General 1",
     "questions": [
         {
             "questionText": "What is the purpose of the @IBOutlet keyword in Swift?",

@@ -24,7 +24,8 @@ struct QuizTabView: View {
                 viewModel: MainViewModel(
                     router: Router(),
                     quizLoader: JSONQuizLoader(),
-                    trophyColorProvider: DefaultTrophyColorProvider()
+                    trophyColorProvider: DefaultTrophyColorProvider(),
+                    scoreManger: ScoreManager()
                 )
             )
             .tabItem {

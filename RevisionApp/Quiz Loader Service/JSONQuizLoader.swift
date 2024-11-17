@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-protocol QuizLoader {
+protocol QuizDataLoader {
     func loadQuizNames() -> [String]?
     func loadQuizCategories() -> [String]?
+    func loadQuiz(named: String) -> QuizModel?
 }
 
-class JSONQuizLoader: QuizLoader {
+class JSONQuizLoader: QuizDataLoader {
     func loadQuizNames() -> [String]? {
         return loadData(from: "Quizzes")
     }
@@ -33,6 +34,22 @@ class JSONQuizLoader: QuizLoader {
             return try decoder.decode([String].self, from: data)
         } catch {
             print("Error decoding JSON for \(resource): \(error.localizedDescription)")
+            return nil
+        }
+    }
+    
+    func loadQuiz(named quizName: String) -> QuizModel? {
+        guard let url = Bundle.main.url(forResource: quizName, withExtension: "json") else {
+            print("Could not find \(quizName).json")
+            return nil
+        }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            return try decoder.decode(QuizModel.self, from: data)
+        } catch {
+            print("Error decoding JSON: \(error.localizedDescription)")
             return nil
         }
     }

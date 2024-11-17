@@ -15,16 +15,21 @@ class MainViewModel: MainViewModelProtocol {
     @Published var quizzes: [String]?
     @Published var categories: [String]?
     
-    private let quizLoader: QuizLoader
+    private let quizLoader: QuizDataLoader
     private let trophyColorProvider: TrophyColorProvider
+    private let scoreManger: ScoreManager
     private var cancellables = Set<AnyCancellable>()
     
-    init(router: RouterProtocol,
-         quizLoader: QuizLoader,
-         trophyColorProvider: TrophyColorProvider) {
+    init(
+        router: RouterProtocol,
+        quizLoader: QuizDataLoader,
+        trophyColorProvider: TrophyColorProvider,
+        scoreManger: ScoreManager
+    ) {
         self.router = router
         self.quizLoader = quizLoader
         self.trophyColorProvider = trophyColorProvider
+        self.scoreManger = scoreManger
         
         configureSubscriptions()
         loadData()
@@ -35,7 +40,12 @@ class MainViewModel: MainViewModelProtocol {
     }
     
     func didTapNavigateToQuiz(selectedQuiz: String) {
-        let quizViewModel = QuizViewModel(router: router, selectedQuiz: selectedQuiz)
+        let quizViewModel = QuizViewModel(
+            router: router,
+            scoreManager: scoreManger,
+            quizDataLoader: quizLoader,
+            selectedQuiz: selectedQuiz
+        )
         router.push(to: .quizView(viewModel: quizViewModel))
     }
     

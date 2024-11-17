@@ -12,24 +12,38 @@ class QuizCarouselViewModel: ObservableObject {
     
     @Published var router: RouterProtocol
     @Published var selectedCategory: String?
+
     var categories: [String]?
+    private let quizLoader: QuizDataLoader
+    private let trophyColorProvider: TrophyColorProvider
+    private let scoreManger: ScoreManager
     private var cancellables = Set<AnyCancellable>()
     
     init(
         router: RouterProtocol,
         selectedCategory: String?,
-        categories: [String]?
+        categories: [String]?,
+        quizLoader: JSONQuizLoader,
+        trophyColorProvider: TrophyColorProvider,
+        scoreManager: ScoreManager
     ) {
         self.router = router
         self.selectedCategory = selectedCategory
         self.categories = categories
+        self.quizLoader = quizLoader
+        self.trophyColorProvider = trophyColorProvider
+        self.scoreManger = scoreManager
         configureSubscriptions()
     }
     
     func didTapNavigateToCategoryView(selectedCategory: String) {
         let catergoryViewModel = CatergoriesViewModel(
+            quizzes: loadCategoryFromJSON(selectedCategory: selectedCategory + " Categories") ?? ["No quiz data available"],
             category: selectedCategory,
-            quizzes: loadCategoryFromJSON(selectedCategory: selectedCategory + " Categories") ?? ["No quiz data available"]
+            router: router,
+            quizLoader: quizLoader,
+            trophyColorProvider: trophyColorProvider,
+            scoreManger: scoreManger
         )
         router.push(to: .categoryView(viewModel: catergoryViewModel))
     }

@@ -23,7 +23,6 @@ struct IncorrectAnswerSheet: View {
                         .font(.title3)
                         .bold()
                     Text(viewModel.quizModel?.questions[viewModel.currentQuestionIndex].possibleAnswers.first(where: { $0.isAnswer })!.optionText ?? "")
-//                    Text(viewModel.questionModel[viewModel.currentQuestion].possibleAnswers.first(where: { $0.isAnswer })!.optionText)
                 }
                 Spacer()
             }
@@ -33,10 +32,4 @@ struct IncorrectAnswerSheet: View {
             .cornerRadius(10)
         }
     }
-}
-
-#Preview {
-    IncorrectAnswerSheet(
-        viewModel: QuizViewModel(router: Router(), selectedQuiz: "")
-    )
 }

@@ -6,49 +6,44 @@
 //
 
 import SwiftUI
+import Combine
 
-class QuizViewModel: ObservableObject {
+class QuizViewModel: QuizViewModelProtocol {
+    
     var selectedQuiz: String
-    var highScoreText: String = ""
-    @Published var quizModel: QuizModel?
+    @Published var highScoreText: String? = nil
+    @Published var quizModel: QuizModel? = nil
     @Published var score: Int = 0
     @Published var currentQuestionIndex: Int = 0
     @Published var backgroundColor: Color = .white
-    @Published var router: RouterProtocol
     @Published var showingAnswerSheet: Bool = false
-    @Published var selectedAnswer: String = ""
+    @Published var selectedAnswer: String? = nil
     @Published var shuffledAnswers: [OptionModel] = []
     
-    private var incorrectlyAnsweredQuestions: [QuestionModel] = []
-    private let scoreManager = ScoreManager()
+    private let router: RouterProtocol
+    private let scoreManager: ScoreManaging
+    private let quizDataLoader: QuizDataLoader
     
     init(
         router: RouterProtocol,
+        scoreManager: ScoreManaging,
+        quizDataLoader: QuizDataLoader,
         selectedQuiz: String
     ) {
         self.router = router
+        self.scoreManager = scoreManager
+        self.quizDataLoader = quizDataLoader
         self.selectedQuiz = selectedQuiz
-        loadQuestionsFromJSON(selectedQuiz: selectedQuiz)
+        
+        loadQuizData()
         shuffleAnswers()
     }
     
-    func loadQuestionsFromJSON(selectedQuiz: String) {
-        guard let url = Bundle.main.url(forResource: selectedQuiz, withExtension: "json") else {
-            print("Could not find \(selectedQuiz).json")
-            return
-        }
-        
-        do {
-            let data = try Data(contentsOf: url)
-            let decoder = JSONDecoder()
-            let decodedData = try decoder.decode(QuizModel.self, from: data)
-            
-            self.quizModel = decodedData
-            shuffleAnswers()
-            
-        } catch {
-            print("Error decoding JSON: \(error.localizedDescription)")
-        }
+    // MARK: - Quiz Management
+    
+    private func loadQuizData() {
+        quizModel = quizDataLoader.loadQuiz(named: selectedQuiz)
+        shuffleAnswers()
     }
     
     func shuffleAnswers() {
@@ -58,6 +53,8 @@ class QuizViewModel: ObservableObject {
         }
         shuffledAnswers = questions[currentQuestionIndex].possibleAnswers.shuffled()
     }
+    
+    // MARK: - Answer Handling
     
     func answerIsCorrect() {
         backgroundColor = Color("correct")
@@ -77,6 +74,12 @@ class QuizViewModel: ObservableObject {
         showingAnswerSheet = true
     }
     
+    private func addIncorrectQuestion(_ question: QuestionModel) {
+        // Store incorrectly answered questions for potential later use
+    }
+    
+    // MARK: - Quiz Progression
+    
     func nextQuestion() {
         showingAnswerSheet = false
         
@@ -85,32 +88,19 @@ class QuizViewModel: ObservableObject {
         }
         
         guard let questionsCount = quizModel?.questions.count, currentQuestionIndex < questionsCount - 1 else {
-            highScoreText = setHighScoreText(quiz: selectedQuiz)
+            highScoreText = setHighScoreText()
             scoreManager.updateScore(for: selectedQuiz, score: score)
             router.push(to: .finishedQuizView(viewModel: self))
+            currentQuestionIndex += 1
             return
         }
         currentQuestionIndex += 1
         shuffleAnswers()
     }
     
-    func addIncorrectQuestion(_ question: QuestionModel) {
-        incorrectlyAnsweredQuestions.append(question)
-    }
-    
     func checkIfQuizComplete() -> Bool {
         guard let questionsCount = quizModel?.questions.count else { return false }
         return currentQuestionIndex >= questionsCount
-    }
-    
-    func setHighScoreText(quiz: String) -> String {
-        if score > scoreManager.getScore(for: quiz) {
-            return "🎉 New High Score 🎉"
-        } else if score == scoreManager.getScore(for: quiz) {
-            return "😎 Matched High Score 😎"
-        } else {
-            return ""
-        }
     }
     
     func completeQuiz() {
@@ -122,15 +112,31 @@ class QuizViewModel: ObservableObject {
         score = 0
         currentQuestionIndex = 0
         showingAnswerSheet = false
+        selectedAnswer = nil
         shuffleAnswers()
-        didTapNavigateToQuiz()
+        didTapNavigateToPreviousView()
     }
     
-    func didTapNavigateToQuiz() {
+    // MARK: - Navigation
+    
+    func didTapNavigateToPreviousView() {
         router.pop()
     }
     
     func didTapNavigateToMainView() {
         router.popToRootView()
+    }
+    
+    // MARK: - High Score Management
+    
+    private func setHighScoreText() -> String {
+        let currentHighScore = scoreManager.getScore(for: selectedQuiz)
+        if score > currentHighScore {
+            return "🎉 New High Score 🎉"
+        } else if score == currentHighScore {
+            return "😎 Matched High Score 😎"
+        } else {
+            return ""
+        }
     }
 }

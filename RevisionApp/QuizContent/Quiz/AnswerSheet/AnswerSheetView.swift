@@ -36,9 +36,3 @@ struct AnswerSheetView: View {
         .background(viewModel.backgroundColor)
     }
 }
-
-#Preview {
-    AnswerSheetView(
-        viewModel: QuizViewModel(router: Router(), selectedQuiz: "")
-    )
-}

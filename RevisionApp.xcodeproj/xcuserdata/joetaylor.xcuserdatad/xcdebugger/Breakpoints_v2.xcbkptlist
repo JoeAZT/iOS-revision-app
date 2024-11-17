@@ -14,8 +14,8 @@
             filePath = "RevisionApp/MainView/Carousel/QuizCarouselViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "loadCategoryFromJSON(selectedCategory:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -23,16 +23,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C5461702-911F-4708-B33D-3AA712CC6EFD"
+            uuid = "910E3027-0538-4CA5-8E54-924E20158EF2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RevisionApp/MainView/Carousel/QuizCarouselViewModel.swift"
+            filePath = "RevisionApp/QuizContent/Quiz/QuizViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "didTapNavigateToCategoryView(selectedCategory:)"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E1CDC139-7BE3-43BE-AAC3-450F878B0B5E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RevisionApp/QuizContent/Quiz/QuizViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
+            landmarkName = "nextQuestion()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

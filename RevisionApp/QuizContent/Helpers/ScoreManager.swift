@@ -7,41 +7,60 @@
 
 import Foundation
 
-class ScoreManager {
+protocol ScoreManaging {
+    func getScore(for quiz: String) -> Int
+    func getTotalQuestions(for quiz: String) -> Int
+    func updateScore(for quiz: String, score: Int)
+    func markQuizAsCompleted(quiz: String)
+    func isQuizCompleted(quiz: String) -> Bool
+}
+
+import Foundation
+
+class ScoreManager: ScoreManaging {
     private let scoresKey = "quizScores"
     private let completedQuizzesKey = "completedQuizzes"
+    private let storage: UserDefaults
+    
+    // MARK: - Initializer
+    
+    init(storage: UserDefaults = .standard) {
+        self.storage = storage
+    }
+    
+    // MARK: - Score Management
     
     func getScore(for quiz: String) -> Int {
-        let scores = UserDefaults.standard.dictionary(forKey: scoresKey) as? [String: Int] ?? [:]
+        let scores = storage.dictionary(forKey: scoresKey) as? [String: Int] ?? [:]
         return scores[quiz] ?? 0
     }
     
-    //get quiz data from JSON file and implement quiz question count
     func getTotalQuestions(for quiz: String) -> Int {
+        // Ideally, the total questions should be dynamically fetched based on quiz metadata.
+        // Currently returning a hardcoded value for demonstration.
         return 10
     }
     
     func updateScore(for quiz: String, score: Int) {
-        var scores = UserDefaults.standard.dictionary(forKey: scoresKey) as? [String: Int] ?? [:]
+        var scores = storage.dictionary(forKey: scoresKey) as? [String: Int] ?? [:]
         if score > (scores[quiz] ?? 0) {
             scores[quiz] = score
-            UserDefaults.standard.setValue(scores, forKey: scoresKey)
+            storage.setValue(scores, forKey: scoresKey)
         }
     }
     
+    // MARK: - Quiz Completion Management
+    
     func markQuizAsCompleted(quiz: String) {
-        var completedQuizzes = UserDefaults.standard.stringArray(forKey: completedQuizzesKey) ?? []
+        var completedQuizzes = storage.stringArray(forKey: completedQuizzesKey) ?? []
         if !completedQuizzes.contains(quiz) {
-            print("Completed quizzes \(completedQuizzes)")
             completedQuizzes.append(quiz)
-            print(completedQuizzes)
-            UserDefaults.standard.setValue(completedQuizzes, forKey: completedQuizzesKey)
+            storage.setValue(completedQuizzes, forKey: completedQuizzesKey)
         }
     }
     
     func isQuizCompleted(quiz: String) -> Bool {
-        let completedQuizzes = UserDefaults.standard.stringArray(forKey: completedQuizzesKey) ?? []
+        let completedQuizzes = storage.stringArray(forKey: completedQuizzesKey) ?? []
         return completedQuizzes.contains(quiz)
     }
-    
 }

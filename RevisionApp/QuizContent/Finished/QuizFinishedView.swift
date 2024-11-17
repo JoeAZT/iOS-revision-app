@@ -21,7 +21,7 @@ struct FinishedQuizView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                 Spacer()
-                Text(viewModel.highScoreText)
+                Text(viewModel.highScoreText ?? "")
                     .font(.title2)
                     .bold()
                 Text("\(viewModel.score)/\(viewModel.quizModel?.questions.count ?? 10)")
@@ -73,6 +73,11 @@ struct FinishedQuizView: View {
 
 #Preview {
     FinishedQuizView(
-        viewModel: QuizViewModel(router: Router(), selectedQuiz: "")
+        viewModel: QuizViewModel(
+            router: Router(),
+            scoreManager: ScoreManager(),
+            quizDataLoader: JSONQuizLoader(),
+            selectedQuiz: "selectedQuiz"
+        )
     )
 }

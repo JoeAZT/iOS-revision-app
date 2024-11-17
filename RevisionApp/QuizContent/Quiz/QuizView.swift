@@ -73,7 +73,7 @@ struct QuizView: View {
             
             ToolbarItem(placement: .navigationBarLeading) {
                 Button {
-                    viewModel.didTapNavigateToMainView()
+                    viewModel.didTapNavigateToPreviousView()
                 } label: {
                     Image(systemName: "chevron.left")
                         .bold()

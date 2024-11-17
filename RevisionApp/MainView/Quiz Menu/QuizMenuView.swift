@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct QuizMenuView: View {
-    @ObservedObject var viewModel: MainViewModel
+    @StateObject var viewModel: MainViewModel
     private let scoreManager = ScoreManager()
     
     var body: some View {
@@ -22,12 +22,19 @@ struct QuizMenuView: View {
                         BannerView(viewModel: viewModel, quiz: "Daily Quiz")
                         QuizCarouselView(
                             viewModel: QuizCarouselViewModel(
-                                router: viewModel.router, selectedCategory: nil,
-                                categories: viewModel.categories ?? []
-                            )
+                                router: viewModel.router,
+                                selectedCategory: nil,
+                                categories: viewModel.categories ?? [],
+                                quizLoader: JSONQuizLoader(),
+                                trophyColorProvider: DefaultTrophyColorProvider(),
+                                scoreManager: ScoreManager())
                         )
-                        BannerView(isDailyQuiz: false, viewModel: viewModel, quiz: "Mistakes")
-                            .padding(.top, 10)
+                        BannerView(
+                            isDailyQuiz: false,
+                            viewModel: viewModel,
+                            quiz: "Mistakes"
+                        )
+                        .padding(.top, 10)
                         Text("Next quizzes")
                             .font(.title3)
                             .padding(.top)
@@ -79,7 +86,6 @@ struct QuizMenuView: View {
                                 let scorePercentage = totalQuestions > 0 ? (Double(bestScore) / Double(totalQuestions)) * 100 : 0
                                 
                                 Button {
-                                    // Optionally handle navigation or show results
                                     viewModel.didTapNavigateToQuiz(selectedQuiz: quiz)
                                 } label: {
                                     HStack {

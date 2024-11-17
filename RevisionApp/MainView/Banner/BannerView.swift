@@ -50,7 +50,8 @@ struct BannerView: View {
     BannerView(viewModel: MainViewModel(
         router: Router(),
         quizLoader: JSONQuizLoader(),
-        trophyColorProvider: DefaultTrophyColorProvider()
+        trophyColorProvider: DefaultTrophyColorProvider(),
+        scoreManger: ScoreManager()
     ),
                quiz: "Daily Quiz"
     )
