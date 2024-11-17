@@ -35,6 +35,7 @@
 		C254300E2CEA49D2003188E7 /* MainViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C254300D2CEA49CB003188E7 /* MainViewModelProtocol.swift */; };
 		C25430112CEA4EDE003188E7 /* QuizViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25430102CEA4ED8003188E7 /* QuizViewModelProtocol.swift */; };
 		C25430132CEA66A7003188E7 /* MockScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25430122CEA66A1003188E7 /* MockScoreManager.swift */; };
+		C25430172CEA9641003188E7 /* QuizLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25430162CEA9630003188E7 /* QuizLoaderTests.swift */; };
 		C2549A6D2CC6AC740088A1A9 /* ProfileSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2549A6C2CC6AC730088A1A9 /* ProfileSheetView.swift */; };
 		C2F3617D2C7FC993000546A1 /* QuizMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */; };
 		C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */; };
@@ -110,6 +111,7 @@
 		C254300D2CEA49CB003188E7 /* MainViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelProtocol.swift; sourceTree = "<group>"; };
 		C25430102CEA4ED8003188E7 /* QuizViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModelProtocol.swift; sourceTree = "<group>"; };
 		C25430122CEA66A1003188E7 /* MockScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockScoreManager.swift; sourceTree = "<group>"; };
+		C25430162CEA9630003188E7 /* QuizLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizLoaderTests.swift; sourceTree = "<group>"; };
 		C2549A6C2CC6AC730088A1A9 /* ProfileSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSheetView.swift; sourceTree = "<group>"; };
 		C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMenuView.swift; sourceTree = "<group>"; };
 		C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 			children = (
 				C2542FFF2CE657E9003188E7 /* Mocks */,
 				C2F362252CA41150000546A1 /* MainViewModelTests.swift */,
+				C25430162CEA9630003188E7 /* QuizLoaderTests.swift */,
 				C25430042CE661EC003188E7 /* TrophyTests.swift */,
 				C25430062CE6620A003188E7 /* RouterTests.swift */,
 				C2F362352CA5F016000546A1 /* QuizViewModelTests.swift */,
@@ -654,6 +657,7 @@
 				C25430092CE66297003188E7 /* MockQuizLoader.swift in Sources */,
 				C25430052CE661F3003188E7 /* TrophyTests.swift in Sources */,
 				C2F362362CA5F016000546A1 /* QuizViewModelTests.swift in Sources */,
+				C25430172CEA9641003188E7 /* QuizLoaderTests.swift in Sources */,
 				C25430072CE6620E003188E7 /* RouterTests.swift in Sources */,
 				C25430132CEA66A7003188E7 /* MockScoreManager.swift in Sources */,
 				C2F362342CA41198000546A1 /* MainViewModelTests.swift in Sources */,
