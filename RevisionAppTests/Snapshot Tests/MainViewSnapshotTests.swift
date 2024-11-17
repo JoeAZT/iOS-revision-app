@@ -15,7 +15,7 @@ final class ContentViewTests: XCTestCase {
     private func getView() -> some View {
         QuizMenuView(
             viewModel: MainViewModel(
-                router: RouterMock(),
+                router: MockRouter(),
                 quizLoader: JSONQuizLoader(),
                 trophyColorProvider: DefaultTrophyColorProvider(),
                 scoreManger: ScoreManager()

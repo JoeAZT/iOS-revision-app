@@ -15,8 +15,6 @@ protocol ScoreManaging {
     func isQuizCompleted(quiz: String) -> Bool
 }
 
-import Foundation
-
 class ScoreManager: ScoreManaging {
     private let scoresKey = "quizScores"
     private let completedQuizzesKey = "completedQuizzes"

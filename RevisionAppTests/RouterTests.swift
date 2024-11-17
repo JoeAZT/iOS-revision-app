@@ -16,7 +16,7 @@ class RouterTests: XCTestCase {
         let quizViewModel = QuizViewModel(
             router: MockRouter(),
             scoreManager: ScoreManager(),
-            quizDataLoader: MockQuizLoader(quiz: nil),
+            quizDataLoader: MockQuizLoader(),
             selectedQuiz: ""
         )
         router.push(to: .quizView(viewModel: quizViewModel))
@@ -32,11 +32,22 @@ class RouterTests: XCTestCase {
             viewModel: QuizViewModel(
                 router: MockRouter(),
                 scoreManager: ScoreManager(),
-                quizDataLoader: MockQuizLoader(quiz: nil),
+                quizDataLoader: MockQuizLoader(),
                 selectedQuiz: ""
             )
         ))
-        router.push(to: .categoryView(viewModel: CatergoriesViewModel(category: "Category mock", quizzes: ["quizzes mock"])))
+        router.push(
+            to: .categoryView(
+            viewModel: CatergoriesViewModel(
+                quizzes: [],
+                category: "",
+                router: MockRouter(),
+                quizLoader: MockQuizLoader(),
+                trophyColorProvider: DefaultTrophyColorProvider(),
+                scoreManger: MockScoreManager()
+            )
+            )
+        )
         
         router.popToRootView()
         XCTAssertTrue(router.stack.isEmpty, "Expected stack to be empty after popToRootView")

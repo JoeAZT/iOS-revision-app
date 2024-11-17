@@ -4,7 +4,6 @@
 //
 //  Created by Joe Taylor on 25/09/2024.
 
-
 import XCTest
 import Combine
 @testable import RevisionApp
@@ -14,9 +13,9 @@ class QuizViewModelTests: XCTestCase {
     
     func makeSUT() -> QuizViewModel {
         QuizViewModel(
-            router: RouterMock(),
+            router: MockRouter(),
             scoreManager: ScoreManager(),
-            quizDataLoader: MockQuizLoader(quiz: nil),
+            quizDataLoader: MockQuizLoader(),
             selectedQuiz: "selectedQuiz"
         )
     }
