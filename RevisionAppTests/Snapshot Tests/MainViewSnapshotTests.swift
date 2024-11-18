@@ -1,5 +1,5 @@
 //
-//  Untitled.swift
+//  QuizMenuViewTests.swift
 //  RevisionApp
 //
 //  Created by Joe Taylor on 14/11/2024.
@@ -10,20 +10,20 @@ import SnapshotTesting
 import SwiftUI
 import XCTest
 
-final class ContentViewTests: XCTestCase {
+final class QuizMenuViewTests: XCTestCase {
     
     private func getView() -> some View {
         QuizMenuView(
             viewModel: MainViewModel(
                 router: MockRouter(),
-                quizLoader: JSONQuizLoader(),
+                quizLoader: MockQuizLoader(),
                 trophyColorProvider: DefaultTrophyColorProvider(),
                 scoreManger: ScoreManager()
             )
         )
     }
     
-    func testContentViewSnapShot() {
+    func testQuizMenuViewSnapShot() {
         let view = getView()
         assertSnapshot(of: view, as: .image)
     }
