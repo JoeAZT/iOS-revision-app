@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-protocol QuizViewModelProtocol: ObservableObject {
+protocol QuizViewModelProtocol {
     var selectedQuiz: String { get }
     var highScoreText: String? { get set }
     var quizModel: QuizModel? { get set }

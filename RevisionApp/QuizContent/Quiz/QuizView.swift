@@ -9,7 +9,7 @@ import SwiftUI
 
 struct QuizView: View {
     
-    @ObservedObject var viewModel: QuizViewModel
+    @StateObject var viewModel: QuizViewModel
     
     var body: some View {
         ZStack {

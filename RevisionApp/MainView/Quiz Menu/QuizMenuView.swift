@@ -19,7 +19,7 @@ struct QuizMenuView: View {
                     .ignoresSafeArea(.all)
                 VStack {
                     ScrollView {
-                        BannerView(viewModel: viewModel, quiz: "Daily Quiz")
+                        BannerView(isDailyQuiz: true, viewModel: viewModel, quiz: "Daily Quiz")
                         QuizCarouselView(
                             viewModel: QuizCarouselViewModel(
                                 router: viewModel.router,
@@ -105,7 +105,7 @@ struct QuizMenuView: View {
                 }
                 .navigationDestination(for: Route.self) { $0 }
             }
-            .navigationTitle("Quiz")
+            .navigationTitle("Hey Joe 👋")
         }
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class QuizViewModel: QuizViewModelProtocol {
+class QuizViewModel: QuizViewModelProtocol, ObservableObject {
     
     var selectedQuiz: String
     @Published var highScoreText: String? = nil

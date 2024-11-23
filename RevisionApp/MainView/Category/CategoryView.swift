@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CategoryView: View {
     
-    var viewModel: CatergoriesViewModel
+    @StateObject var viewModel: CatergoriesViewModel
     private let scoreManager = ScoreManager()
     
     var body: some View {

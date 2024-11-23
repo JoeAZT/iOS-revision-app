@@ -9,7 +9,7 @@ import SwiftUI
 
 struct QuizCarouselView: View {
     
-    var viewModel: QuizCarouselViewModel
+    @StateObject var viewModel: QuizCarouselViewModel
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {

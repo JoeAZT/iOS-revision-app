@@ -36,6 +36,7 @@
 		C25430112CEA4EDE003188E7 /* QuizViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25430102CEA4ED8003188E7 /* QuizViewModelProtocol.swift */; };
 		C25430132CEA66A7003188E7 /* MockScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25430122CEA66A1003188E7 /* MockScoreManager.swift */; };
 		C25430172CEA9641003188E7 /* QuizLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25430162CEA9630003188E7 /* QuizLoaderTests.swift */; };
+		C25430282CF2325D003188E7 /* IrregularGradient in Frameworks */ = {isa = PBXBuildFile; productRef = C25430272CF2325D003188E7 /* IrregularGradient */; };
 		C2549A6D2CC6AC740088A1A9 /* ProfileSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2549A6C2CC6AC730088A1A9 /* ProfileSheetView.swift */; };
 		C2F3617D2C7FC993000546A1 /* QuizMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */; };
 		C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */; };
@@ -161,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C25430282CF2325D003188E7 /* IrregularGradient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +504,7 @@
 			);
 			name = RevisionApp;
 			packageProductDependencies = (
+				C25430272CF2325D003188E7 /* IrregularGradient */,
 			);
 			productName = RevisionApp;
 			productReference = C20CF2BF2C6A974A009CE98E /* RevisionApp.app */;
@@ -559,6 +562,7 @@
 			packageReferences = (
 				C20CF2DA2C6BE430009CE98E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				C2542FEA2CE60BA3003188E7 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				C25430262CF2325D003188E7 /* XCRemoteSwiftPackageReference "IrregularGradient" */,
 			);
 			productRefGroup = C20CF2C02C6A974A009CE98E /* Products */;
 			projectDirPath = "";
@@ -810,6 +814,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -839,6 +844,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -937,6 +943,14 @@
 				minimumVersion = 1.17.6;
 			};
 		};
+		C25430262CF2325D003188E7 /* XCRemoteSwiftPackageReference "IrregularGradient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/joogps/IrregularGradient";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -949,6 +963,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C2542FEA2CE60BA3003188E7 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
 			productName = SnapshotTesting;
+		};
+		C25430272CF2325D003188E7 /* IrregularGradient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C25430262CF2325D003188E7 /* XCRemoteSwiftPackageReference "IrregularGradient" */;
+			productName = IrregularGradient;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
