@@ -21,9 +21,9 @@ struct ProfileStatView: View {
             Text(statName)
                 .opacity(0.75)
         }
-        .frame(maxWidth: .infinity) // Ensure full width
+        .frame(maxWidth: .infinity)
         .padding()
-        .background(Color.white) // Use Color.white for the background
+        .background(Color.white)
         .cornerRadius(10)
         .shadow(radius: 2)
     }

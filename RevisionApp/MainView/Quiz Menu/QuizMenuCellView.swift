@@ -19,12 +19,10 @@ struct QuizMenuCellView: View {
                 .strokeBorder((viewModel.trophyColor(for: viewModel.getScorePercentage(quiz: quiz)).linearGradient), lineWidth: 4)
                 .padding(.horizontal, 16)
             HStack {
-                Image(systemName: "trophy.circle.fill")
-                    .resizable()
-                    .scaledToFit()
-//                    .foregroundColor(viewModel.trophyColor(for: viewModel.getScorePercentage(quiz: quiz)).linearGradient)
-                    .frame(height: 24)
-                    .padding(.vertical)
+                Text("🧠")
+                    .padding(12)
+                    .background(viewModel.trophyColor(for: viewModel.getScorePercentage(quiz: quiz)).linearGradient)
+                    .cornerRadius(12)
                 Text(quiz)
                 Spacer()
                 HStack(spacing: 2) {
@@ -43,7 +41,7 @@ struct QuizMenuCellView: View {
                 }
             }
             .padding(.horizontal, 32)
-            .padding()
+            .padding(.vertical, 16)
         }
     }
 }

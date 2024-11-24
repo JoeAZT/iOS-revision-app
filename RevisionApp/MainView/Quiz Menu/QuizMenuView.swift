@@ -14,9 +14,9 @@ struct QuizMenuView: View {
     
     var body: some View {
         NavigationStack(path: $viewModel.router.stack) {
-            ZStack {
-                RadialGradient(colors: [Color.blue.opacity(0.1), Color.purple.opacity(0.1)], center: .center, startRadius: 50, endRadius: 400)
-                    .ignoresSafeArea(.all)
+//            ZStack {
+//                RadialGradient(colors: [Color.blue.opacity(0.9), Color.purple.opacity(0.9)], center: .center, startRadius: 50, endRadius: 400)
+//                    .ignoresSafeArea(.all)
                 VStack {
                     ScrollView {
                         BannerView(isDailyQuiz: true, viewModel: viewModel, quiz: "Daily Quiz")
@@ -80,7 +80,7 @@ struct QuizMenuView: View {
                     }
                 }
                 .navigationDestination(for: Route.self) { $0 }
-            }
+//            }
             .navigationTitle("Hey Joe 👋")
         }
     }
