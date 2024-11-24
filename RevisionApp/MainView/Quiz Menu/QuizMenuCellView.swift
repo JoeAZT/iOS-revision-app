@@ -24,10 +24,18 @@ struct QuizMenuCellView: View {
                 Text(quiz)
                 Spacer()
                 HStack(spacing: 2) {
-                    Text("\(viewModel.getScorePercentage(quiz: quiz))")
-                        .bold()
-                    Text("points")
-                        .opacity(0.8)
+                    if viewModel.getScorePercentage(quiz: quiz) != 0 {
+                        Text("\(viewModel.getScorePercentage(quiz: quiz))")
+                            .bold()
+                        Text("points")
+                            .opacity(0.8)
+                    } else {
+                        Text("0")
+                            .bold()
+                            .opacity(0.5)
+                        Text("points")
+                            .opacity(0.4)
+                    }
                 }
             }
             .padding()
