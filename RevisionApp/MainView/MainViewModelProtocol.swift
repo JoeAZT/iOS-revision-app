@@ -10,6 +10,6 @@ import SwiftUI
 protocol MainViewModelProtocol: ObservableObject {
     var quizzes: [String]? { get }
     var categories: [String]? { get }
-    func trophyColor(for percentage: Double) -> Color
+    func trophyColor(for percentage: Int) -> Color
     func didTapNavigateToQuiz(selectedQuiz: String)
 }

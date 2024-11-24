@@ -42,26 +42,15 @@ struct QuizMenuView: View {
                             .bold()
                             .frame(maxWidth: .infinity, alignment: .leading)
                         
-                        // Check if quizzes is nil and display message if it is
                         if let quizzes = viewModel.quizzes {
                             ForEach(quizzes.filter { !scoreManager.isQuizCompleted(quiz: $0) }, id: \.self) { quiz in
-                                let bestScore = scoreManager.getScore(for: quiz)
-                                let totalQuestions = scoreManager.getTotalQuestions(for: quiz)
-                                let scorePercentage = totalQuestions > 0 ? (Double(bestScore) / Double(totalQuestions)) * 100 : 0
-                                
                                 Button {
                                     viewModel.didTapNavigateToQuiz(selectedQuiz: quiz)
                                 } label: {
-                                    HStack {
-                                        Text(quiz)
-                                        Spacer()
-                                        Image(systemName: "trophy.fill")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .foregroundColor(viewModel.trophyColor(for: scorePercentage))
-                                            .padding(.vertical)
-                                    }
-                                    .modifier(MainButtonStyle())
+                                    QuizMenuCellView(
+                                        quiz: quiz,
+                                        viewModel: viewModel
+                                    )
                                 }
                             }
                         } else {
@@ -81,23 +70,10 @@ struct QuizMenuView: View {
                         
                         if let quizzes = viewModel.quizzes {
                             ForEach(quizzes.filter { scoreManager.isQuizCompleted(quiz: $0) }, id: \.self) { quiz in
-                                let bestScore = scoreManager.getScore(for: quiz)
-                                let totalQuestions = scoreManager.getTotalQuestions(for: quiz)
-                                let scorePercentage = totalQuestions > 0 ? (Double(bestScore) / Double(totalQuestions)) * 100 : 0
-                                
                                 Button {
                                     viewModel.didTapNavigateToQuiz(selectedQuiz: quiz)
                                 } label: {
-                                    HStack {
-                                        Text(quiz)
-                                        Spacer()
-                                        Image(systemName: "trophy.fill")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .foregroundColor(viewModel.trophyColor(for: scorePercentage))
-                                            .padding(.vertical)
-                                    }
-                                    .modifier(MainButtonStyle())
+                                    QuizMenuCellView(quiz: quiz, viewModel: viewModel)
                                 }
                             }
                         }

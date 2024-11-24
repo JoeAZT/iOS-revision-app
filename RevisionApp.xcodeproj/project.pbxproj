@@ -37,6 +37,7 @@
 		C25430132CEA66A7003188E7 /* MockScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25430122CEA66A1003188E7 /* MockScoreManager.swift */; };
 		C25430172CEA9641003188E7 /* QuizLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25430162CEA9630003188E7 /* QuizLoaderTests.swift */; };
 		C25430282CF2325D003188E7 /* IrregularGradient in Frameworks */ = {isa = PBXBuildFile; productRef = C25430272CF2325D003188E7 /* IrregularGradient */; };
+		C254302A2CF27456003188E7 /* QuizMenuCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25430292CF27451003188E7 /* QuizMenuCellView.swift */; };
 		C2549A6D2CC6AC740088A1A9 /* ProfileSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2549A6C2CC6AC730088A1A9 /* ProfileSheetView.swift */; };
 		C2F3617D2C7FC993000546A1 /* QuizMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */; };
 		C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */; };
@@ -113,6 +114,7 @@
 		C25430102CEA4ED8003188E7 /* QuizViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModelProtocol.swift; sourceTree = "<group>"; };
 		C25430122CEA66A1003188E7 /* MockScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockScoreManager.swift; sourceTree = "<group>"; };
 		C25430162CEA9630003188E7 /* QuizLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizLoaderTests.swift; sourceTree = "<group>"; };
+		C25430292CF27451003188E7 /* QuizMenuCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMenuCellView.swift; sourceTree = "<group>"; };
 		C2549A6C2CC6AC730088A1A9 /* ProfileSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSheetView.swift; sourceTree = "<group>"; };
 		C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMenuView.swift; sourceTree = "<group>"; };
 		C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */,
+				C25430292CF27451003188E7 /* QuizMenuCellView.swift */,
 			);
 			path = "Quiz Menu";
 			sourceTree = "<group>";
@@ -628,6 +631,7 @@
 				C2542FFD2CE64C2A003188E7 /* TrophyColorProvider.swift in Sources */,
 				C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */,
 				C254300E2CEA49D2003188E7 /* MainViewModelProtocol.swift in Sources */,
+				C254302A2CF27456003188E7 /* QuizMenuCellView.swift in Sources */,
 				C20CF2D52C6BD866009CE98E /* AnswerButton.swift in Sources */,
 				C2542F972CDD665B003188E7 /* CatergoriesViewModel.swift in Sources */,
 				C2F361C52C890A4D000546A1 /* CorrectAnswerSheet.swift in Sources */,

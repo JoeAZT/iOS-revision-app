@@ -19,9 +19,6 @@ struct CategoryView: View {
             VStack {
                 ScrollView {
                     ForEach(viewModel.quizzes.filter { !scoreManager.isQuizCompleted(quiz: $0) }, id: \.self) { quiz in
-                        let bestScore = scoreManager.getScore(for: quiz)
-                        let totalQuestions = scoreManager.getTotalQuestions(for: quiz)
-                        let scorePercentage = totalQuestions > 0 ? (Double(bestScore) / Double(totalQuestions)) * 100 : 0
                         
                         Button {
                             viewModel.didTapNavigateToQuiz(selectedQuiz: quiz)
@@ -32,7 +29,7 @@ struct CategoryView: View {
                                 Image(systemName: "trophy.fill")
                                     .resizable()
                                     .scaledToFit()
-                                    .foregroundColor(viewModel.trophyColor(for: scorePercentage))
+//                                    .foregroundColor(viewModel.trophyColor(for: scorePercentage))
                                     .padding(.vertical)
                             }
                             .modifier(MainButtonStyle())

@@ -35,7 +35,7 @@ class CatergoriesViewModel: ObservableObject {
         self.scoreManger = scoreManger
     }
     
-    func trophyColor(for percentage: Double) -> Color {
+    func trophyColor(for percentage: Int) -> Color {
         return trophyColorProvider.trophyColor(for: percentage)
     }
     

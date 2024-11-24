@@ -17,7 +17,7 @@ class MainViewModel: MainViewModelProtocol {
     
     private let quizLoader: QuizDataLoader
     private let trophyColorProvider: TrophyColorProvider
-    private let scoreManger: ScoreManager
+    private let scoreManager: ScoreManager
     private var cancellables = Set<AnyCancellable>()
     
     init(
@@ -29,24 +29,32 @@ class MainViewModel: MainViewModelProtocol {
         self.router = router
         self.quizLoader = quizLoader
         self.trophyColorProvider = trophyColorProvider
-        self.scoreManger = scoreManger
+        self.scoreManager = scoreManger
         
         configureSubscriptions()
         loadData()
     }
     
-    func trophyColor(for percentage: Double) -> Color {
+    func trophyColor(for percentage: Int) -> Color {
         return trophyColorProvider.trophyColor(for: percentage)
     }
     
     func didTapNavigateToQuiz(selectedQuiz: String) {
         let quizViewModel = QuizViewModel(
             router: router,
-            scoreManager: scoreManger,
+            scoreManager: scoreManager,
             quizDataLoader: quizLoader,
             selectedQuiz: selectedQuiz
         )
         router.push(to: .quizView(viewModel: quizViewModel))
+    }
+    
+    func getScorePercentage(quiz: String) -> Int {
+        let bestScore = scoreManager.getScore(for: quiz)
+        let totalQuestions = scoreManager.getTotalQuestions(for: quiz)
+        print(quiz)
+        print(totalQuestions > 0 ? (bestScore * 100) / totalQuestions : 0)
+        return totalQuestions > 0 ? (bestScore * 100) / totalQuestions : 0
     }
     
     private func loadData() {
