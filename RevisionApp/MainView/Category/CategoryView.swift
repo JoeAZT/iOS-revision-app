@@ -10,6 +10,7 @@ import SwiftUI
 struct CategoryView: View {
     
     @StateObject var viewModel: CatergoriesViewModel
+    //why do we need scoreManager here when we have it in the viewModel anyway?
     private let scoreManager = ScoreManager()
     
     var body: some View {

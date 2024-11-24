@@ -20,7 +20,7 @@ struct BannerView: View {
         } label: {
             HStack {
                 VStack(alignment: .leading, spacing: 12) {
-                    Text("Suggested")
+                    Text(isDailyQuiz == true ? "Suggested" : "Just for you")
                         .opacity(0.8)
                     Text(isDailyQuiz == true ? "Test your iOS knowledge everyday with new questions!" : "Fix your previous mistakes and fill any gaps in your knowledge")
                         .multilineTextAlignment(.leading)
@@ -30,21 +30,24 @@ struct BannerView: View {
                         .font(.subheadline)
                         .padding(20)
                         .padding(.horizontal, 12)
-                        .background(.appBlack)
                         .foregroundColor(.white)
+                        .background(.appBlack)
                         .cornerRadius(20)
                 }
                 Spacer()
             }
             .padding()
-            .foregroundColor(.white)
+            .foregroundColor(isDailyQuiz == true ? .white : .appBlack)
             .background(
                 ZStack {
                     MeshGradient(
                         width: 2,
                         height: 2,
                         points: [[0, 0], [1, 0], [0, 1], [1, 1]],
-                        colors: [.indigo.opacity(0.8), .blue.opacity(0.5), .purple.opacity(0.5), .purple.opacity(0.5)]
+                        colors: isDailyQuiz == true ?
+                        [.indigo.opacity(0.8), .blue.opacity(0.5), .purple.opacity(0.5), .purple.opacity(0.5)]
+                        :
+                        [Color.offwhite, Color.offwhite, Color.offwhite, Color.offwhite]
                     )
                 }
             )
