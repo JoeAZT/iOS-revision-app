@@ -20,16 +20,7 @@ struct QuizCarouselView: View {
                         Button {
                             viewModel.didTapNavigateToCategoryView(selectedCategory: categoryName)
                         } label: {
-                            VStack {
-                                Circle()
-                                    .stroke(lineWidth: 5)
-                                    .foregroundColor(.appBlack)
-                                    .frame(width: 60, height: 60)
-                                    .padding()
-                                    .background(.white)
-                                    .cornerRadius(20)
-                                Text(categoryName)
-                            }
+                            QuizCarouselCellView(categoryName: categoryName)
                         }
                     }
                 } else {
@@ -41,7 +32,6 @@ struct QuizCarouselView: View {
             }
             .padding(.leading, 20)
         }
-        .frame(height: 120)
         .padding(.top, 10)
     }
 }
