@@ -29,7 +29,6 @@ struct CategoryView: View {
                                 Image(systemName: "trophy.fill")
                                     .resizable()
                                     .scaledToFit()
-//                                    .foregroundColor(viewModel.trophyColor(for: scorePercentage))
                                     .padding(.vertical)
                             }
                             .modifier(MainButtonStyle())
@@ -41,12 +40,3 @@ struct CategoryView: View {
         .navigationTitle(viewModel.category)
     }
 }
-
-//#Preview {
-//    CategoryView(
-//        viewModel: CatergoriesViewModel(
-//            category: "General",
-//            quizzes: ["quiz 1", "quiz 2", "quiz 3", "quiz 4"]
-//        )
-//    )
-//}
