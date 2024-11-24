@@ -28,7 +28,7 @@ struct AnswerSheetView: View {
                     .foregroundColor(.white)
                     .padding()
                     .frame(maxWidth: .infinity)
-                    .background(.black)
+                    .background(.appBlack)
                     .cornerRadius(10)
             }
         }

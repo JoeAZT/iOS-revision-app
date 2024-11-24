@@ -66,7 +66,7 @@ struct FinishedQuizView: View {
             .padding()
         }
         .background(
-            Color.black.ignoresSafeArea()
+            Color.appBlack.ignoresSafeArea()
         )
     }
 }

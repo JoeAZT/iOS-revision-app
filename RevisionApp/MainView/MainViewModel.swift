@@ -35,7 +35,7 @@ class MainViewModel: MainViewModelProtocol {
         loadData()
     }
     
-    func trophyColor(for percentage: Int) -> Color {
+    func trophyColor(for percentage: Int) -> CommodityColor {
         return trophyColorProvider.trophyColor(for: percentage)
     }
     

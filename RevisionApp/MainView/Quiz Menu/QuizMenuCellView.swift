@@ -14,11 +14,15 @@ struct QuizMenuCellView: View {
     
     var body: some View {
         ZStack {
+            RoundedRectangle(cornerRadius: 20)
+                .fill(.white)
+                .strokeBorder((viewModel.trophyColor(for: viewModel.getScorePercentage(quiz: quiz)).linearGradient), lineWidth: 4)
+                .padding(.horizontal, 16)
             HStack {
                 Image(systemName: "trophy.circle.fill")
                     .resizable()
                     .scaledToFit()
-                    .foregroundColor(viewModel.trophyColor(for: viewModel.getScorePercentage(quiz: quiz)))
+//                    .foregroundColor(viewModel.trophyColor(for: viewModel.getScorePercentage(quiz: quiz)).linearGradient)
                     .frame(height: 24)
                     .padding(.vertical)
                 Text(quiz)
@@ -38,10 +42,8 @@ struct QuizMenuCellView: View {
                     }
                 }
             }
+            .padding(.horizontal, 32)
             .padding()
-            .background(Color.white)
-            .cornerRadius(20)
-            .padding(.horizontal, 16)
         }
     }
 }

@@ -11,7 +11,7 @@ struct MainButtonStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
             .bold()
-            .foregroundColor(.black)
+            .foregroundColor(.appBlack)
             .padding()
             .frame(
                 maxWidth: .infinity,

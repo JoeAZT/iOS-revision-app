@@ -15,7 +15,7 @@ struct AnswerButton: ViewModifier {
                 .font(.title2)
                 .multilineTextAlignment(.leading)
                 .padding()
-                .background(.black)
+                .background(.appBlack)
                 .clipShape(.rect(cornerRadius: 10))
     }
 }

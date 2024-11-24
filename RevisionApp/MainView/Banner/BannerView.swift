@@ -30,7 +30,7 @@ struct BannerView: View {
                         .font(.subheadline)
                         .padding(20)
                         .padding(.horizontal, 12)
-                        .background(.black)
+                        .background(.appBlack)
                         .foregroundColor(.white)
                         .cornerRadius(20)
                 }

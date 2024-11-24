@@ -23,7 +23,7 @@ struct QuizCarouselView: View {
                             VStack {
                                 Circle()
                                     .stroke(lineWidth: 5)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.appBlack)
                                     .frame(width: 60, height: 60)
                                     .padding()
                                     .background(.white)
