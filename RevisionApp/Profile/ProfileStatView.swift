@@ -23,9 +23,10 @@ struct ProfileStatView: View {
         }
         .frame(maxWidth: .infinity)
         .padding()
-        .background(Color.white)
-        .cornerRadius(10)
-        .shadow(radius: 2)
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(.offwhite, lineWidth: 4)
+        )
     }
 }
 
