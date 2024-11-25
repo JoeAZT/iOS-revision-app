@@ -16,33 +16,30 @@ class MainViewModel: MainViewModelProtocol {
     @Published var categories: [String]?
     
     private let quizLoader: QuizDataLoader
-    private let trophyColorProvider: TrophyColorProvider
-    private let scoreManager: ScoreManager
+    internal var quizCellHelper: QuizCellHelperProtocol
     private var cancellables = Set<AnyCancellable>()
     
     init(
         router: RouterProtocol,
         quizLoader: QuizDataLoader,
-        trophyColorProvider: TrophyColorProvider,
-        scoreManger: ScoreManager
+        quizCellHelper: QuizCellHelper
     ) {
         self.router = router
+        self.quizCellHelper = quizCellHelper
         self.quizLoader = quizLoader
-        self.trophyColorProvider = trophyColorProvider
-        self.scoreManager = scoreManger
         
         configureSubscriptions()
         loadData()
     }
     
     func trophyColor(for percentage: Int) -> CommodityColor {
-        return trophyColorProvider.trophyColor(for: percentage)
+        return quizCellHelper.trophyColorProvider.trophyColor(for: percentage)
     }
     
     func didTapNavigateToQuiz(selectedQuiz: String) {
         let quizViewModel = QuizViewModel(
             router: router,
-            scoreManager: scoreManager,
+            scoreManager: quizCellHelper.scoreManager,
             quizDataLoader: quizLoader,
             selectedQuiz: selectedQuiz
         )
@@ -50,10 +47,8 @@ class MainViewModel: MainViewModelProtocol {
     }
     
     func getScorePercentage(quiz: String) -> Int {
-        let bestScore = scoreManager.getScore(for: quiz)
-        let totalQuestions = scoreManager.getTotalQuestions(for: quiz)
-        print(quiz)
-        print(totalQuestions > 0 ? (bestScore * 100) / totalQuestions : 0)
+        let bestScore = quizCellHelper.scoreManager.getScore(for: quiz)
+        let totalQuestions = quizCellHelper.scoreManager.getTotalQuestions(for: quiz)
         return totalQuestions > 0 ? (bestScore * 100) / totalQuestions : 0
     }
     

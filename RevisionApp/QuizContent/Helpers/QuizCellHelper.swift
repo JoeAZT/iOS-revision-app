@@ -5,7 +5,16 @@
 //  Created by Joe Taylor on 24/11/2024.
 //
 
-class QuizCellHelper {
+protocol QuizCellHelperProtocol {
+    
+    var trophyColorProvider: TrophyColorProvider { get }
+    var scoreManager: ScoreManager { get }
+    
+    func trophyColor(for percentage: Int) -> CommodityColor
+    func getScorePercentage(quiz: String) -> Int
+}
+
+class QuizCellHelper: QuizCellHelperProtocol {
     
     let trophyColorProvider: TrophyColorProvider
     let scoreManager: ScoreManager

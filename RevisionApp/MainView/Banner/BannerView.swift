@@ -47,7 +47,7 @@ struct BannerView: View {
                         colors: isDailyQuiz == true ?
                         [.indigo.opacity(0.8), .blue.opacity(0.5), .purple.opacity(0.5), .purple.opacity(0.5)]
                         :
-                        [Color.offwhite, Color.offwhite, Color.offwhite, Color.offwhite]
+                            [Color.offwhite, Color.offwhite, Color.offwhite, Color.offwhite]
                     )
                 }
             )
@@ -63,8 +63,10 @@ struct BannerView: View {
         viewModel: MainViewModel(
             router: Router(),
             quizLoader: JSONQuizLoader(),
-            trophyColorProvider: DefaultTrophyColorProvider(),
-            scoreManger: ScoreManager()
+            quizCellHelper: QuizCellHelper(
+                trophyColorProvider: DefaultTrophyColorProvider(),
+                scoreManger: ScoreManager()
+            )
         ),
         quiz: "Daily Quiz"
     )
@@ -73,8 +75,10 @@ struct BannerView: View {
         viewModel: MainViewModel(
             router: Router(),
             quizLoader: JSONQuizLoader(),
-            trophyColorProvider: DefaultTrophyColorProvider(),
-            scoreManger: ScoreManager()
+            quizCellHelper: QuizCellHelper(
+                trophyColorProvider: DefaultTrophyColorProvider(),
+                scoreManger: ScoreManager()
+            )
         ),
         quiz: "Daily Quiz"
     )
