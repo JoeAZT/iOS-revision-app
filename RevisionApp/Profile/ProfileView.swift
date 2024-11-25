@@ -108,7 +108,7 @@ struct ProfileView: View {
                                     .foregroundColor(symbolColor(for: user.symbol))
                                     .bold()
                                 //add the users position in the scoreboard here
-                                Text(1)
+                                Text("1")
                                     .bold()
                                 Circle()
                                     .frame(height: 30)
