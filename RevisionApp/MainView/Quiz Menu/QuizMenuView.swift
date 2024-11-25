@@ -77,8 +77,17 @@ struct QuizMenuView: View {
                     }
                 }
                 .navigationDestination(for: Route.self) { $0 }
-//            }
             .navigationTitle("Hey Joe 👋")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "gear")
+                            .foregroundColor(.secondaryGrey)
+                    }
+                }
+            }
         }
     }
 }

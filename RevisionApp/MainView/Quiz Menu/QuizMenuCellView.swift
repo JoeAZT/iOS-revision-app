@@ -38,7 +38,7 @@ struct QuizMenuCellView: View {
         .padding()
         .overlay(
             RoundedRectangle(cornerRadius: 16)
-                .stroke(.offwhite, lineWidth: 4)
+                .stroke(viewModel.trophyColor(for: viewModel.getScorePercentage(quiz: quiz)).linearGradient, lineWidth: 4)
         )
         .padding(.horizontal, 16)
     }
