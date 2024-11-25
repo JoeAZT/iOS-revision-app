@@ -80,7 +80,7 @@ struct ProfileView: View {
                             ProfileStatView(statValue: 78, statName: "Average %")
                         }
                         
-                        //add gradients to these boxes 
+                        //add gradients to these boxes
                         HStack {
                             ProfileStatView(statValue: 137, statName: "Gold")
                             Spacer()
@@ -114,6 +114,7 @@ struct ProfileView: View {
                                 Circle()
                                     .frame(height: 30)
                                 Text(user.name)
+                                    .bold()
                                 Spacer()
                                 HStack(spacing: 2) {
                                     Text("\(user.score)")
