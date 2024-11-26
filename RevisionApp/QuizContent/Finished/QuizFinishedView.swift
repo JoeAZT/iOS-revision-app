@@ -75,7 +75,9 @@ struct FinishedQuizView: View {
     FinishedQuizView(
         viewModel: QuizViewModel(
             router: Router(),
-            scoreManager: ScoreManager(),
+            quizCellHelper: QuizCellHelper(
+                trophyColorProvider: DefaultTrophyColorProvider(),
+                scoreManger: ScoreManager()),
             quizDataLoader: JSONQuizLoader(),
             selectedQuiz: "selectedQuiz"
         )

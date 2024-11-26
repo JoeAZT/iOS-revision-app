@@ -41,6 +41,7 @@ class QuizCarouselViewModel: ObservableObject {
             quizzes: loadCategoryFromJSON(selectedCategory: selectedCategory + " Categories") ?? ["No quiz data available"],
             category: selectedCategory,
             router: router,
+            quizCellHelper: <#any QuizCellHelperProtocol#>,
             quizLoader: quizLoader,
             trophyColorProvider: trophyColorProvider,
             scoreManger: scoreManger

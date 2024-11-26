@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class QuizViewModel: QuizViewModelProtocol, ObservableObject {
+class QuizViewModel: QuizViewModelProtocol {
     
     var selectedQuiz: String
     @Published var highScoreText: String? = nil
@@ -21,17 +21,17 @@ class QuizViewModel: QuizViewModelProtocol, ObservableObject {
     @Published var shuffledAnswers: [OptionModel] = []
     
     private let router: RouterProtocol
-    private let scoreManager: ScoreManaging
+    var quizCellHelper: QuizCellHelperProtocol
     private let quizDataLoader: QuizDataLoader
     
     init(
         router: RouterProtocol,
-        scoreManager: ScoreManaging,
+        quizCellHelper: QuizCellHelperProtocol,
         quizDataLoader: QuizDataLoader,
         selectedQuiz: String
     ) {
         self.router = router
-        self.scoreManager = scoreManager
+        self.quizCellHelper = quizCellHelper
         self.quizDataLoader = quizDataLoader
         self.selectedQuiz = selectedQuiz
         
@@ -89,7 +89,7 @@ class QuizViewModel: QuizViewModelProtocol, ObservableObject {
         
         guard let questionsCount = quizModel?.questions.count, currentQuestionIndex < questionsCount - 1 else {
             highScoreText = setHighScoreText()
-            scoreManager.updateScore(for: selectedQuiz, score: score)
+            quizCellHelper.scoreManager.updateScore(for: selectedQuiz, score: score)
             router.push(to: .finishedQuizView(viewModel: self))
             currentQuestionIndex += 1
             return
@@ -104,7 +104,7 @@ class QuizViewModel: QuizViewModelProtocol, ObservableObject {
     }
     
     func completeQuiz() {
-        scoreManager.markQuizAsCompleted(quiz: selectedQuiz)
+        quizCellHelper.scoreManager.markQuizAsCompleted(quiz: selectedQuiz)
         didTapNavigateToMainView()
     }
     
@@ -130,7 +130,7 @@ class QuizViewModel: QuizViewModelProtocol, ObservableObject {
     // MARK: - High Score Management
     
     private func setHighScoreText() -> String {
-        let currentHighScore = scoreManager.getScore(for: selectedQuiz)
+        let currentHighScore = quizCellHelper.scoreManager.getScore(for: selectedQuiz)
         if score > currentHighScore {
             return "🎉 New High Score 🎉"
         } else if score == currentHighScore {

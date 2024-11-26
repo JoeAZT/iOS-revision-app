@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-protocol QuizViewModelProtocol {
+protocol QuizViewModelProtocol: ObservableObject {
     var selectedQuiz: String { get }
     var highScoreText: String? { get set }
     var quizModel: QuizModel? { get set }
@@ -18,6 +18,7 @@ protocol QuizViewModelProtocol {
     var showingAnswerSheet: Bool { get set }
     var selectedAnswer: String? { get set }
     var shuffledAnswers: [OptionModel] { get set }
+    var quizCellHelper: QuizCellHelperProtocol { get }
     
     func shuffleAnswers()
     func answerIsCorrect()

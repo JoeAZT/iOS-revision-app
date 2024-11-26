@@ -22,7 +22,7 @@ class MainViewModel: MainViewModelProtocol {
     init(
         router: RouterProtocol,
         quizLoader: QuizDataLoader,
-        quizCellHelper: QuizCellHelper
+        quizCellHelper: QuizCellHelperProtocol
     ) {
         self.router = router
         self.quizCellHelper = quizCellHelper
@@ -39,7 +39,7 @@ class MainViewModel: MainViewModelProtocol {
     func didTapNavigateToQuiz(selectedQuiz: String) {
         let quizViewModel = QuizViewModel(
             router: router,
-            scoreManager: quizCellHelper.scoreManager,
+            quizCellHelper: quizCellHelper,
             quizDataLoader: quizLoader,
             selectedQuiz: selectedQuiz
         )

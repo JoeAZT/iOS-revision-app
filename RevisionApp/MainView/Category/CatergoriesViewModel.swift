@@ -42,7 +42,7 @@ class CatergoriesViewModel: ObservableObject {
     func didTapNavigateToQuiz(selectedQuiz: String) {
         let quizViewModel = QuizViewModel(
             router: router,
-            scoreManager: scoreManger,
+            quizCellHelper: quizCellHelper,
             quizDataLoader: quizLoader,
             selectedQuiz: selectedQuiz
         )
