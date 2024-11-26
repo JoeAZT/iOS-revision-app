@@ -15,8 +15,7 @@ class QuizCarouselViewModel: ObservableObject {
 
     var categories: [String]?
     private let quizLoader: QuizDataLoader
-    private let trophyColorProvider: TrophyColorProvider
-    private let scoreManger: ScoreManager
+    private let quizCellHelper: QuizCellHelperProtocol
     private var cancellables = Set<AnyCancellable>()
     
     init(
@@ -24,15 +23,13 @@ class QuizCarouselViewModel: ObservableObject {
         selectedCategory: String?,
         categories: [String]?,
         quizLoader: JSONQuizLoader,
-        trophyColorProvider: TrophyColorProvider,
-        scoreManager: ScoreManager
+        quizCellHelper: QuizCellHelperProtocol
     ) {
         self.router = router
         self.selectedCategory = selectedCategory
         self.categories = categories
         self.quizLoader = quizLoader
-        self.trophyColorProvider = trophyColorProvider
-        self.scoreManger = scoreManager
+        self.quizCellHelper = quizCellHelper
         configureSubscriptions()
     }
     
@@ -41,10 +38,8 @@ class QuizCarouselViewModel: ObservableObject {
             quizzes: loadCategoryFromJSON(selectedCategory: selectedCategory + " Categories") ?? ["No quiz data available"],
             category: selectedCategory,
             router: router,
-            quizCellHelper: <#any QuizCellHelperProtocol#>,
-            quizLoader: quizLoader,
-            trophyColorProvider: trophyColorProvider,
-            scoreManger: scoreManger
+            quizCellHelper: quizCellHelper,
+            quizLoader: quizLoader
         )
         router.push(to: .categoryView(viewModel: catergoryViewModel))
     }

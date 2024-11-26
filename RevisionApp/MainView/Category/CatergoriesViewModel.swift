@@ -14,29 +14,22 @@ class CatergoriesViewModel: ObservableObject {
     var quizzes: [String]
     var category: String
     
+    private let quizCellHelper: QuizCellHelperProtocol
     private let quizLoader: QuizDataLoader
-    private let trophyColorProvider: TrophyColorProvider
-    private let scoreManger: ScoreManager
     private var cancellables = Set<AnyCancellable>()
     
     init(
         quizzes: [String],
         category: String,
         router: RouterProtocol,
-        quizLoader: QuizDataLoader,
-        trophyColorProvider: TrophyColorProvider,
-        scoreManger: ScoreManager
+        quizCellHelper: QuizCellHelperProtocol,
+        quizLoader: QuizDataLoader
     ) {
         self.quizzes = quizzes
         self.category = category
         self.router = router
+        self.quizCellHelper = quizCellHelper
         self.quizLoader = quizLoader
-        self.trophyColorProvider = trophyColorProvider
-        self.scoreManger = scoreManger
-    }
-    
-    func trophyColor(for percentage: Int) -> CommodityColor {
-        return trophyColorProvider.trophyColor(for: percentage)
     }
     
     func didTapNavigateToQuiz(selectedQuiz: String) {
