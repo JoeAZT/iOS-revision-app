@@ -10,15 +10,35 @@ import XCTest
 
 class RouterTests: XCTestCase {
     
+    func makeQuizViewModel() -> QuizViewModel {
+        QuizViewModel(
+            router: MockRouter(),
+            quizCellHelper: QuizCellHelper(
+                trophyColorProvider: DefaultTrophyColorProvider(),
+                scoreManger: MockScoreManager()
+            ),
+            quizDataLoader: MockQuizLoader(),
+            selectedQuiz: "selectedQuiz"
+        )
+    }
+    
+    func makeCategoriesViewModel() -> CatergoriesViewModel {
+        CatergoriesViewModel(
+            quizzes: [],
+            category: "selectedCategory",
+            router: MockRouter(),
+            quizCellHelper: QuizCellHelper(
+                trophyColorProvider: DefaultTrophyColorProvider(),
+                scoreManger: MockScoreManager()
+            ),
+            quizLoader: MockQuizLoader()
+        )
+    }
+    
     func testPushAndPopRoutes() {
         let router = Router()
         
-        let quizViewModel = QuizViewModel(
-            router: MockRouter(),
-            scoreManager: ScoreManager(),
-            quizDataLoader: MockQuizLoader(),
-            selectedQuiz: ""
-        )
+        let quizViewModel = makeQuizViewModel()
         router.push(to: .quizView(viewModel: quizViewModel))
         XCTAssertEqual(router.stack, [.quizView(viewModel: quizViewModel)], "Expected stack to contain pushed route")
         router.pop()
@@ -29,26 +49,14 @@ class RouterTests: XCTestCase {
         let router = Router()
         
         router.push(to: .quizView(
-            viewModel: QuizViewModel(
-                router: MockRouter(),
-                scoreManager: ScoreManager(),
-                quizDataLoader: MockQuizLoader(),
-                selectedQuiz: ""
-            )
+            viewModel: makeQuizViewModel()
         ))
+        
         router.push(
             to: .categoryView(
-            viewModel: CatergoriesViewModel(
-                quizzes: [],
-                category: "",
-                router: MockRouter(),
-                quizLoader: MockQuizLoader(),
-                trophyColorProvider: DefaultTrophyColorProvider(),
-                scoreManger: MockScoreManager()
-            )
+                viewModel: makeCategoriesViewModel()
             )
         )
-        
         router.popToRootView()
         XCTAssertTrue(router.stack.isEmpty, "Expected stack to be empty after popToRootView")
     }

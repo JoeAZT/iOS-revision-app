@@ -17,8 +17,10 @@ final class QuizMenuViewTests: XCTestCase {
             viewModel: MainViewModel(
                 router: MockRouter(),
                 quizLoader: MockQuizLoader(),
-                trophyColorProvider: DefaultTrophyColorProvider(),
-                scoreManger: ScoreManager()
+                quizCellHelper: QuizCellHelper(
+                    trophyColorProvider: DefaultTrophyColorProvider(),
+                    scoreManger: MockScoreManager()
+                )
             )
         )
     }

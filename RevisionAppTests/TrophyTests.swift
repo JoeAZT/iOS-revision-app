@@ -14,9 +14,9 @@ class TrophyColorProviderTests: XCTestCase {
     func testTrophyColor() {
         let trophyColorProvider = DefaultTrophyColorProvider()
         
-        XCTAssertEqual(trophyColorProvider.trophyColor(for: 100), Color("gold"), "Expected gold color for 100%")
-        XCTAssertEqual(trophyColorProvider.trophyColor(for: 95), Color("silver"), "Expected silver color for 95%")
-        XCTAssertEqual(trophyColorProvider.trophyColor(for: 80), Color("bronze"), "Expected bronze color for 80%")
-        XCTAssertEqual(trophyColorProvider.trophyColor(for: 50), .gray.opacity(0.75), "Expected gray color for <70%")
+        XCTAssertEqual(trophyColorProvider.trophyColor(for: 100), CommodityColor.gold, "Expected gold color for 100%")
+        XCTAssertEqual(trophyColorProvider.trophyColor(for: 90), CommodityColor.silver, "Expected gold color for 100%")
+        XCTAssertEqual(trophyColorProvider.trophyColor(for: 80), CommodityColor.bronze, "Expected gold color for 100%")
+        XCTAssertEqual(trophyColorProvider.trophyColor(for: 50), CommodityColor.standard, "Expected gold color for 100%")
     }
 }
