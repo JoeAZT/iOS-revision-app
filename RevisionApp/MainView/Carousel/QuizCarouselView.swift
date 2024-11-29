@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct QuizCarouselView: View {
-    
     @StateObject var viewModel: QuizCarouselViewModel
-    
+
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 20) {
-                
-                if let categories = viewModel.categories {
-                    ForEach(Array(zip(categories.indices, categories)), id: \.1) { index, categoryName in
+                if viewModel.hasCategories {
+                    ForEach(viewModel.categoryData, id: \.0) { index, categoryName in
                         Button {
                             viewModel.didTapNavigateToCategoryView(selectedCategory: categoryName)
                         } label: {
@@ -24,7 +22,7 @@ struct QuizCarouselView: View {
                         }
                     }
                 } else {
-                    Text("No Quiz Data Found")
+                    Text(viewModel.noDataMessage)
                         .font(.headline)
                         .foregroundColor(.gray)
                         .padding(.top, 20)

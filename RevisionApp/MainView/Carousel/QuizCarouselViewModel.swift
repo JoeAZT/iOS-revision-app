@@ -9,20 +9,19 @@ import SwiftUI
 import Combine
 
 class QuizCarouselViewModel: ObservableObject {
-    
     @Published var router: RouterProtocol
     @Published var selectedCategory: String?
 
-    var categories: [String]?
+    let categories: [String]?
     private let quizLoader: QuizDataLoader
     private let quizCellHelper: QuizCellHelperProtocol
     private var cancellables = Set<AnyCancellable>()
-    
+
     init(
         router: RouterProtocol,
         selectedCategory: String?,
         categories: [String]?,
-        quizLoader: JSONQuizLoader,
+        quizLoader: QuizDataLoader,
         quizCellHelper: QuizCellHelperProtocol
     ) {
         self.router = router
@@ -32,35 +31,30 @@ class QuizCarouselViewModel: ObservableObject {
         self.quizCellHelper = quizCellHelper
         configureSubscriptions()
     }
-    
+
+    var hasCategories: Bool {
+        categories != nil && !categories!.isEmpty
+    }
+
+    var categoryData: [(Int, String)] {
+        guard let categories = categories else { return [] }
+        return Array(zip(categories.indices, categories))
+    }
+
+    var noDataMessage: String {
+        "No Quiz Data Found"
+    }
+
     func didTapNavigateToCategoryView(selectedCategory: String) {
-        let catergoryViewModel = CatergoriesViewModel(
-            quizzes: loadCategoryFromJSON(selectedCategory: selectedCategory + " Categories") ?? ["No quiz data available"],
+        let quizzes = quizLoader.loadCategories(for: selectedCategory + " Categories") ?? ["No quiz data available"]
+        let categoryViewModel = CatergoriesViewModel(
+            quizzes: quizzes,
             category: selectedCategory,
             router: router,
             quizCellHelper: quizCellHelper,
             quizLoader: quizLoader
         )
-        router.push(to: .categoryView(viewModel: catergoryViewModel))
-    }
-}
-
-private extension QuizCarouselViewModel {
-    func loadCategoryFromJSON(selectedCategory: String) -> [String]? {
-        guard let url = Bundle.main.url(forResource: selectedCategory, withExtension: "json") else {
-            print("Could not find \(selectedCategory).json")
-            return nil
-        }
-        
-        do {
-            let data = try Data(contentsOf: url)
-            let decoder = JSONDecoder()
-            let decodedData = try decoder.decode(CategoryGroupModel.self, from: data)
-            return decodedData.quizzes
-        } catch {
-            print("Error decoding JSON: \(error.localizedDescription)")
-            return nil
-        }
+        router.push(to: .categoryView(viewModel: categoryViewModel))
     }
 }
 
