@@ -34,8 +34,6 @@ class QuizCellHelper: QuizCellHelperProtocol {
     func getScorePercentage(quiz: String) -> Int {
         let bestScore = scoreManager.getScore(for: quiz)
         let totalQuestions = scoreManager.getTotalQuestions(for: quiz)
-        print(quiz)
-        print(totalQuestions > 0 ? (bestScore * 100) / totalQuestions : 0)
         return totalQuestions > 0 ? (bestScore * 100) / totalQuestions : 0
     }
 }

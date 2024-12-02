@@ -24,6 +24,13 @@ struct CategoryView: View {
                         Button {
                             viewModel.didTapNavigateToQuiz(selectedQuiz: quiz)
                         } label: {
+                            Text("test for quiz failures")
+//                            QuizMenuCellView(
+//                                quiz: quiz,
+                                //create a quizMenuC3llViewModel mate surely thats easier, nice try though :)
+//                                quizCellHelper: viewModel.quizCellHelper
+//                            )
+                            
                             HStack {
                                 Text(quiz)
                                 Spacer()

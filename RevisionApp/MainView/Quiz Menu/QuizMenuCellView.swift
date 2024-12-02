@@ -10,19 +10,19 @@ import SwiftUI
 struct QuizMenuCellView: View {
     
     let quiz: String
-    let viewModel: MainViewModel
+    let quizCellHelper: QuizCellHelperProtocol
     
     var body: some View {
         HStack {
             Text("🧠")
                 .padding(12)
-                .background(viewModel.trophyColor(for: viewModel.getScorePercentage(quiz: quiz)).linearGradient)
+                .background(quizCellHelper.trophyColor(for: quizCellHelper.getScorePercentage(quiz: quiz)).linearGradient)
                 .cornerRadius(12)
             Text(quiz)
             Spacer()
             HStack(spacing: 2) {
-                if viewModel.getScorePercentage(quiz: quiz) != 0 {
-                    Text("\(viewModel.getScorePercentage(quiz: quiz))")
+                if quizCellHelper.getScorePercentage(quiz: quiz) != 0 {
+                    Text("\(quizCellHelper.getScorePercentage(quiz: quiz))")
                         .bold()
                     Text("points")
                         .opacity(0.8)
@@ -38,7 +38,7 @@ struct QuizMenuCellView: View {
         .padding()
         .overlay(
             RoundedRectangle(cornerRadius: 16)
-                .stroke(viewModel.trophyColor(for: viewModel.getScorePercentage(quiz: quiz)).linearGradient, lineWidth: 4)
+                .stroke(quizCellHelper.trophyColor(for: quizCellHelper.getScorePercentage(quiz: quiz)).linearGradient, lineWidth: 4)
         )
         .padding(.horizontal, 16)
     }

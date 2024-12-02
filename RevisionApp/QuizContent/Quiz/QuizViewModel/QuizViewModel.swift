@@ -88,13 +88,14 @@ class QuizViewModel: QuizViewModelProtocol {
         }
         
         guard let questionsCount = quizModel?.questions.count, currentQuestionIndex < questionsCount - 1 else {
+            print("question number: \(currentQuestionIndex)")
             highScoreText = setHighScoreText()
             quizCellHelper.scoreManager.updateScore(for: selectedQuiz, score: score)
             router.push(to: .finishedQuizView(viewModel: self))
-            currentQuestionIndex += 1
             return
         }
         currentQuestionIndex += 1
+        print("question number: \(currentQuestionIndex)")
         shuffleAnswers()
     }
     
