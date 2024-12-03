@@ -18,7 +18,7 @@ protocol QuizViewModelProtocol: ObservableObject {
     var showingAnswerSheet: Bool { get set }
     var selectedAnswer: String? { get set }
     var shuffledAnswers: [OptionModel] { get set }
-    var quizCellHelper: QuizCellHelperProtocol { get }
+    var quizCellViewModel: QuizCellViewModelProtocol { get }
     
     func shuffleAnswers()
     func answerIsCorrect()

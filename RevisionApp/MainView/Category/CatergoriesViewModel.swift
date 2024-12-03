@@ -14,7 +14,7 @@ class CatergoriesViewModel: ObservableObject {
     var quizzes: [String]
     var category: String
     
-    private let quizCellHelper: QuizCellHelperProtocol
+    private let quizCellViewModel: QuizCellViewModel
     private let quizLoader: QuizDataLoader
     private var cancellables = Set<AnyCancellable>()
     
@@ -22,20 +22,20 @@ class CatergoriesViewModel: ObservableObject {
         quizzes: [String],
         category: String,
         router: RouterProtocol,
-        quizCellHelper: QuizCellHelperProtocol,
+        quizCellViewModel: QuizCellViewModel,
         quizLoader: QuizDataLoader
     ) {
         self.quizzes = quizzes
         self.category = category
         self.router = router
-        self.quizCellHelper = quizCellHelper
+        self.quizCellViewModel = quizCellViewModel
         self.quizLoader = quizLoader
     }
     
     func didTapNavigateToQuiz(selectedQuiz: String) {
         let quizViewModel = QuizViewModel(
             router: router,
-            quizCellHelper: quizCellHelper,
+            quizCellViewModel: quizCellViewModel,
             quizDataLoader: quizLoader,
             selectedQuiz: selectedQuiz
         )

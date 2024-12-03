@@ -20,17 +20,14 @@ struct CategoryView: View {
             VStack {
                 ScrollView {
                     ForEach(viewModel.quizzes.filter { !scoreManager.isQuizCompleted(quiz: $0) }, id: \.self) { quiz in
-                        
                         Button {
                             viewModel.didTapNavigateToQuiz(selectedQuiz: quiz)
                         } label: {
-                            Text("test for quiz failures")
 //                            QuizMenuCellView(
 //                                quiz: quiz,
-                                //create a quizMenuC3llViewModel mate surely thats easier, nice try though :)
+//                                create a quizMenuC3llViewModel mate surely thats easier, nice try though :)
 //                                quizCellHelper: viewModel.quizCellHelper
 //                            )
-                            
                             HStack {
                                 Text(quiz)
                                 Spacer()

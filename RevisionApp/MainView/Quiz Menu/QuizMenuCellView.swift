@@ -10,7 +10,7 @@ import SwiftUI
 struct QuizMenuCellView: View {
     
     let quiz: String
-    let quizCellHelper: QuizCellHelperProtocol
+    let quizCellHelper: QuizCellViewModel
     
     var body: some View {
         HStack {

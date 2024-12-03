@@ -5,7 +5,7 @@
 //  Created by Joe Taylor on 24/11/2024.
 //
 
-protocol QuizCellHelperProtocol {
+protocol QuizCellViewModelProtocol {
     
     var trophyColorProvider: TrophyColorProvider { get }
     var scoreManager: ScoreManager { get }
@@ -14,7 +14,7 @@ protocol QuizCellHelperProtocol {
     func getScorePercentage(quiz: String) -> Int
 }
 
-class QuizCellHelper: QuizCellHelperProtocol {
+class QuizCellViewModel: QuizCellViewModelProtocol {
     
     let trophyColorProvider: TrophyColorProvider
     let scoreManager: ScoreManager

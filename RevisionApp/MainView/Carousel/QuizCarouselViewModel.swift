@@ -14,7 +14,7 @@ class QuizCarouselViewModel: ObservableObject {
 
     let categories: [String]?
     private let quizLoader: QuizDataLoader
-    private let quizCellHelper: QuizCellHelperProtocol
+    private let quizCellViewModel: QuizCellViewModel
     private var cancellables = Set<AnyCancellable>()
 
     init(
@@ -22,13 +22,13 @@ class QuizCarouselViewModel: ObservableObject {
         selectedCategory: String?,
         categories: [String]?,
         quizLoader: QuizDataLoader,
-        quizCellHelper: QuizCellHelperProtocol
+        quizCellViewModel: QuizCellViewModel
     ) {
         self.router = router
         self.selectedCategory = selectedCategory
         self.categories = categories
         self.quizLoader = quizLoader
-        self.quizCellHelper = quizCellHelper
+        self.quizCellViewModel = quizCellViewModel
         configureSubscriptions()
     }
 
@@ -51,7 +51,7 @@ class QuizCarouselViewModel: ObservableObject {
             quizzes: quizzes,
             category: selectedCategory,
             router: router,
-            quizCellHelper: quizCellHelper,
+            quizCellViewModel: quizCellViewModel,
             quizLoader: quizLoader
         )
         router.push(to: .categoryView(viewModel: categoryViewModel))

@@ -14,7 +14,7 @@ class QuizViewModelTests: XCTestCase {
     func makeSUT() -> QuizViewModel {
         QuizViewModel(
             router: MockRouter(),
-            quizCellHelper: QuizCellHelper(
+            quizCellHelper: QuizCellViewModel(
                 trophyColorProvider: DefaultTrophyColorProvider(),
                 scoreManger: MockScoreManager()
             ),

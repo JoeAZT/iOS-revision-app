@@ -13,7 +13,7 @@ class RouterTests: XCTestCase {
     func makeQuizViewModel() -> QuizViewModel {
         QuizViewModel(
             router: MockRouter(),
-            quizCellHelper: QuizCellHelper(
+            quizCellHelper: QuizCellViewModel(
                 trophyColorProvider: DefaultTrophyColorProvider(),
                 scoreManger: MockScoreManager()
             ),
@@ -27,7 +27,7 @@ class RouterTests: XCTestCase {
             quizzes: [],
             category: "selectedCategory",
             router: MockRouter(),
-            quizCellHelper: QuizCellHelper(
+            quizCellHelper: QuizCellViewModel(
                 trophyColorProvider: DefaultTrophyColorProvider(),
                 scoreManger: MockScoreManager()
             ),

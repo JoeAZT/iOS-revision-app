@@ -23,7 +23,7 @@ struct QuizMenuView: View {
                             selectedCategory: nil,
                             categories: viewModel.categories ?? [],
                             quizLoader: JSONQuizLoader(),
-                            quizCellHelper: viewModel.quizCellHelper
+                            quizCellViewModel: viewModel.quizCellViewModel
                         )
                     )
                     BannerView(

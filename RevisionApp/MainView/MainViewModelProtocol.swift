@@ -10,5 +10,5 @@ import SwiftUI
 protocol MainViewModelProtocol: ObservableObject {
     var quizzes: [String]? { get }
     var categories: [String]? { get }
-    var quizCellHelper: QuizCellHelperProtocol { get }
+    var quizCellViewModel: QuizCellViewModelProtocol { get }
 }

@@ -63,7 +63,7 @@ struct BannerView: View {
         viewModel: MainViewModel(
             router: Router(),
             quizLoader: JSONQuizLoader(),
-            quizCellHelper: QuizCellHelper(
+            quizCellViewModel: QuizCellViewModel(
                 trophyColorProvider: DefaultTrophyColorProvider(),
                 scoreManger: ScoreManager()
             )
@@ -75,7 +75,7 @@ struct BannerView: View {
         viewModel: MainViewModel(
             router: Router(),
             quizLoader: JSONQuizLoader(),
-            quizCellHelper: QuizCellHelper(
+            quizCellViewModel: QuizCellViewModel(
                 trophyColorProvider: DefaultTrophyColorProvider(),
                 scoreManger: ScoreManager()
             )

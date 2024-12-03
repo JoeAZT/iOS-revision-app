@@ -36,7 +36,7 @@ class MainViewModelTests: XCTestCase {
         MainViewModel(
             router: mockRouter,
             quizLoader: mockQuizLoader,
-            quizCellHelper: QuizCellHelper(
+            quizCellHelper: QuizCellViewModel(
                 trophyColorProvider: mockTrophyColorProvider,
                 scoreManger: mockScoreManager
             )
