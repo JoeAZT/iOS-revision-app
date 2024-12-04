@@ -14,7 +14,7 @@ class CatergoriesViewModel: ObservableObject {
     var quizzes: [String]
     var category: String
     
-    private let quizCellViewModel: QuizCellViewModel
+    private let quizCellViewModel: QuizCellViewModelProtocol
     private let quizLoader: QuizDataLoader
     private var cancellables = Set<AnyCancellable>()
     
@@ -22,7 +22,7 @@ class CatergoriesViewModel: ObservableObject {
         quizzes: [String],
         category: String,
         router: RouterProtocol,
-        quizCellViewModel: QuizCellViewModel,
+        quizCellViewModel: QuizCellViewModelProtocol,
         quizLoader: QuizDataLoader
     ) {
         self.quizzes = quizzes

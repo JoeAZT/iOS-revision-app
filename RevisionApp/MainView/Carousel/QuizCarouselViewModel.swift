@@ -14,7 +14,7 @@ class QuizCarouselViewModel: ObservableObject {
 
     let categories: [String]?
     private let quizLoader: QuizDataLoader
-    private let quizCellViewModel: QuizCellViewModel
+    private let quizCellViewModel: QuizCellViewModelProtocol
     private var cancellables = Set<AnyCancellable>()
 
     init(
@@ -22,7 +22,7 @@ class QuizCarouselViewModel: ObservableObject {
         selectedCategory: String?,
         categories: [String]?,
         quizLoader: QuizDataLoader,
-        quizCellViewModel: QuizCellViewModel
+        quizCellViewModel: QuizCellViewModelProtocol
     ) {
         self.router = router
         self.selectedCategory = selectedCategory

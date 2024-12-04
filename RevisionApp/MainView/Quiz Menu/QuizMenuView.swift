@@ -46,7 +46,7 @@ struct QuizMenuView: View {
                             } label: {
                                 QuizMenuCellView(
                                     quiz: quiz,
-                                    quizCellHelper: viewModel.quizCellHelper
+                                    quizCellViewModel: viewModel.quizCellViewModel
                                 )
                             }
                         }
@@ -70,7 +70,10 @@ struct QuizMenuView: View {
                             Button {
                                 viewModel.didTapNavigateToQuiz(selectedQuiz: quiz)
                             } label: {
-                                QuizMenuCellView(quiz: quiz, quizCellHelper: viewModel.quizCellHelper)
+                                QuizMenuCellView(
+                                    quiz: quiz,
+                                    quizCellViewModel: viewModel.quizCellViewModel
+                                )
                             }
                         }
                     }
