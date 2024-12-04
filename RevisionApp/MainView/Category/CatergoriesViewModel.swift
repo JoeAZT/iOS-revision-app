@@ -14,7 +14,7 @@ class CatergoriesViewModel: ObservableObject {
     var quizzes: [String]
     var category: String
     
-    private let quizCellViewModel: QuizCellViewModelProtocol
+    internal let quizCellViewModel: QuizCellViewModelProtocol
     private let quizLoader: QuizDataLoader
     private var cancellables = Set<AnyCancellable>()
     
