@@ -43,6 +43,7 @@ class MainViewModel: MainViewModelProtocol {
             quizDataLoader: quizLoader,
             selectedQuiz: selectedQuiz
         )
+        router.push(to: .quizView(viewModel: quizViewModel))
     }
     
     func getScorePercentage(quiz: String) -> Int {
