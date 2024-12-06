@@ -1,7 +1,6 @@
 
 {
     "name": "General3",
-    {
       "questions": [
         {
           "questionText": "What is the difference between 'any' and 'some' in Swift?",
