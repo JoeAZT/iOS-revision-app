@@ -1,0 +1,96 @@
+
+{
+    "name": "Debugging 1",
+    "questions": [
+        {
+            "questionText": "What is the first step to take when encountering a runtime crash in Swift?",
+            "possibleAnswers": [
+                { "optionText": "Check the debugger console for the crash log and error message", "isAnswer": true },
+                { "optionText": "Rewrite the entire code segment causing the crash", "isAnswer": false },
+                { "optionText": "Disable all breakpoints and re-run the code", "isAnswer": false },
+                { "optionText": "Change the optimization level in the build settings", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How can you debug a 'nil' value causing a crash in your application?",
+            "possibleAnswers": [
+                { "optionText": "Use optional binding or optional chaining to safely handle the 'nil' value", "isAnswer": true },
+                { "optionText": "Force-unwrap the value to bypass the crash", "isAnswer": false },
+                { "optionText": "Replace all optional values with non-optional values", "isAnswer": false },
+                { "optionText": "Delete the code that uses the 'nil' value", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the purpose of using breakpoints in debugging?",
+            "possibleAnswers": [
+                { "optionText": "To pause code execution at specific points and inspect variables and flow", "isAnswer": true },
+                { "optionText": "To skip over sections of code that are unnecessary", "isAnswer": false },
+                { "optionText": "To generate a detailed crash log automatically", "isAnswer": false },
+                { "optionText": "To prevent runtime errors during execution", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How can you identify performance bottlenecks in your Swift code?",
+            "possibleAnswers": [
+                { "optionText": "Use Instruments in Xcode to analyze CPU, memory, and time usage", "isAnswer": true },
+                { "optionText": "Rewrite all functions to use asynchronous code", "isAnswer": false },
+                { "optionText": "Disable threading to isolate the performance issue", "isAnswer": false },
+                { "optionText": "Increase the app's memory allocation to improve speed", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What should you do if your app consistently crashes on a specific user action?",
+            "possibleAnswers": [
+                { "optionText": "Reproduce the crash in a debug environment and analyze the stack trace", "isAnswer": true },
+                { "optionText": "Ignore the crash, assuming it is an issue with the user's device", "isAnswer": false },
+                { "optionText": "Add more animations to the app to distract the user from the crash", "isAnswer": false },
+                { "optionText": "Reduce the app's features to simplify its functionality", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How can you debug an infinite loop in your Swift code?",
+            "possibleAnswers": [
+                { "optionText": "Use breakpoints or print statements to identify where the loop fails to terminate", "isAnswer": true },
+                { "optionText": "Restart your system to reset the code execution environment", "isAnswer": false },
+                { "optionText": "Force stop the code and avoid using loops", "isAnswer": false },
+                { "optionText": "Switch to using recursion instead of loops", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the function of the 'po' command in Xcode's LLDB debugger?",
+            "possibleAnswers": [
+                { "optionText": "It prints the description of an object in the debugger console", "isAnswer": true },
+                { "optionText": "It pauses the execution of the program", "isAnswer": false },
+                { "optionText": "It restarts the app with logging enabled", "isAnswer": false },
+                { "optionText": "It prints only primitive data types", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How can you debug an unexpected behavior in a closure?",
+            "possibleAnswers": [
+                { "optionText": "Check for capture lists and ensure variables are captured correctly", "isAnswer": true },
+                { "optionText": "Remove the closure and use global functions instead", "isAnswer": false },
+                { "optionText": "Closures cannot be debugged; avoid using them", "isAnswer": false },
+                { "optionText": "Declare all variables inside the closure as 'let'", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the purpose of using the 'Debug Navigator' in Xcode?",
+            "possibleAnswers": [
+                { "optionText": "To monitor CPU, memory, and thread usage during runtime", "isAnswer": true },
+                { "optionText": "To edit source code while debugging", "isAnswer": false },
+                { "optionText": "To automatically fix runtime errors", "isAnswer": false },
+                { "optionText": "To view a history of previous debugging sessions", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How can you debug an app that is failing to fetch data from a network request?",
+            "possibleAnswers": [
+                { "optionText": "Use breakpoints or logging to inspect the request and response data", "isAnswer": true },
+                { "optionText": "Switch to offline mode to avoid network-related issues", "isAnswer": false },
+                { "optionText": "Rewrite the entire networking layer", "isAnswer": false },
+                { "optionText": "Force the app to return mock data instead of a real network response", "isAnswer": false }
+            ]
+        }
+    ]
+}
