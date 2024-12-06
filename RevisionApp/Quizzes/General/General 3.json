@@ -1,51 +1,43 @@
 
 {
     "name": "General3",
-    "questions": [
+    {
+      "questions": [
         {
-            "questionText": "What is the difference between a struct and a class in Swift?",
-            "possibleAnswers": [
-                { "optionText": "Structs are value types; classes are reference types", "isAnswer": true },
-                { "optionText": "Structs are for small data; classes for complex data", "isAnswer": false },
-                { "optionText": "Structs are immutable by default; classes are mutable", "isAnswer": false },
-                { "optionText": "There is no significant difference; both are interchangeable", "isAnswer": false }
-            ]
+          "questionText": "What is the difference between 'any' and 'some' in Swift?",
+          "possibleAnswers": [
+            { "optionText": "'any' represents a type-erased protocol, while 'some' specifies an opaque return type", "isAnswer": true },
+            { "optionText": "'any' is used for inheritance, while 'some' is for composition", "isAnswer": false },
+            { "optionText": "'any' allows for generics, while 'some' does not", "isAnswer": false },
+            { "optionText": "'any' defines a function, while 'some' defines a variable", "isAnswer": false }
+          ]
         },
         {
-            "questionText": "When would you use a struct over a class in Swift?",
-            "possibleAnswers": [
-                { "optionText": "Use structs for simple, immutable data models; use classes for inheritance", "isAnswer": true },
-                { "optionText": "Always use structs for better memory efficiency", "isAnswer": false },
-                { "optionText": "Always use classes for more flexible inheritance", "isAnswer": false },
-                { "optionText": "Use structs for any data model; they are faster", "isAnswer": false }
-            ]
+          "questionText": "What does 'sendable' mean in Swift?",
+          "possibleAnswers": [
+            { "optionText": "'Sendable' indicates that a type is safe to be passed between threads", "isAnswer": true },
+            { "optionText": "'Sendable' allows functions to send data over the network", "isAnswer": false },
+            { "optionText": "'Sendable' defines a protocol for asynchronous event handling", "isAnswer": false },
+            { "optionText": "'Sendable' makes a type immutable by default", "isAnswer": false }
+          ]
         },
         {
-            "questionText": "What is the difference between synchronous and asynchronous tasks?",
-            "possibleAnswers": [
-                { "optionText": "Synchronous tasks block the current thread; asynchronous tasks allow it to continue", "isAnswer": true },
-                { "optionText": "Asynchronous tasks are always faster than synchronous tasks", "isAnswer": false },
-                { "optionText": "Synchronous tasks must run on the main thread", "isAnswer": false },
-                { "optionText": "There is no difference; both are handled the same", "isAnswer": false }
-            ]
+          "questionText": "Does a lazy property have access to other values in its class?",
+          "possibleAnswers": [
+            { "optionText": "Yes, a lazy property can access other properties and methods of its class", "isAnswer": true },
+            { "optionText": "No, a lazy property is isolated and cannot access any other class members", "isAnswer": false },
+            { "optionText": "Yes, but only if it is initialized within the class's initializer", "isAnswer": false },
+            { "optionText": "No, lazy properties can only reference static values", "isAnswer": false }
+          ]
         },
         {
-            "questionText": "What are optionals in Swift?",
-            "possibleAnswers": [
-                { "optionText": "A type that can hold either a value or nil", "isAnswer": true },
-                { "optionText": "A type that must always have a value", "isAnswer": false },
-                { "optionText": "A type used only for error handling in Swift", "isAnswer": false },
-                { "optionText": "A function that returns a value or nil", "isAnswer": false }
-            ]
-        },
-        {
-            "questionText": "What is the purpose of a guard statement in Swift?",
-            "possibleAnswers": [
-                { "optionText": "To check conditions and exit early if they aren't met", "isAnswer": true },
-                { "optionText": "To break out of a loop when a condition is met", "isAnswer": false },
-                { "optionText": "To declare variables that must be initialized before exiting", "isAnswer": false },
-                { "optionText": "To create loops that run while a condition is true", "isAnswer": false }
-            ]
+          "questionText": "What is a keyPath in Swift and its function?",
+          "possibleAnswers": [
+            { "optionText": "A keyPath is a type-safe reference to a property of a type, used for dynamic property access", "isAnswer": true },
+            { "optionText": "A keyPath is a mapping function used to filter collections", "isAnswer": false },
+            { "optionText": "A keyPath is a shortcut for initializing types with default values", "isAnswer": false },
+            { "optionText": "A keyPath is a Swift UI feature for defining navigation routes", "isAnswer": false }
+          ]
         },
         {
             "questionText": "What is GCD (Grand Central Dispatch) used for in iOS?",
@@ -85,6 +77,15 @@
         },
         {
             "questionText": "What is the difference between weak and strong references?",
+            "possibleAnswers": [
+                { "optionText": "Strong references increase reference count; weak references do not", "isAnswer": true },
+                { "optionText": "Weak references are faster and more memory-efficient", "isAnswer": false },
+                { "optionText": "Strong references are used within closures only", "isAnswer": false },
+                { "optionText": "No significant difference; both serve the same purpose", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "add new question here from ",
             "possibleAnswers": [
                 { "optionText": "Strong references increase reference count; weak references do not", "isAnswer": true },
                 { "optionText": "Weak references are faster and more memory-efficient", "isAnswer": false },

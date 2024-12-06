@@ -163,6 +163,7 @@
 		C2542FDB2CE2C3F0003188E7 /* Tabs */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Tabs; sourceTree = "<group>"; };
 		C2542FED2CE60C12003188E7 /* Snapshot Tests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Snapshot Tests"; sourceTree = "<group>"; };
 		C2542FFA2CE64C07003188E7 /* Quiz Loader Service */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Quiz Loader Service"; sourceTree = "<group>"; };
+		C2AA35792D03426C00023222 /* Debugging */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Debugging; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -472,6 +473,7 @@
 				C2F361F12C9B0BB9000546A1 /* Daily Quiz.json */,
 				C2997DAD2CA9C9BF007C69D6 /* OverviewLists */,
 				C2997DAE2CA9C9CD007C69D6 /* General */,
+				C2AA35792D03426C00023222 /* Debugging */,
 				C2997DAF2CA9C9D6007C69D6 /* Combine */,
 				C2997DB02CA9C9DF007C69D6 /* Architecture */,
 				C2997DB12CA9C9E6007C69D6 /* UIKit */,
@@ -513,6 +515,7 @@
 			fileSystemSynchronizedGroups = (
 				C2542FDB2CE2C3F0003188E7 /* Tabs */,
 				C2542FFA2CE64C07003188E7 /* Quiz Loader Service */,
+				C2AA35792D03426C00023222 /* Debugging */,
 			);
 			name = RevisionApp;
 			packageProductDependencies = (
