@@ -24,7 +24,7 @@
 		C2542FE32CE560DE003188E7 /* Architecture Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C2542FE22CE560DE003188E7 /* Architecture Categories.json */; };
 		C2542FE52CE56111003188E7 /* UIKit Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C2542FE42CE56111003188E7 /* UIKit Categories.json */; };
 		C2542FE72CE5619D003188E7 /* SwiftUI Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C2542FE62CE5619D003188E7 /* SwiftUI Categories.json */; };
-		C2542FE92CE561C4003188E7 /* Access Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C2542FE82CE561C4003188E7 /* Access Categories.json */; };
+		C2542FE92CE561C4003188E7 /* Access and Visibility Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C2542FE82CE561C4003188E7 /* Access and Visibility Categories.json */; };
 		C2542FEF2CE611DE003188E7 /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = C2542FEE2CE611DE003188E7 /* InlineSnapshotTesting */; };
 		C2542FF12CE611DE003188E7 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = C2542FF02CE611DE003188E7 /* SnapshotTesting */; };
 		C2542FFD2CE64C2A003188E7 /* TrophyColorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2542FFB2CE64C29003188E7 /* TrophyColorProvider.swift */; };
@@ -107,7 +107,7 @@
 		C2542FE22CE560DE003188E7 /* Architecture Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Architecture Categories.json"; sourceTree = "<group>"; };
 		C2542FE42CE56111003188E7 /* UIKit Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "UIKit Categories.json"; sourceTree = "<group>"; };
 		C2542FE62CE5619D003188E7 /* SwiftUI Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "SwiftUI Categories.json"; sourceTree = "<group>"; };
-		C2542FE82CE561C4003188E7 /* Access Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Access Categories.json"; sourceTree = "<group>"; };
+		C2542FE82CE561C4003188E7 /* Access and Visibility Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Access and Visibility Categories.json"; sourceTree = "<group>"; };
 		C2542FFB2CE64C29003188E7 /* TrophyColorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophyColorProvider.swift; sourceTree = "<group>"; };
 		C25430022CE6595D003188E7 /* MockRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRouter.swift; sourceTree = "<group>"; };
 		C25430042CE661EC003188E7 /* TrophyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophyTests.swift; sourceTree = "<group>"; };
@@ -377,7 +377,7 @@
 		C2997DB32CA9C9F9007C69D6 /* Access and Visibility */ = {
 			isa = PBXGroup;
 			children = (
-				C2542FE82CE561C4003188E7 /* Access Categories.json */,
+				C2542FE82CE561C4003188E7 /* Access and Visibility Categories.json */,
 				C2F361CE2C90651E000546A1 /* Access and Visibility.json */,
 			);
 			path = "Access and Visibility";
@@ -606,7 +606,7 @@
 				C2F361CF2C90651E000546A1 /* Access and Visibility.json in Resources */,
 				C2542FE12CE560A6003188E7 /* Combine Categories.json in Resources */,
 				C2F361E52C98BF36000546A1 /* General 6.json in Resources */,
-				C2542FE92CE561C4003188E7 /* Access Categories.json in Resources */,
+				C2542FE92CE561C4003188E7 /* Access and Visibility Categories.json in Resources */,
 				C2F361C92C9060C2000546A1 /* Combine 1.json in Resources */,
 				C2F361F92CA1A12D000546A1 /* Combine 2.json in Resources */,
 				C20CF2CA2C6A974C009CE98E /* Preview Assets.xcassets in Resources */,
