@@ -216,8 +216,7 @@
 				C2542FDA2CE2C3E9003188E7 /* Route */,
 				C2542FFA2CE64C07003188E7 /* Quiz Loader Service */,
 				C2542FDB2CE2C3F0003188E7 /* Tabs */,
-				C2AA36572D04FD1C00023222 /* LoginView.swift */,
-				C2AA36592D05019D00023222 /* LoginViewModel.swift */,
+				C2AA365B2D050B4900023222 /* Login */,
 				C2F361E82C99E08F000546A1 /* Profile */,
 				C2F361802C7FCA81000546A1 /* MainView */,
 				C2F361812C7FCAE8000546A1 /* QuizContent */,
@@ -387,6 +386,15 @@
 				C2F361CE2C90651E000546A1 /* Access and Visibility.json */,
 			);
 			path = "Access and Visibility";
+			sourceTree = "<group>";
+		};
+		C2AA365B2D050B4900023222 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C2AA36572D04FD1C00023222 /* LoginView.swift */,
+				C2AA36592D05019D00023222 /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		C2F361802C7FCA81000546A1 /* MainView */ = {
