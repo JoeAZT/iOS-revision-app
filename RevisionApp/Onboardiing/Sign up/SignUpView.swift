@@ -16,6 +16,8 @@ struct SignUpView: View {
                 .font(.largeTitle)
                 .bold()
                 .padding()
+            
+            Spacer()
 
             TextField("Email", text: $viewModel.email)
                 .keyboardType(.emailAddress)
@@ -39,20 +41,19 @@ struct SignUpView: View {
                     .foregroundColor(.red)
                     .padding()
             }
-
+            Spacer()
             Button(action: viewModel.signUp) {
-                Text(viewModel.isLoading ? "Loading..." : "Sign Up")
+                Text(viewModel.isLoading ? "Loading..." : "SIGN UP")
+                    .bold()
                     .foregroundColor(.white)
                     .padding()
                     .frame(maxWidth: .infinity)
-                    .background(Color.green)
+                    .background(.appBlack)
                     .cornerRadius(8)
             }
             .disabled(viewModel.isLoading)
-
-            Spacer()
         }
-        .padding()
+        .padding(.horizontal)
     }
 }
 
