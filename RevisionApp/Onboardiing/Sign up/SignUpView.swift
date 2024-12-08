@@ -19,6 +19,12 @@ struct SignUpView: View {
             
             Spacer()
 
+            TextField("Name", text: $viewModel.name)
+                .keyboardType(.emailAddress)
+                .autocapitalization(.none)
+                .padding()
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(8)
             TextField("Email", text: $viewModel.email)
                 .keyboardType(.emailAddress)
                 .autocapitalization(.none)
