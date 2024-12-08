@@ -9,26 +9,28 @@ import Foundation
 import Combine
 
 class SignUpViewModel: ObservableObject {
-    @Published var name: String = ""
-    @Published var email: String = ""
-    @Published var password: String = ""
-    @Published var confirmPassword: String = ""
+    @Published var name: String
+    @Published var email: String
+    @Published var passwordText: String
+    @Published var confirmPasswordText: String
     @Published var errorMessage: String?
     @Published var isLoading: Bool = false
 
     private var cancellables = Set<AnyCancellable>()
     
     init(
-        email: String,
-        password: String,
-        confirmPassword: String,
+        name: String = "",
+        email: String = "",
+        password: String = "",
+        confirmPassword: String = "",
         errorMessage: String? = nil,
-        isLoading: Bool,
+        isLoading: Bool = false,
         cancellables: Set<AnyCancellable> = Set<AnyCancellable>()
     ) {
+        self.name = name
         self.email = email
-        self.password = password
-        self.confirmPassword = confirmPassword
+        self.passwordText = password
+        self.confirmPasswordText = confirmPassword
         self.errorMessage = errorMessage
         self.isLoading = isLoading
         self.cancellables = cancellables
@@ -50,12 +52,12 @@ class SignUpViewModel: ObservableObject {
     }
 
     func signUp() {
-        guard !email.isEmpty, !password.isEmpty, !confirmPassword.isEmpty else {
+        guard !email.isEmpty, !passwordText.isEmpty, !confirmPasswordText.isEmpty else {
             errorMessage = "Please fill in all fields."
             return
         }
 
-        guard password == confirmPassword else {
+        guard passwordText == confirmPasswordText else {
             errorMessage = "Passwords do not match."
             return
         }
@@ -63,7 +65,7 @@ class SignUpViewModel: ObservableObject {
         isLoading = true
         errorMessage = nil
 
-        performSignUp(email: email, password: password)
+        performSignUp(email: email, password: passwordText)
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 self?.isLoading = false

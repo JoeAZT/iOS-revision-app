@@ -9,18 +9,18 @@ import Foundation
 import Combine
 
 class LoginViewModel: ObservableObject {
-    @Published var email: String = ""
-    @Published var password: String = ""
+    @Published var email: String
+    @Published var password: String
     @Published var errorMessage: String?
-    @Published var isLoading: Bool = false
+    @Published var isLoading: Bool
 
     private var cancellables = Set<AnyCancellable>()
     
     init(
-        email: String,
-        password: String,
+        email: String = "",
+        password: String = "",
         errorMessage: String? = nil,
-        isLoading: Bool,
+        isLoading: Bool = false,
         cancellables: Set<AnyCancellable> = Set<AnyCancellable>()
     ) {
         self.email = email

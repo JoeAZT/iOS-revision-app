@@ -32,12 +32,12 @@ struct SignUpView: View {
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(8)
 
-            SecureField("Password", text: $viewModel.password)
+            SecureField("Password", text: $viewModel.passwordText)
                 .padding()
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(8)
 
-            SecureField("Confirm Password", text: $viewModel.confirmPassword)
+            SecureField("Confirm Password", text: $viewModel.confirmPasswordText)
                 .padding()
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(8)
