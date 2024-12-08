@@ -48,7 +48,11 @@ struct LoginView: View {
             
             Spacer()
             
-            Button(action: viewModel.login) {
+            Button {
+                Task {
+                    try await viewModel.login(email: viewModel.email, password: viewModel.password)
+                }
+            } label: {
                 Text(viewModel.isLoading ? "Loading..." : "LOGIN")
                     .bold()
                     .foregroundColor(.white)

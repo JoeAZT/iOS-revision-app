@@ -13,7 +13,7 @@ class LoginViewModel: ObservableObject {
     @Published var password: String
     @Published var errorMessage: String?
     @Published var isLoading: Bool
-
+    
     private var cancellables = Set<AnyCancellable>()
     
     init(
@@ -29,7 +29,7 @@ class LoginViewModel: ObservableObject {
         self.isLoading = isLoading
         self.cancellables = cancellables
     }
-
+    
     // Simulate a login service (replace with real backend logic)
     private func performLogin(email: String, password: String) -> AnyPublisher<Bool, Error> {
         return Future<Bool, Error> { promise in
@@ -43,30 +43,10 @@ class LoginViewModel: ObservableObject {
         }
         .eraseToAnyPublisher()
     }
-
-    func login() {
-        guard !email.isEmpty, !password.isEmpty else {
-            errorMessage = "Please enter both email and password."
-            return
-        }
-
-        isLoading = true
-        errorMessage = nil
-
-        performLogin(email: email, password: password)
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] completion in
-                self?.isLoading = false
-                if case let .failure(error) = completion {
-                    self?.errorMessage = error.localizedDescription
-                }
-            } receiveValue: { [weak self] success in
-                if success {
-                    // Handle successful login, e.g., navigate to the main app
-                    print("Login successful")
-                }
-            }
-            .store(in: &cancellables)
+    
+    func login(email: String, password: String) async throws {
+        print("Login:")
+        print("email: \(email)")
+        print("password: \(password)")
     }
 }
-

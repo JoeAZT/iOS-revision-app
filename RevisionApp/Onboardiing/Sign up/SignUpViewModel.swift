@@ -35,49 +35,11 @@ class SignUpViewModel: ObservableObject {
         self.isLoading = isLoading
         self.cancellables = cancellables
     }
-
-    // Simulate a registration service (replace with real backend logic)
-    private func performSignUp(email: String, password: String) -> AnyPublisher<Bool, Error> {
-        return Future<Bool, Error> { promise in
-            DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
-                // Simulate success if email is valid and password is non-empty
-                if email.contains("@") && !password.isEmpty {
-                    promise(.success(true))
-                } else {
-                    promise(.failure(NSError(domain: "", code: 400, userInfo: [NSLocalizedDescriptionKey: "Invalid email or password"])))
-                }
-            }
-        }
-        .eraseToAnyPublisher()
-    }
-
-    func signUp() {
-        guard !email.isEmpty, !passwordText.isEmpty, !confirmPasswordText.isEmpty else {
-            errorMessage = "Please fill in all fields."
-            return
-        }
-
-        guard passwordText == confirmPasswordText else {
-            errorMessage = "Passwords do not match."
-            return
-        }
-
-        isLoading = true
-        errorMessage = nil
-
-        performSignUp(email: email, password: passwordText)
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] completion in
-                self?.isLoading = false
-                if case let .failure(error) = completion {
-                    self?.errorMessage = error.localizedDescription
-                }
-            } receiveValue: { [weak self] success in
-                if success {
-                    // Handle successful signup, e.g., navigate to login or main app
-                    print("Sign-up successful")
-                }
-            }
-            .store(in: &cancellables)
+    
+    func signUp(email: String, password: String, name: String) async throws {
+        print("Sign up:")
+        print("email: \(email)")
+        print("password: \(password)")
+        print("name: \(name)")
     }
 }

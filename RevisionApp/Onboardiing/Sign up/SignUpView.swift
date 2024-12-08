@@ -48,7 +48,11 @@ struct SignUpView: View {
                     .padding()
             }
             Spacer()
-            Button(action: viewModel.signUp) {
+            Button {
+                Task {
+                    try await viewModel.signUp(email: viewModel.email, password: viewModel.passwordText, name: viewModel.name)
+                }
+            } label: {
                 Text(viewModel.isLoading ? "Loading..." : "SIGN UP")
                     .bold()
                     .foregroundColor(.white)
