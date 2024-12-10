@@ -7,15 +7,16 @@
 
 import SwiftUI
 
-struct AuthView: View {
+struct OnboardingView: View {
+    var viewModel: AuthViewModel
     @State private var isSignUp: Bool = false
 
     var body: some View {
         VStack {
             if isSignUp {
-                SignUpView(viewModel: SignUpViewModel())
+                SignUpView(viewModel: viewModel)
             } else {
-                LoginView(viewModel: LoginViewModel())
+                LoginView(viewModel: viewModel)
             }
 
             Button(action: { isSignUp.toggle() }) {

@@ -6,13 +6,18 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct RevisionAppApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
 
     var body: some Scene {
         WindowGroup {
-            QuizTabView()
+            OnboardingView()
                 .environment(\.colorScheme, .light)
         }
     }

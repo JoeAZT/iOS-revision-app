@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @StateObject var viewModel: LoginViewModel
+    @StateObject var viewModel: AuthViewModel
     
     var body: some View {
         VStack {
@@ -26,7 +26,7 @@ struct LoginView: View {
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(8)
             
-            SecureField("Password", text: $viewModel.password)
+            SecureField("Password", text: $viewModel.passwordText)
                 .padding()
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(8)

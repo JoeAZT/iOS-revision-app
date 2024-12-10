@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @StateObject var viewModel: SignUpViewModel
+    
+    @StateObject var viewModel: AuthViewModel
 
     var body: some View {
         VStack {
@@ -69,11 +70,6 @@ struct SignUpView: View {
 
 #Preview {
     SignUpView(
-        viewModel: SignUpViewModel(
-            email: "email@gmail.com",
-            password: "password1",
-            confirmPassword: "confirm1",
-            isLoading: false
-        )
+        viewModel: AuthViewModel()
     )
 }
