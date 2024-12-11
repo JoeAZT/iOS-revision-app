@@ -11,14 +11,17 @@ import Firebase
 @main
 struct RevisionAppApp: App {
     
+    @StateObject private var authViewModel = AuthViewModel()
+    
     init() {
         FirebaseApp.configure()
     }
 
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
-                .environment(\.colorScheme, .light)
+            ContentView()
+                .environmentObject(authViewModel)
         }
+        .environment(\.colorScheme, .light)
     }
 }

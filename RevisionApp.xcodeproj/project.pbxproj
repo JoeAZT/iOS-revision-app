@@ -42,10 +42,11 @@
 		C25430322CF3CDD2003188E7 /* QuizCarouselCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25430312CF3CDC8003188E7 /* QuizCarouselCellView.swift */; };
 		C2549A6D2CC6AC740088A1A9 /* ProfileSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2549A6C2CC6AC730088A1A9 /* ProfileSheetView.swift */; };
 		C2AA355F2D02114700023222 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA355E2D02113F00023222 /* CoreDataManager.swift */; };
-		C2AA36722D064E7700023222 /* Google Service Info - Firebase.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2AA36712D064E7700023222 /* Google Service Info - Firebase.plist */; };
+		C2AA36722D064E7700023222 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2AA36712D064E7700023222 /* GoogleService-Info.plist */; };
 		C2AA36742D06510500023222 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C2AA36732D06510500023222 /* FirebaseAuth */; };
 		C2AA36762D06510500023222 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C2AA36752D06510500023222 /* FirebaseFirestore */; };
 		C2AA36782D06510500023222 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C2AA36772D06510500023222 /* FirebaseStorage */; };
+		C2AA36802D08AA6C00023222 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA367F2D08AA6C00023222 /* ContentView.swift */; };
 		C2F3617D2C7FC993000546A1 /* QuizMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */; };
 		C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */; };
 		C2F361832C7FCB4E000546A1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361822C7FCB4E000546A1 /* Router.swift */; };
@@ -126,7 +127,8 @@
 		C25430312CF3CDC8003188E7 /* QuizCarouselCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCarouselCellView.swift; sourceTree = "<group>"; };
 		C2549A6C2CC6AC730088A1A9 /* ProfileSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSheetView.swift; sourceTree = "<group>"; };
 		C2AA355E2D02113F00023222 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		C2AA36712D064E7700023222 /* Google Service Info - Firebase.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Google Service Info - Firebase.plist"; sourceTree = "<group>"; };
+		C2AA36712D064E7700023222 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C2AA367F2D08AA6C00023222 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMenuView.swift; sourceTree = "<group>"; };
 		C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C2F361822C7FCB4E000546A1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				C20CF2C22C6A974A009CE98E /* RevisionAppApp.swift */,
+				C2AA367F2D08AA6C00023222 /* ContentView.swift */,
 				C2542FDA2CE2C3E9003188E7 /* Route */,
 				C2542FFA2CE64C07003188E7 /* Quiz Loader Service */,
 				C2542FDB2CE2C3F0003188E7 /* Tabs */,
@@ -227,7 +230,7 @@
 				C2F361812C7FCAE8000546A1 /* QuizContent */,
 				C2F362242CA4108C000546A1 /* Quizzes */,
 				C20CF2C62C6A974C009CE98E /* Assets.xcassets */,
-				C2AA36712D064E7700023222 /* Google Service Info - Firebase.plist */,
+				C2AA36712D064E7700023222 /* GoogleService-Info.plist */,
 				C20CF2C82C6A974C009CE98E /* Preview Content */,
 			);
 			path = RevisionApp;
@@ -613,7 +616,7 @@
 				C2F361FD2CA1DF7F000546A1 /* UIKit 1.json in Resources */,
 				C2F361FF2CA1DF9B000546A1 /* UIKit 2.json in Resources */,
 				C2542FDD2CE5571B003188E7 /* General Categories.json in Resources */,
-				C2AA36722D064E7700023222 /* Google Service Info - Firebase.plist in Resources */,
+				C2AA36722D064E7700023222 /* GoogleService-Info.plist in Resources */,
 				C2F361E32C9767C3000546A1 /* General 5.json in Resources */,
 				C2F361DB2C9764A9000546A1 /* General 2.json in Resources */,
 				C2542FE32CE560DE003188E7 /* Architecture Categories.json in Resources */,
@@ -673,6 +676,7 @@
 				C25430302CF3B5A6003188E7 /* QuizCellViewModel.swift in Sources */,
 				C20CF2D12C6A9A53009CE98E /* QuizModel.swift in Sources */,
 				C2F361E72C99E084000546A1 /* ProfileView.swift in Sources */,
+				C2AA36802D08AA6C00023222 /* ContentView.swift in Sources */,
 				C25430322CF3CDD2003188E7 /* QuizCarouselCellView.swift in Sources */,
 				C2AA355F2D02114700023222 /* CoreDataManager.swift in Sources */,
 				C2F361BD2C84FA9F000546A1 /* MainButtonModifier.swift in Sources */,

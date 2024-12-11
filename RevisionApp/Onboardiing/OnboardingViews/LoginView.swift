@@ -50,7 +50,7 @@ struct LoginView: View {
             
             Button {
                 Task {
-                    try await viewModel.login(email: viewModel.email, password: viewModel.password)
+                    try await viewModel.signIn(email: viewModel.email, password: viewModel.passwordText)
                 }
             } label: {
                 Text(viewModel.isLoading ? "Loading..." : "LOGIN")
@@ -69,10 +69,6 @@ struct LoginView: View {
 
 #Preview {
     LoginView(
-        viewModel: LoginViewModel(
-            email: "email@gmail.com",
-            password: "password1",
-            isLoading: false
-        )
+        viewModel: AuthViewModel()
     )
 }

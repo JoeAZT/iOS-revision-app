@@ -79,7 +79,7 @@ struct FinishedQuizView: View {
                 trophyColorProvider: DefaultTrophyColorProvider(),
                 scoreManger: ScoreManager()),
             quizDataLoader: JSONQuizLoader(),
-            selectedQuiz: "selectedQuiz"
+            selectedQuiz: "Swift Quiz"
         )
     )
 }
