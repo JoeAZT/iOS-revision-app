@@ -8,6 +8,7 @@
 import Foundation
 
 struct User: Codable, Identifiable {
+    var name: String
     var username: String
     var password: String
     var id: String
@@ -15,6 +16,6 @@ struct User: Codable, Identifiable {
 
 extension User {
     static var mock: User {
-        User(username: "Joe", password: "password", id: "id")
+        User(name: "Joe", username: "Joeazt", password: "password", id: "id")
     }
 }

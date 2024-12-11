@@ -51,7 +51,12 @@ struct SignUpView: View {
             Spacer()
             Button {
                 Task {
-                    try await viewModel.signUp(email: viewModel.email, password: viewModel.passwordText, name: viewModel.name)
+                    try await viewModel.signUp(
+                        name: viewModel.name,
+                        email: viewModel.email,
+                        password: viewModel.passwordText,
+                        confirmPassword: viewModel.confirmPasswordText
+                    )
                 }
             } label: {
                 Text(viewModel.isLoading ? "Loading..." : "SIGN UP")

@@ -14,7 +14,6 @@ struct ProfileView: View {
     
     var body: some View {
         if let user = viewModel.currentUser {
-//            ProfileView(user: user)
             NavigationStack {
                 ScrollView {
                     VStack {
@@ -23,10 +22,10 @@ struct ProfileView: View {
                                 .frame(width: 50, height: 50)
                                 .foregroundColor(.black)
                             VStack(alignment: .leading) {
-                                Text(user.username)
+                                Text(user.name)
                                     .font(.title2)
                                     .bold()
-                                Text("@joeazt")
+                                Text("@\(user.username)")
                                     .font(.subheadline)
                                     .opacity(0.8)
                             }
@@ -161,6 +160,14 @@ struct ProfileView: View {
                             }
                         }
                         .padding(.top, 12)
+                        
+                        Button {
+                            Task {
+                               try await viewModel.signOut()
+                            }
+                        } label: {
+                            Text("Sign out")
+                        }
                     }
                     
                     .padding()

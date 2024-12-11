@@ -14,16 +14,7 @@ struct ContentView: View {
     var body: some View {
         Group {
             if viewModel.userSession != nil {
-                QuizMenuView(
-                    viewModel: MainViewModel(
-                        router: Router(),
-                        quizLoader: JSONQuizLoader(),
-                        quizCellViewModel: QuizCellViewModel(
-                            trophyColorProvider: DefaultTrophyColorProvider(),
-                            scoreManger: ScoreManager()
-                        )
-                    )
-                )
+                QuizTabView()
             } else {
                 OnboardingView(viewModel: viewModel)
             }

@@ -38,12 +38,12 @@ class AuthViewModel: ObservableObject {
         }
     }
     
-    func signUp(email: String, password: String, name: String) async throws {
+    func signUp(name: String, email: String, password: String, confirmPassword: String) async throws {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             self.userSession = result.user
 
-            let user = User(username: email, password: password, id: result.user.uid)
+            let user = User(name: name, username: email, password: password, id: result.user.uid)
             try await Firestore.firestore().collection("users").document(user.id).setData(from: user)
             await fetchUser()
         } catch {
@@ -53,7 +53,13 @@ class AuthViewModel: ObservableObject {
     }
     
     func signOut() async throws {
-        
+        do {
+            try Auth.auth().signOut()
+            self.userSession = nil
+            self.currentUser = nil
+        } catch {
+            print("DEBUG: Error signing out \(error.localizedDescription)")
+        }
     }
     
     func deleteAccount() async throws {
