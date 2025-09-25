@@ -1,0 +1,95 @@
+{
+    "name": "Swift Concurrency 1",
+    "questions": [
+        {
+            "questionText": "What is the main role of the Structured Concurrency model in Swift?",
+            "possibleAnswers": [
+                { "optionText": "To ensure child tasks are automatically cancelled when their parent task is cancelled", "isAnswer": true },
+                { "optionText": "To force all tasks to execute on the main thread in a predictable order", "isAnswer": false },
+                { "optionText": "To manage memory allocation between synchronous and asynchronous calls", "isAnswer": false },
+                { "optionText": "To serialize access to global shared state across tasks", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the difference between Task.detached and Task.init in Swift?",
+            "possibleAnswers": [
+                { "optionText": "Task.detached runs outside the current actor context, while Task.init inherits it", "isAnswer": true },
+                { "optionText": "Task.detached is always higher priority than Task.init", "isAnswer": false },
+                { "optionText": "Task.init is cancelled immediately if detached tasks fail", "isAnswer": false },
+                { "optionText": "Task.detached can only run on the main thread, while Task.init can run anywhere", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How does an AsyncSequence differ from a regular Sequence in Swift?",
+            "possibleAnswers": [
+                { "optionText": "AsyncSequence produces elements asynchronously over time using await", "isAnswer": true },
+                { "optionText": "AsyncSequence stores all its values in memory before iteration begins", "isAnswer": false },
+                { "optionText": "AsyncSequence guarantees results will always be delivered on the main actor", "isAnswer": false },
+                { "optionText": "AsyncSequence requires values to conform to Sendable by default", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What happens if you call await inside a non-async function?",
+            "possibleAnswers": [
+                { "optionText": "It results in a compiler error because await requires an async context", "isAnswer": true },
+                { "optionText": "The function will implicitly be promoted to async by the compiler", "isAnswer": false },
+                { "optionText": "The function will run synchronously but block the main thread", "isAnswer": false },
+                { "optionText": "It compiles, but execution is delayed until the enclosing actor finishes", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the role of withTaskGroup in Swift concurrency?",
+            "possibleAnswers": [
+                { "optionText": "It allows creation and coordination of dynamically created child tasks", "isAnswer": true },
+                { "optionText": "It ensures that all async calls execute on a single actor", "isAnswer": false },
+                { "optionText": "It runs all tasks sequentially and returns after each completion", "isAnswer": false },
+                { "optionText": "It prevents cancellation from propagating to child tasks", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How are priority values like .high and .background used in Swift concurrency?",
+            "possibleAnswers": [
+                { "optionText": "They influence task scheduling, but do not guarantee execution order", "isAnswer": true },
+                { "optionText": "They guarantee higher-priority tasks will always complete first", "isAnswer": false },
+                { "optionText": "They determine which actor executes the associated tasks", "isAnswer": false },
+                { "optionText": "They prevent tasks from being cancelled once started", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the role of MainActor in Swift concurrency?",
+            "possibleAnswers": [
+                { "optionText": "It isolates tasks to the main thread for UI-related operations", "isAnswer": true },
+                { "optionText": "It guarantees that code executes with the highest possible priority", "isAnswer": false },
+                { "optionText": "It prevents async functions from suspending while awaiting results", "isAnswer": false },
+                { "optionText": "It manages structured concurrency across detached tasks", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How does try? interact with async/await in Swift?",
+            "possibleAnswers": [
+                { "optionText": "It converts thrown errors into nil even when used with await", "isAnswer": true },
+                { "optionText": "It automatically retries failed async calls before returning", "isAnswer": false },
+                { "optionText": "It forces the task to run synchronously in error cases", "isAnswer": false },
+                { "optionText": "It wraps results into a Result type automatically", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the main difference between actor and class in Swift?",
+            "possibleAnswers": [
+                { "optionText": "Actor ensures isolated access to its mutable state, class does not", "isAnswer": true },
+                { "optionText": "Actor cannot contain stored properties, class can", "isAnswer": false },
+                { "optionText": "Actor cannot inherit from other actors, class can inherit freely", "isAnswer": false },
+                { "optionText": "Actor properties are always immutable, class properties can be mutable", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the default behaviour if a child task inside withTaskGroup throws?",
+            "possibleAnswers": [
+                { "optionText": "The error propagates out of the group and cancels remaining tasks", "isAnswer": true },
+                { "optionText": "The error is ignored and only successful results are returned", "isAnswer": false },
+                { "optionText": "The group retries the failing child task until success", "isAnswer": false },
+                { "optionText": "The parent task continues unaffected while child tasks complete", "isAnswer": false }
+            ]
+        }
+    ]
+}

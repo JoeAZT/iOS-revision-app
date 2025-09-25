@@ -13,11 +13,12 @@ struct ContentView: View {
     
     var body: some View {
         Group {
-            if viewModel.userSession != nil {
+//            if viewModel.userSession != nil {
                 QuizTabView()
-            } else {
-                OnboardingView(viewModel: viewModel)
-            }
+//            }
+//            } else {
+//                OnboardingView(viewModel: viewModel)
+//            }
         }
     }
 }

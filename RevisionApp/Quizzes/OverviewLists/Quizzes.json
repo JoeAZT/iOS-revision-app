@@ -12,5 +12,8 @@
     "SwiftUI",
     "Access and Visibility",
     "Practical MVVM",
-    "Debugging 1"
+    "Debugging 1",
+    "Swift Concurrency 1",
+    "Swift Concurrency 2",
+    "Swift Concurrency 3",
 ]

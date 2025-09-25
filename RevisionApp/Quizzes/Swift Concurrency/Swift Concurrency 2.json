@@ -1,0 +1,95 @@
+{
+    "name": "Swift Concurrency 2",
+    "questions": [
+        {
+            "questionText": "What happens if you access non-isolated properties of an actor directly from another task?",
+            "possibleAnswers": [
+                { "optionText": "It results in a compiler error unless the property is explicitly marked nonisolated", "isAnswer": true },
+                { "optionText": "The compiler automatically inserts async hops to safely access them", "isAnswer": false },
+                { "optionText": "The property is implicitly copied into the new task’s context", "isAnswer": false },
+                { "optionText": "It always executes on the main actor regardless of isolation", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "Why might you use async let instead of creating a Task group?",
+            "possibleAnswers": [
+                { "optionText": "async let creates a small number of child tasks with simpler syntax", "isAnswer": true },
+                { "optionText": "async let allows cancellation, whereas Task groups do not", "isAnswer": false },
+                { "optionText": "async let guarantees sequential execution of child tasks", "isAnswer": false },
+                { "optionText": "async let ensures results are cached across multiple awaits", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the difference between @Sendable and @escaping closures in Swift concurrency?",
+            "possibleAnswers": [
+                { "optionText": "@Sendable closures guarantee thread safety when captured across tasks", "isAnswer": true },
+                { "optionText": "@Sendable closures cannot escape scope while @escaping ones can", "isAnswer": false },
+                { "optionText": "@escaping closures require await before execution, @Sendable do not", "isAnswer": false },
+                { "optionText": "@escaping closures are always executed on the main actor, @Sendable on background threads", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What does Task.sleep do in Swift concurrency?",
+            "possibleAnswers": [
+                { "optionText": "It suspends the current task without blocking the underlying thread", "isAnswer": true },
+                { "optionText": "It blocks the main thread until the delay expires", "isAnswer": false },
+                { "optionText": "It creates a detached task scheduled to resume later", "isAnswer": false },
+                { "optionText": "It cancels the current task and then reschedules it", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the effect of marking a function with @MainActor?",
+            "possibleAnswers": [
+                { "optionText": "It enforces that all calls into the function execute on the main thread", "isAnswer": true },
+                { "optionText": "It guarantees the function is synchronous regardless of async content", "isAnswer": false },
+                { "optionText": "It prevents the function from throwing errors across actor boundaries", "isAnswer": false },
+                { "optionText": "It ensures the function cannot be called from detached tasks", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the difference between checked and unchecked continuations in Swift?",
+            "possibleAnswers": [
+                { "optionText": "Checked continuations validate correct resumption; unchecked do not", "isAnswer": true },
+                { "optionText": "Unchecked continuations require async context; checked do not", "isAnswer": false },
+                { "optionText": "Checked continuations can resume multiple times safely", "isAnswer": false },
+                { "optionText": "Unchecked continuations automatically propagate cancellation", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the result of calling Task.cancel on a running task?",
+            "possibleAnswers": [
+                { "optionText": "It sets a cancellation flag, and the task cooperates by checking for it", "isAnswer": true },
+                { "optionText": "It immediately stops execution and deallocates the task", "isAnswer": false },
+                { "optionText": "It blocks until all child tasks have finished", "isAnswer": false },
+                { "optionText": "It restarts the task from the beginning on the next event loop cycle", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How can you bridge legacy completion handlers into Swift concurrency?",
+            "possibleAnswers": [
+                { "optionText": "By wrapping them with withCheckedContinuation or withUnsafeContinuation", "isAnswer": true },
+                { "optionText": "By marking the handler function with @Sendable", "isAnswer": false },
+                { "optionText": "By converting the handler into an actor-isolated method", "isAnswer": false },
+                { "optionText": "By calling them inside a detached Task automatically", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the difference between async/await and Combine in Swift?",
+            "possibleAnswers": [
+                { "optionText": "Async/await handles single-shot async work; Combine handles streams of values", "isAnswer": true },
+                { "optionText": "Async/await requires main-thread usage; Combine is thread-agnostic", "isAnswer": false },
+                { "optionText": "Async/await is only supported on iOS, while Combine is cross-platform", "isAnswer": false },
+                { "optionText": "Async/await guarantees thread safety by default; Combine does not", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What happens if a Task throws inside async let bindings?",
+            "possibleAnswers": [
+                { "optionText": "The error is propagated when the result is awaited, cancelling sibling tasks", "isAnswer": true },
+                { "optionText": "The error is ignored and the task returns nil by default", "isAnswer": false },
+                { "optionText": "The error is wrapped in a Result type and delivered automatically", "isAnswer": false },
+                { "optionText": "The task retries automatically before surfacing the failure", "isAnswer": false }
+            ]
+        }
+    ]
+}

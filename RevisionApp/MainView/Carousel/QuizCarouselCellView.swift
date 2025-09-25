@@ -12,10 +12,18 @@ struct QuizCarouselCellView: View {
     
     var body: some View {
         VStack {
-            Circle()
-                .stroke(lineWidth: 5)
-                .foregroundColor(.offwhite)
-                .frame(width: 60, height: 60)
+            ZStack {
+                Circle()
+                    .stroke(lineWidth: 5)
+                    .foregroundColor(.offwhite)
+                    .frame(width: 60, height: 60)
+                Circle()
+                    .trim(from: 0.0, to: 0.25)
+                    .stroke(lineWidth: 5)
+                    .rotationEffect(.degrees(-90))
+                    .foregroundColor(.red)
+                    .frame(width: 60, height: 60)
+            }
             Text(categoryName)
                 .padding(.top, 12)
         }

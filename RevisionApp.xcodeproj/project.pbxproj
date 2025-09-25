@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 73;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -47,6 +47,7 @@
 		C2AA36762D06510500023222 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C2AA36752D06510500023222 /* FirebaseFirestore */; };
 		C2AA36782D06510500023222 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C2AA36772D06510500023222 /* FirebaseStorage */; };
 		C2AA36802D08AA6C00023222 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA367F2D08AA6C00023222 /* ContentView.swift */; };
+		C2AA36842D0BA30800023222 /* ScoreHistoryChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA36832D0BA2ED00023222 /* ScoreHistoryChartView.swift */; };
 		C2F3617D2C7FC993000546A1 /* QuizMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */; };
 		C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */; };
 		C2F361832C7FCB4E000546A1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F361822C7FCB4E000546A1 /* Router.swift */; };
@@ -129,6 +130,7 @@
 		C2AA355E2D02113F00023222 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		C2AA36712D064E7700023222 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2AA367F2D08AA6C00023222 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C2AA36832D0BA2ED00023222 /* ScoreHistoryChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreHistoryChartView.swift; sourceTree = "<group>"; };
 		C2F3617C2C7FC993000546A1 /* QuizMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMenuView.swift; sourceTree = "<group>"; };
 		C2F3617E2C7FCA26000546A1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C2F361822C7FCB4E000546A1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -166,7 +168,32 @@
 		C2F362352CA5F016000546A1 /* QuizViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C21B68D52E85BD5100D4006F /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Swift Concurrency 1.json",
+				"Swift Concurrency 2.json",
+				"Swift Concurrency 3.json",
+			);
+			target = C20CF2BE2C6A974A009CE98E /* RevisionApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		C21B68D62E85BD5100D4006F /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = C20CF2BB2C6A974A009CE98E /* Sources */;
+			membershipExceptions = (
+				"Swift Concurrency 1.json",
+				"Swift Concurrency 2.json",
+				"Swift Concurrency 3.json",
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		C21B68C92E85870800D4006F /* Swift Concurrency */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (C21B68D52E85BD5100D4006F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, C21B68D62E85BD5100D4006F /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Swift Concurrency"; sourceTree = "<group>"; };
 		C2542FDB2CE2C3F0003188E7 /* Tabs */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Tabs; sourceTree = "<group>"; };
 		C2542FED2CE60C12003188E7 /* Snapshot Tests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Snapshot Tests"; sourceTree = "<group>"; };
 		C2542FFA2CE64C07003188E7 /* Quiz Loader Service */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Quiz Loader Service"; sourceTree = "<group>"; };
@@ -447,6 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				C2F361D02C906B6C000546A1 /* QuizFinishedView.swift */,
+				C2AA36832D0BA2ED00023222 /* ScoreHistoryChartView.swift */,
 			);
 			path = Finished;
 			sourceTree = "<group>";
@@ -488,6 +516,7 @@
 				C2997DAD2CA9C9BF007C69D6 /* OverviewLists */,
 				C2997DAE2CA9C9CD007C69D6 /* General */,
 				C2AA35792D03426C00023222 /* Debugging */,
+				C21B68C92E85870800D4006F /* Swift Concurrency */,
 				C2997DAF2CA9C9D6007C69D6 /* Combine */,
 				C2997DB02CA9C9DF007C69D6 /* Architecture */,
 				C2997DB12CA9C9E6007C69D6 /* UIKit */,
@@ -527,6 +556,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				C21B68C92E85870800D4006F /* Swift Concurrency */,
 				C2542FDB2CE2C3F0003188E7 /* Tabs */,
 				C2542FFA2CE64C07003188E7 /* Quiz Loader Service */,
 				C2AA35792D03426C00023222 /* Debugging */,
@@ -584,7 +614,6 @@
 				};
 			};
 			buildConfigurationList = C20CF2BA2C6A974A009CE98E /* Build configuration list for PBXProject "RevisionApp" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -597,6 +626,7 @@
 				C2542FEA2CE60BA3003188E7 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 				C25430262CF2325D003188E7 /* XCRemoteSwiftPackageReference "IrregularGradient" */,
 			);
+			preferredProjectObjectVersion = 56;
 			productRefGroup = C20CF2C02C6A974A009CE98E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -658,6 +688,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2F361852C7FCBFB000546A1 /* RouterProtocol.swift in Sources */,
+				C2AA36842D0BA30800023222 /* ScoreHistoryChartView.swift in Sources */,
 				C2F361BF2C87A150000546A1 /* AnswerSheetView.swift in Sources */,
 				C2542FFD2CE64C2A003188E7 /* TrophyColorProvider.swift in Sources */,
 				C2F3617F2C7FCA26000546A1 /* MainViewModel.swift in Sources */,

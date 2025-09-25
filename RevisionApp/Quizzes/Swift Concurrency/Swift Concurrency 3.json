@@ -1,0 +1,95 @@
+{
+    "name": "Swift Concurrency 3",
+    "questions": [
+        {
+            "questionText": "What is the role of cooperative cancellation in Swift concurrency?",
+            "possibleAnswers": [
+                { "optionText": "Tasks must periodically check for cancellation and exit gracefully", "isAnswer": true },
+                { "optionText": "The runtime forcibly terminates tasks once cancellation is signalled", "isAnswer": false },
+                { "optionText": "Cancellation automatically rolls back all side effects in a task", "isAnswer": false },
+                { "optionText": "Cancelled tasks are retried with lower priority until success", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What happens if you never await an async function call?",
+            "possibleAnswers": [
+                { "optionText": "The compiler warns, and the work is never executed", "isAnswer": true },
+                { "optionText": "The function runs synchronously without suspension", "isAnswer": false },
+                { "optionText": "The compiler automatically wraps the call in Task.detached", "isAnswer": false },
+                { "optionText": "The function runs in the background but results are discarded silently", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the purpose of Task.yield in Swift concurrency?",
+            "possibleAnswers": [
+                { "optionText": "It allows other tasks to execute by suspending the current one briefly", "isAnswer": true },
+                { "optionText": "It restarts the current task from its entry point", "isAnswer": false },
+                { "optionText": "It prevents cancellation checks until the next await", "isAnswer": false },
+                { "optionText": "It guarantees the current task completes on the main thread", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How does nonisolated keyword affect actor methods?",
+            "possibleAnswers": [
+                { "optionText": "It makes the method callable without awaiting actor isolation", "isAnswer": true },
+                { "optionText": "It forces the method to always run on the main actor", "isAnswer": false },
+                { "optionText": "It prevents the method from accessing any actor state", "isAnswer": false },
+                { "optionText": "It allows the method to run synchronously within detached tasks", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the main purpose of await Task.checkCancellation()?",
+            "possibleAnswers": [
+                { "optionText": "To throw CancellationError immediately if the task has been cancelled", "isAnswer": true },
+                { "optionText": "To reset the cancellation flag for the current task", "isAnswer": false },
+                { "optionText": "To pause execution until cancellation is cleared", "isAnswer": false },
+                { "optionText": "To ignore cancellation and continue execution", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "How are actors different from serial DispatchQueues?",
+            "possibleAnswers": [
+                { "optionText": "Actors integrate with Swift type system for safe async isolation", "isAnswer": true },
+                { "optionText": "Actors guarantee faster performance than DispatchQueues", "isAnswer": false },
+                { "optionText": "Actors can only be used on Apple platforms, not Linux", "isAnswer": false },
+                { "optionText": "Actors cannot perform async calls, while queues can", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the effect of marking a property @MainActor?",
+            "possibleAnswers": [
+                { "optionText": "It restricts access to that property to the main thread", "isAnswer": true },
+                { "optionText": "It forces the property to be immutable across all actors", "isAnswer": false },
+                { "optionText": "It disables observation of changes in SwiftUI", "isAnswer": false },
+                { "optionText": "It ensures the property cannot throw when accessed", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the benefit of using Continuations in Swift concurrency?",
+            "possibleAnswers": [
+                { "optionText": "They bridge callback-based APIs into async/await world", "isAnswer": true },
+                { "optionText": "They ensure all async operations run without suspension", "isAnswer": false },
+                { "optionText": "They replace actors for thread safety in shared state", "isAnswer": false },
+                { "optionText": "They enable priority inheritance between child and parent tasks", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What is the behaviour of TaskGroup when all tasks complete successfully?",
+            "possibleAnswers": [
+                { "optionText": "It aggregates all results and returns them once finished", "isAnswer": true },
+                { "optionText": "It cancels the parent task as no more work is available", "isAnswer": false },
+                { "optionText": "It executes the results sequentially in submission order", "isAnswer": false },
+                { "optionText": "It discards results unless explicitly collected by the parent", "isAnswer": false }
+            ]
+        },
+        {
+            "questionText": "What does Sendable enforce in Swift concurrency?",
+            "possibleAnswers": [
+                { "optionText": "That values can safely be transferred across concurrency domains", "isAnswer": true },
+                { "optionText": "That types automatically adopt actor isolation semantics", "isAnswer": false },
+                { "optionText": "That closures are only executed on their defining actor", "isAnswer": false },
+                { "optionText": "That async tasks always return immutable value types", "isAnswer": false }
+            ]
+        }
+    ]
+}

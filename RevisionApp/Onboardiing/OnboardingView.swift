@@ -10,7 +10,7 @@ import SwiftUI
 struct OnboardingView: View {
     var viewModel: AuthViewModel
     @State private var isSignUp: Bool = false
-
+    
     var body: some View {
         VStack {
             if isSignUp {
@@ -18,8 +18,10 @@ struct OnboardingView: View {
             } else {
                 LoginView(viewModel: viewModel)
             }
-
-            Button(action: { isSignUp.toggle() }) {
+            
+            Button {
+                isSignUp.toggle()
+            } label: {
                 Text(isSignUp ? "Already have an account? Log In" : "Don't have an account? Sign Up")
                     .foregroundColor(.blue)
                     .padding()

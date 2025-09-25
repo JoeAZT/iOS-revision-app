@@ -16,7 +16,11 @@ struct QuizMenuCellView: View {
         HStack {
             Text("🧠")
                 .padding(12)
-                .background(quizCellViewModel.trophyColor(for: quizCellViewModel.getScorePercentage(quiz: quiz)).linearGradient)
+                .background(
+                    quizCellViewModel.trophyColor(
+                        for: quizCellViewModel.getScorePercentage(quiz: quiz)
+                    )
+                    .linearGradient)
                 .cornerRadius(12)
             Text(quiz)
             Spacer()

@@ -20,9 +20,7 @@ struct CategoryView: View {
                     Button {
                         viewModel.didTapNavigateToQuiz(selectedQuiz: quiz)
                     } label: {
-                        Button {
-                            viewModel.didTapNavigateToQuiz(selectedQuiz: quiz)
-                        } label: {
+                        VStack {
                             QuizMenuCellView(
                                 quiz: quiz,
                                 quizCellViewModel: viewModel.quizCellViewModel
@@ -31,7 +29,7 @@ struct CategoryView: View {
                     }
                 }
             }
+            .navigationTitle(viewModel.category)
         }
-        .navigationTitle(viewModel.category)
     }
 }
